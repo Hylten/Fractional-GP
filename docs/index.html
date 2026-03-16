@@ -129,29 +129,6 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* --- Header / Top Right --- */
-        .top-location {
-            position: absolute;
-            top: 40px;
-            right: 40px;
-            text-align: right;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--text-muted);
-            z-index: 10;
-        }
-
-        @media (max-width: 768px) {
-            .top-location {
-                position: relative;
-                top: 0;
-                right: 0;
-                text-align: center;
-                margin-top: 40px;
-            }
-        }
-
         /* --- Hero Section --- */
         .hero {
             min-height: 80vh;
@@ -263,48 +240,45 @@
 
         .portfolio-list {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(1, 1fr);
             gap: 16px;
         }
 
-        .portfolio-item {
+        @media (min-width: 768px) {
+            .portfolio-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .portfolio-item-clean {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 32px 40px;
+            padding: 40px 32px;
             background: var(--surface);
             border: 1px solid var(--border);
             transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
         }
 
-        .portfolio-item:hover {
+        .portfolio-item-clean h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text-main);
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .portfolio-item-clean:hover {
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.05);
         }
 
-        .portfolio-item h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--text-main);
-            letter-spacing: 1px;
-        }
-
-        .portfolio-link {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
+        .portfolio-item-clean:hover h3 {
             color: var(--accent);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: var(--transition);
-            opacity: 0.8;
-        }
-
-        .portfolio-link:hover {
-            opacity: 1;
-            text-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
         }
 
         /* --- Legacy Operations (Accordion) --- */
@@ -368,6 +342,12 @@
             font-size: 1.1rem;
             color: var(--text-main);
             font-family: 'Playfair Display', serif;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a.legacy-role:hover {
+            color: var(--accent);
         }
 
         .legacy-company {
@@ -409,24 +389,17 @@
         }
 
         .comp-item h4 {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--accent);
-            margin-bottom: 12px;
             font-family: 'Inter', sans-serif;
             font-weight: 500;
             letter-spacing: 1px;
-        }
-        
-        .comp-item p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
+            margin: 0; /* Removing margin since no subtext */
         }
 
         /* --- Footer CTA --- */
         .footer {
-            padding: 120px 0;
+            padding: 120px 0 60px 0;
             text-align: center;
             border-top: 1px solid var(--border);
             position: relative;
@@ -437,8 +410,79 @@
             font-weight: 400;
             letter-spacing: 2px;
             font-size: 1.5rem;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
             color: var(--text-main);
+        }
+
+        .footer-action-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-action-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .action-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .action-box:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .action-box.primary-action {
+            background: var(--text-main);
+            color: var(--bg-color);
+            border-color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .action-box.primary-action:hover {
+            background: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .regulatory-footer {
+            border-top: 1px solid var(--border);
+            padding-top: 60px;
+        }
+
+        .location-stamp {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 32px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .regulatory-text {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 2;
+            opacity: 0.5;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* --- Modal (QR Code) --- */
@@ -526,6 +570,8 @@
 
             <div class="action-bar">
                 <a href="./jonas-hylten.vcf" class="btn btn-primary" download>Save Contact</a>
+                <button id="shareBtn" class="btn btn-outline">Share Profile</button>
+                <button id="qrBtn" class="btn btn-glass">QR Code</button>
             </div>
         </div>
     </header>
@@ -553,21 +599,17 @@
             </div>
 
             <div class="portfolio-list">
-                <a href="https://roialscapital.com/" target="_blank" class="portfolio-item" style="text-decoration: none;">
+                <a href="https://roialscapital.com/" target="_blank" class="portfolio-item-clean">
                     <h3>Roials Capital</h3>
-                    <div class="portfolio-link" style="color: var(--text-muted); text-transform: none; font-family: 'Inter', sans-serif; letter-spacing: 0;">Proprietary Alpha Engine</div>
                 </a>
-                <a href="https://hylten.github.io/Alpha/" target="_blank" class="portfolio-item" style="border-color: rgba(197, 160, 89, 0.3); text-decoration: none;">
-                    <h3 style="color: var(--accent);">Roials Alpha</h3>
-                    <div class="portfolio-link">[Explore Infrastructure]</div>
-                </a>
-                <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="portfolio-item" style="text-decoration: none;">
+                <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="portfolio-item-clean">
                     <h3>Hyltén Invest</h3>
-                    <div class="portfolio-link" style="color: var(--text-muted); text-transform: none; font-family: 'Inter', sans-serif; letter-spacing: 0;">Principal Investments</div>
                 </a>
-                <a href="https://www.eferio.com/" target="_blank" class="portfolio-item" style="text-decoration: none;">
+                <a href="https://hylten.github.io/Alpha/" target="_blank" class="portfolio-item-clean">
+                    <h3>Roials Alpha</h3>
+                </a>
+                <a href="https://www.eferio.com/" target="_blank" class="portfolio-item-clean">
                     <h3>Eferio</h3>
-                    <div class="portfolio-link" style="color: var(--text-muted); text-transform: none; font-family: 'Inter', sans-serif; letter-spacing: 0;">Digital Infrastructure & TMT</div>
                 </a>
             </div>
 
@@ -580,9 +622,16 @@
                 <div class="legacy-content" id="legacyContent">
                     <ul class="legacy-list">
                         <li>
-                            <div class="legacy-role">Pathmaker</div>
-                            <a href="https://hylten.github.io/Pathmakers/" target="_blank" style="color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; text-decoration: underline;">[View Archive]</a>
-                            <div class="legacy-company">2021–2025</div>
+                            <a href="https://hylten.github.io/Pathmakers/" target="_blank" class="legacy-role">Pathmaker</a>
+                            <div class="legacy-company">2021–2023</div>
+                        </li>
+                        <li>
+                            <div class="legacy-role">Strategic Sales Leadership</div>
+                            <div class="legacy-company">2006–2019</div>
+                        </li>
+                        <li>
+                            <div class="legacy-role">Swedish Armed Forces</div>
+                            <div class="legacy-company">2005–2006</div>
                         </li>
                     </ul>
                 </div>
@@ -602,15 +651,12 @@
             <div class="competencies-grid">
                 <div class="comp-item">
                     <h4>Capital Architecture</h4>
-                    <p>M&A and Deal Structuring</p>
                 </div>
                 <div class="comp-item">
                     <h4>Proprietary Alpha</h4>
-                    <p>Agentic AI Origination</p>
                 </div>
                 <div class="comp-item">
                     <h4>Institutional Stewardship</h4>
-                    <p>Conservative Values & Discipline</p>
                 </div>
             </div>
         </div>
@@ -619,21 +665,82 @@
     <!-- FOOTER / CTA -->
     <footer class="footer">
         <div class="container">
-            <h3 style="margin-bottom: 24px;">Connect for Mandate Inquiry.</h3>
+            <h3>Connect for Mandate Inquiry.</h3>
             
-            <div class="action-bar" style="margin-bottom: 60px;">
-                <a href="https://wa.me/46701619978" target="_blank" class="btn btn-primary" style="background: var(--text-main); color: var(--bg-color);">Inquire</a>
+            <div class="footer-action-grid">
+                <a href="https://www.linkedin.com/in/hylten" target="_blank" class="action-box">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://wa.me/46701619978" target="_blank" class="action-box primary-action">
+                    <span>Inquire</span>
+                </a>
+                <a href="mailto:jthevathason@gmail.com" target="_blank" class="action-box">
+                    <span>Email</span>
+                </a>
             </div>
-            
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 24px;">
-                <span class="serif" style="font-size: 14px; color: var(--text-muted);">Jönköping, Sweden</span>
-                <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); transition: var(--transition);">Verify via LinkedIn</a>
+
+            <div class="regulatory-footer">
+                <div class="location-stamp">Jönköping, Sweden</div>
+                <p class="regulatory-text">FOR INFORMATIONAL PURPOSES ONLY. This interface does not constitute an offer to sell or a solicitation of an offer to buy securities. Content is not investment, tax, or legal advice. Capital at risk; past performance is not indicative of future results. Intended strictly for Wholesale, Professional, and Accredited Investors.</p>
             </div>
         </div>
     </footer>
 
+    <!-- QR Modal -->
+    <div class="modal" id="qrModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeQr">&times;</button>
+            <h3 class="serif" style="color: var(--accent); margin-bottom: 24px; font-size: 1.5rem;">Connect</h3>
+            <div class="qr-placeholder">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://hylten.github.io/Fractional-GP/&color=000000&bgcolor=ffffff" alt="QR Code">
+            </div>
+            <p style="font-size: 13px; color: var(--text-muted);">Scan to open this profile on your device.</p>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script>
+        // Web Share API
+        document.getElementById('shareBtn').addEventListener('click', async () => {
+            const shareData = {
+                title: 'Jonas Hyltén | Fractional GP',
+                text: 'Institutional Origination & Sovereign Alpha Architecture',
+                url: window.location.href
+            };
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    console.log('Share canceled', err);
+                }
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                const btn = document.getElementById('shareBtn');
+                const originalText = btn.innerText;
+                btn.innerText = 'Link Copied!';
+                setTimeout(() => btn.innerText = originalText, 2000);
+            }
+        });
+
+        // QR Modal Logic
+        const qrModal = document.getElementById('qrModal');
+        const qrBtn = document.getElementById('qrBtn');
+        const closeQr = document.getElementById('closeQr');
+
+        qrBtn.addEventListener('click', () => {
+            qrModal.classList.add('active');
+        });
+
+        closeQr.addEventListener('click', () => {
+            qrModal.classList.remove('active');
+        });
+
+        qrModal.addEventListener('click', (e) => {
+            if (e.target === qrModal) {
+                qrModal.classList.remove('active');
+            }
+        });
+
         // Legacy Accordion Logic
         const legacyToggle = document.getElementById('legacyToggle');
         const legacyContent = document.getElementById('legacyContent');
