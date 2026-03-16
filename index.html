@@ -429,26 +429,45 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 60px 32px;
-            background: var(--surface);
-            border: 1px solid var(--border);
+            padding: 40px 24px;
+            background: transparent;
+            border: none;
             transition: var(--transition);
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .comp-item:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 20%;
+                height: 60%;
+                width: 1px;
+                background: rgba(255, 255, 255, 0.05);
+            }
         }
 
         .comp-item:hover {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-4px);
+            transform: translateY(-2px);
+        }
+
+        .comp-status {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            opacity: 0.5;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
         }
 
         .comp-item h4 {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--accent);
             font-family: 'Inter', sans-serif;
             font-weight: 500;
             letter-spacing: 1px;
-            margin: 0; /* Removing margin since no subtext */
+            margin: 0;
         }
 
         /* --- Footer CTA --- */
@@ -710,22 +729,25 @@
         </div>
     </section>
 
-    <!-- CORE COMPETENCIES (Power of 3) -->
+    <!-- CORE COMPETENCIES (Agentic Interface) -->
     <section class="section">
         <div class="container">
-            <div class="grid-header">
+            <div class="grid-header" style="text-align: center;">
                 <span class="section-label">Capabilities</span>
                 <h2 class="serif" style="font-size: clamp(2rem, 4vw, 3rem);">Core Competencies</h2>
             </div>
 
             <div class="competencies-grid">
                 <a href="https://roialscapital.com/" target="_blank" class="comp-item" style="text-decoration: none;">
+                    <div class="comp-status">[01]</div>
                     <h4>Capital Architecture</h4>
                 </a>
                 <a href="https://hylten.github.io/Alpha/" target="_blank" class="comp-item" style="text-decoration: none;">
+                    <div class="comp-status">[02]</div>
                     <h4>Proprietary Alpha</h4>
                 </a>
                 <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="comp-item" style="text-decoration: none;">
+                    <div class="comp-status">[03]</div>
                     <h4>Institutional Stewardship</h4>
                 </a>
             </div>
