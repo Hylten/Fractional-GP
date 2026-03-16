@@ -7,33 +7,35 @@
   <meta name="description" content="Fractional GP Insights - Institutional briefings on AI-driven deal flow and capital architecture.">
   <meta name="author" content="Jonas Hyltén">
   <link rel="canonical" href="https://hylten.github.io/Fractional-GP/insights/">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #000; color: #E5E7EB; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    a { color: #C5A059; text-decoration: none; }
+    body { background: #000; color: #E5E7EB; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #C5A059; text-decoration: none; transition: 0.3s; }
     a:hover { opacity: 0.7; }
-    .container { max-width: 800px; margin: 0 auto; padding: 180px 24px 60px; }
-    .back { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 60px; display: inline-block; }
+    .container { max-width: 820px; margin: 0 auto; padding: 180px 24px 120px; }
+    .back { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 80px; display: inline-block; font-weight: 500; }
     .back:hover { color: #C5A059; }
-    h1 { font-family: Georgia, serif; font-size: clamp(2rem, 5vw, 3.5rem); color: #C5A059; margin-bottom: 40px; line-height: 1.15; font-weight: 400; }
-    .meta { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 60px; padding-bottom: 40px; border-bottom: 1px solid #1a1a1a; }
-    .content p { font-size: 1.15rem; line-height: 2; color: #9CA3AF; font-weight: 300; margin-bottom: 36px; }
-    .content h2 { font-family: Georgia, serif; font-size: 1.8rem; color: #C5A059; margin: 50px 0 24px; font-weight: 400; }
-    .content h3 { font-family: Georgia, serif; font-size: 1.4rem; color: #C5A059; margin: 40px 0 20px; font-weight: 500; }
-    .content strong { color: #E5E7EB; font-weight: 600; }
-    .content em { font-style: italic; }
-    .content blockquote { border-left: 2px solid #C5A059; padding-left: 20px; margin: 30px 0; color: #9CA3AF; }
-    .home-btn { display: inline-block; padding: 14px 32px; background: rgba(10,10,10,0.8); border: 1px solid rgba(255,255,255,0.1); color: #C5A059; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; border-radius: 2px; margin-top: 80px; }
-    .home-btn:hover { background: #C5A059; color: #000; opacity: 1; }
-    .wa-btn { position: fixed; bottom: 28px; right: 28px; z-index: 1000; background: #1a1a1a; padding: 12px; border-radius: 50%; box-shadow: 0 8px 24px rgba(0,0,0,0.5); opacity: 0.6; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; }
-    .wa-btn:hover { opacity: 1; }
-    .list-item { margin-bottom: 120px; padding-bottom: 80px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: center; }
-    .list-item h2 { font-family: Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.8rem); color: #C5A059; margin-bottom: 24px; font-weight: 400; line-height: 1.2; }
-    .list-item .desc { font-size: 1.1rem; color: #9CA3AF; line-height: 1.7; font-weight: 300; max-width: 600px; margin: 0 auto 40px; }
-    .list-item .date { font-size: 11px; color: #C5A059; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 30px; font-weight: 700; opacity: 0.8; }
-    .list-item .read { font-size: 10px; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: #E5E7EB; border-bottom: 1px solid #C5A059; padding-bottom: 6px; }
-    .index-title { font-family: Georgia, serif; font-size: clamp(3rem, 8vw, 6rem); color: #C5A059; margin-bottom: 40px; font-weight: 400; letter-spacing: -0.03em; text-align: center; }
-    .index-sub { font-size: 1.15rem; color: #9CA3AF; max-width: 650px; margin: 0 auto 120px; line-height: 1.6; font-weight: 300; text-align: center; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #C5A059; margin-bottom: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -0.02em; }
+    .meta { font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #1a1a1a; font-weight: 500; }
+    .content p { font-size: 1.15rem; line-height: 2.2; color: rgba(229, 231, 235, 0.7); font-weight: 300; margin-bottom: 48px; }
+    .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #fff; margin: 80px 0 40px; font-weight: 300; line-height: 1.2; }
+    .content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #fff; margin: 60px 0 30px; font-weight: 400; }
+    .content strong { color: #fff; font-weight: 500; }
+    .content em { font-style: italic; color: rgba(229, 231, 235, 0.9); }
+    .content blockquote { border-left: 1px solid #C5A059; padding-left: 32px; margin: 60px 0; font-style: italic; color: rgba(229, 231, 235, 0.5); font-size: 1.2rem; }
+    .home-btn { display: inline-block; padding: 16px 40px; background: transparent; border: 1px solid rgba(255,255,255,0.1); color: #C5A059; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; border-radius: 0; margin-top: 100px; transition: 0.4s; }
+    .home-btn:hover { background: #C5A059; color: #000; border-color: #C5A059; }
+    .wa-btn { position: fixed; bottom: 32px; right: 32px; z-index: 1000; background: #111; padding: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.6); opacity: 0.4; transition: 0.3s; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; }
+    .wa-btn:hover { opacity: 1; transform: translateY(-2px); }
+    .list-item { margin-bottom: 140px; padding-bottom: 100px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: left; }
+    .list-item h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #C5A059; margin-bottom: 32px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; }
+    .list-item .desc { font-size: 1.1rem; color: rgba(229, 231, 235, 0.6); line-height: 1.8; font-weight: 300; max-width: 650px; margin-bottom: 40px; }
+    .list-item .date { font-size: 10px; color: #C5A059; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 32px; font-weight: 500; opacity: 0.6; }
+    .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
+    .list-item .read:hover { border-bottom-color: #C5A059; color: #C5A059; }
+    .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: #C5A059; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
+    .index-sub { font-size: 1.15rem; color: rgba(229, 231, 235, 0.5); max-width: 700px; margin: 0 auto 140px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
   </style>
 </head>
 <body>
@@ -44,26 +46,26 @@
       <p class="index-sub">Institutional briefings on Fractional GP architecture, Agentic AI infrastructure, and proprietary deal flow for mid-market principals.</p>
       
       <div class="list-item">
-        <div class="date">March 8, 2026</div>
+        <div class="date">March 18, 2024</div>
         <a href="/Fractional-GP/insights/agentic-ai-fiduciary-duty-lp-capital-protection/" style="text-decoration:none;">
-          <h2>Agentic AI as Fiduciary Duty</h2>
-          <p class="desc">How automated operational diligence through agentic AI systems protects LP capital, strengthens DSCR integrity, and redefines fiduciary responsibility in modern private equity.</p>
+          <h2>Agentic Systems and the Fiduciary Mandate: Emerging Standards in Capital Protection</h2>
+          <p class="desc">A technical evaluation of algorithmic risk surveillance as a fulfillment of fiduciary duty in private equity and multi-family office environments.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
       <div class="list-item">
-        <div class="date">March 10, 2026</div>
+        <div class="date">March 17, 2024</div>
         <a href="/Fractional-GP/insights/inefficiency-mid-market-origination-fractional-gp/" style="text-decoration:none;">
-          <h2>The Inefficiency of Mid-Market Origination</h2>
-          <p class="desc">How AI-enabled fractional GP structures outperform traditional broker-led auction pipelines by capturing proprietary deal flow, reducing pricing distortion, and restoring underwriting discipline.</p>
+          <h2>The Mid-Market Friction: A Logic Chain for Fractional GP Specialization</h2>
+          <p class="desc">An inquiry into the structural inefficiencies of traditional off-market origination and the mechanics of the Fractional GP as a corrective layer for selective mandates.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
       <div class="list-item">
-        <div class="date">March 16, 2026</div>
+        <div class="date">March 16, 2024</div>
         <a href="/Fractional-GP/insights/sabbath-architect-structural-rest-algorithmic-execution/" style="text-decoration:none;">
-          <h2>The Sabbath Architect</h2>
-          <p class="desc">A Fractional GP briefing on structural rest, algorithmic execution, and the institutional logic of high‑performance capital management.</p>
+          <h2>The Sabbath Protocol: Structural Equilibrium in High-Velocity Mandates</h2>
+          <p class="desc">A clinical analysis of institutional rest as a risk mitigation framework and its role in maintaining algorithmic execution integrity across asset cycles.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
