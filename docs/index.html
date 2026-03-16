@@ -129,6 +129,21 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
+        .inquire-link {
+            font-size: 13px; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            color: var(--text-muted); 
+            opacity: 0.6; 
+            text-decoration: none; 
+            transition: var(--transition);
+        }
+
+        .inquire-link:hover {
+            color: var(--accent) !important;
+            opacity: 1 !important;
+        }
+
         /* --- Top Actions --- */
         .top-actions {
             position: absolute;
@@ -322,7 +337,7 @@
 
         /* --- Legacy Operations (Accordion) --- */
         .legacy-section {
-            margin-top: 60px;
+            margin-top: -1px; /* Stitch borders together if needed or just tight */
             border: 1px solid var(--border);
         }
 
@@ -638,7 +653,11 @@
 
     <!-- ACTIVE PORTFOLIO -->
     <section class="section">
-        <div class="container">
+        <div class="container" style="text-align: center;">
+            <div style="margin-bottom: 40px;">
+                <span class="section-label" style="display: block; margin-bottom: 0;">Operations</span>
+            </div>
+            
             <!-- Example Mandates (Accordion) -->
             <div class="legacy-section" style="margin-top: 0;">
                 <div class="legacy-header" id="mandateToggle">
@@ -718,7 +737,7 @@
             <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 24px; opacity: 0.4;">Capped at 3 mandates annually</p>
             
             <div style="margin-bottom: 80px;">
-                <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Fractional%20GP%20Mandate" target="_blank" style="font-size: 13px; text-transform: uppercase; letter-spacing: 4px; color: var(--text-muted); opacity: 0.6; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--accent)'; this.style.opacity='1';" onmouseout="this.style.color=''; this.style.opacity='';">Inquire</a>
+                <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Fractional%20GP%20Mandate" target="_blank" class="inquire-link">Inquire</a>
             </div>
 
             <div class="regulatory-footer">
