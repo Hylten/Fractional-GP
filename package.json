@@ -1,0 +1,13 @@
+{
+  "name": "fractional-gp",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-seo.js",
+    "publish": "chmod +x scripts/publish.sh && ./scripts/publish.sh"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
