@@ -639,24 +639,28 @@
     <!-- ACTIVE PORTFOLIO -->
     <section class="section">
         <div class="container">
-            <div class="grid-header">
-                <span class="section-label">Portfolio</span>
-                <h2 class="serif" style="font-size: clamp(2rem, 4vw, 3rem);">Example Mandates</h2>
-            </div>
-
-            <div class="portfolio-list">
-                <a href="https://roialscapital.com/" target="_blank" class="portfolio-item-clean">
-                    <h3>Roials Capital</h3>
-                </a>
-                <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="portfolio-item-clean">
-                    <h3>Hyltén Invest</h3>
-                </a>
-                <a href="https://hylten.github.io/Alpha/" target="_blank" class="portfolio-item-clean">
-                    <h3>Roials Alpha</h3>
-                </a>
-                <a href="https://www.eferio.com/" target="_blank" class="portfolio-item-clean">
-                    <h3>Eferio</h3>
-                </a>
+            <!-- Example Mandates (Accordion) -->
+            <div class="legacy-section" style="margin-top: 0;">
+                <div class="legacy-header" id="mandateToggle">
+                    <span>Example Mandates</span>
+                    <span id="mandateIcon">+</span>
+                </div>
+                <div class="legacy-content" id="mandateContent">
+                    <div class="portfolio-list" style="padding: 24px;">
+                        <a href="https://roialscapital.com/" target="_blank" class="portfolio-item-clean" style="padding: 24px;">
+                            <h3>Roials Capital</h3>
+                        </a>
+                        <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="portfolio-item-clean" style="padding: 24px;">
+                            <h3>Hyltén Invest</h3>
+                        </a>
+                        <a href="https://hylten.github.io/Alpha/" target="_blank" class="portfolio-item-clean" style="padding: 24px;">
+                            <h3 style="color: var(--accent);">Roials Alpha</h3>
+                        </a>
+                        <a href="https://www.eferio.com/" target="_blank" class="portfolio-item-clean" style="padding: 24px;">
+                            <h3>Eferio</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- Legacy Operations -->
@@ -714,13 +718,13 @@
             <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 24px; opacity: 0.8;">Capped at 3 mandates annually</p>
             
             <div style="margin-bottom: 80px;">
-                <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 4px; color: var(--text-muted); opacity: 0.6;">Inquire</span>
+                <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Fractional%20GP%20Mandate" target="_blank" style="font-size: 13px; text-transform: uppercase; letter-spacing: 4px; color: var(--text-muted); opacity: 0.6; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#FFFFFF'; this.style.opacity='1';" onmouseout="this.style.color=''; this.style.opacity='';">Inquire</a>
             </div>
 
             <div class="regulatory-footer">
                 <div class="location-stamp" style="margin-bottom: 8px;">Jönköping, Sweden</div>
                 <div style="margin-bottom: 40px;">
-                    <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4;">View LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4;">LinkedIn</a>
                 </div>
                 <p class="regulatory-text">FOR INFORMATIONAL PURPOSES ONLY. This interface does not constitute an offer to sell or a solicitation of an offer to buy securities. Content is not investment, tax, or legal advice. Capital at risk; past performance is not indicative of future results. Intended strictly for Wholesale, Professional, and Accredited Investors.</p>
             </div>
@@ -782,7 +786,19 @@
             }
         });
 
-        // Legacy Accordion Logic
+        // Legacy Accordion Logic (Mandates)
+        const mandateToggle = document.getElementById('mandateToggle');
+        const mandateContent = document.getElementById('mandateContent');
+        const mandateIcon = document.getElementById('mandateIcon');
+
+        if(mandateToggle) {
+            mandateToggle.addEventListener('click', () => {
+                mandateContent.classList.toggle('open');
+                mandateIcon.innerText = mandateContent.classList.contains('open') ? '-' : '+';
+            });
+        }
+
+        // Legacy Accordion Logic (Operations)
         const legacyToggle = document.getElementById('legacyToggle');
         const legacyContent = document.getElementById('legacyContent');
         const legacyIcon = document.getElementById('legacyIcon');
