@@ -658,7 +658,7 @@
     <section class="section about">
         <div class="container">
             <span class="section-label">About</span>
-            <h2 class="serif">Conviction-based Stewardship</h2>
+            <h2 class="serif">Conviction Based Stewardship</h2>
             
             <div class="about-text">
                 <p>Jonas Hyltén is a Dealmaker operating at the intersection of institutional finance and agentic technology. He provides Family Offices and Private Equity sponsors with a decisive, asymmetrical advantage in off-market origination.</p>
@@ -768,8 +768,11 @@
 
             <div class="regulatory-footer">
                 <div class="location-stamp" style="margin-bottom: 8px;">Jönköping, Sweden</div>
+                <div style="margin-bottom: 24px;">
+                    <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4; text-decoration: none;">LinkedIn</a>
+                </div>
                 <div style="margin-bottom: 40px;">
-                    <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4;">LinkedIn</a>
+                    <button id="legalBtn" style="background: none; border: none; font-family: 'JetBrains Mono', monospace; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); opacity: 0.3; cursor: pointer; transition: var(--transition);">Legal Disclosures</button>
                 </div>
                 <p class="regulatory-text">FOR INFORMATIONAL PURPOSES ONLY. This interface does not constitute an offer to sell or a solicitation of an offer to buy securities. Content is not investment, tax, or legal advice. Capital at risk; past performance is not indicative of future results. Intended strictly for Wholesale, Professional, and Accredited Investors.</p>
             </div>
@@ -785,6 +788,30 @@
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://hylten.github.io/Fractional-GP/&color=000000&bgcolor=ffffff" alt="QR Code">
             </div>
             <p style="font-size: 13px; color: var(--text-muted);">Scan to open this profile on your device.</p>
+        </div>
+    </div>
+
+    <!-- Legal Disclosures Modal -->
+    <div class="modal" id="legalModal">
+        <div class="modal-content" style="max-width: 600px; text-align: left; max-height: 80vh; overflow-y: auto;">
+            <button class="close-modal" id="closeLegal">&times;</button>
+            <h3 class="serif" style="color: var(--accent); margin-bottom: 24px; font-size: 1.5rem;">Legal Intelligence</h3>
+            
+            <div style="font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+                <h4 style="color: #fff; margin-bottom: 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">TERMS & CONDITIONS</h4>
+                <p style="margin-bottom: 16px;"><strong>1. Scope of Services:</strong> Roials Capital operates as a strategic asset architect and advisory firm. We do not act as a retail broker-dealer, nor do we provide personal financial advice to retail investors. Services are strictly limited to the structuring and strategic positioning of institutional mandates for professional, wholesale, and accredited investors.</p>
+                <p style="margin-bottom: 16px;"><strong>2. Status:</strong> Access to mandates is strictly reserved for "Accredited Investors" or "Professional Clients". Verification is a mandatory prerequisite for engagement.</p>
+                <p style="margin-bottom: 16px;"><strong>3. Intellectual Property:</strong> All "Asset Architecture" methodologies and proprietary frameworks are the exclusive property of Roials Capital.</p>
+                <p style="margin-bottom: 24px;"><strong>4. Governing Law:</strong> Laws of Sweden. Disputes resolved in Stockholm courts.</p>
+
+                <h4 style="color: #fff; margin-bottom: 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">PRIVACY POLICY (GDPR)</h4>
+                <p style="margin-bottom: 8px;"><strong>Data Controller:</strong> Roials Capital (jonas@roials.co).</p>
+                <p style="margin-bottom: 8px;"><strong>Data Collection:</strong> We collect Identity, Contact, and Financial Data (KYC/Accreditation status) strictly for Mandate Structuring and Compliance (AML/CTF).</p>
+                <p style="margin-bottom: 24px;"><strong>Your Rights:</strong> You have the right to access, rectify, or erase your data.</p>
+
+                <h4 style="color: #fff; margin-bottom: 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">COOKIE POLICY</h4>
+                <p>We use strictly essential cookies for security and core functionality, and performance cookies for optimization. You can decline cookies via your browser settings.</p>
+            </div>
         </div>
     </div>
 
@@ -828,6 +855,29 @@
         qrModal.addEventListener('click', (e) => {
             if (e.target === qrModal) {
                 qrModal.classList.remove('active');
+            }
+        });
+
+        // Legal Modal Logic
+        const legalModal = document.getElementById('legalModal');
+        const legalBtn = document.getElementById('legalBtn');
+        const closeLegal = document.getElementById('closeLegal');
+
+        if(legalBtn) {
+            legalBtn.addEventListener('click', () => {
+                legalModal.classList.add('active');
+            });
+        }
+
+        if(closeLegal) {
+            closeLegal.addEventListener('click', () => {
+                legalModal.classList.remove('active');
+            });
+        }
+
+        legalModal.addEventListener('click', (e) => {
+            if (e.target === legalModal) {
+                legalModal.classList.remove('active');
             }
         });
 
