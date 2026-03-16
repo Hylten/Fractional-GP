@@ -730,27 +730,30 @@
         </div>
     </section>
 
-    <!-- CORE COMPETENCIES (Agentic Interface) -->
-    <section class="section">
+    <!-- CAPABILITIES (The Institutional Grid Accordion) -->
+    <section class="section" style="border-top: none; padding-top: 0;">
         <div class="container">
-            <div class="grid-header">
-                <span class="section-label">Capabilities</span>
-                <h2 class="serif" style="font-size: clamp(2rem, 4vw, 3rem);">Core Competencies</h2>
-            </div>
-
-            <div class="competencies-grid">
-                <a href="https://roialscapital.com/" target="_blank" class="comp-item" style="text-decoration: none;">
-                    <div class="comp-status">[01]</div>
-                    <h4>Capital Architecture</h4>
-                </a>
-                <a href="https://hylten.github.io/Alpha/" target="_blank" class="comp-item" style="text-decoration: none;">
-                    <div class="comp-status">[02]</div>
-                    <h4>Proprietary Alpha</h4>
-                </a>
-                <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="comp-item" style="text-decoration: none;">
-                    <div class="comp-status">[03]</div>
-                    <h4>Institutional Stewardship</h4>
-                </a>
+            <div class="legacy-section" style="margin-top: -1px;">
+                <div class="legacy-header" id="capabilitiesToggle">
+                    <span>Capabilities</span>
+                    <span id="capabilitiesIcon">+</span>
+                </div>
+                <div class="legacy-content" id="capabilitiesContent">
+                    <div class="competencies-grid" style="padding: 40px 0;">
+                        <a href="https://roialscapital.com/" target="_blank" class="comp-item" style="text-decoration: none;">
+                            <div class="comp-status">[01]</div>
+                            <h4>Capital Architecture</h4>
+                        </a>
+                        <a href="https://hylten.github.io/Alpha/" target="_blank" class="comp-item" style="text-decoration: none;">
+                            <div class="comp-status">[02]</div>
+                            <h4>Proprietary Alpha</h4>
+                        </a>
+                        <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="comp-item" style="text-decoration: none;">
+                            <div class="comp-status">[03]</div>
+                            <h4>Institutional Stewardship</h4>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -828,6 +831,18 @@
                 qrModal.classList.remove('active');
             }
         });
+
+        // Legacy Accordion Logic (Capabilities)
+        const capabilitiesToggle = document.getElementById('capabilitiesToggle');
+        const capabilitiesContent = document.getElementById('capabilitiesContent');
+        const capabilitiesIcon = document.getElementById('capabilitiesIcon');
+
+        if(capabilitiesToggle) {
+            capabilitiesToggle.addEventListener('click', () => {
+                capabilitiesContent.classList.toggle('open');
+                capabilitiesIcon.innerText = capabilitiesContent.classList.contains('open') ? '-' : '+';
+            });
+        }
 
         // Legacy Accordion Logic (Mandates)
         const mandateToggle = document.getElementById('mandateToggle');
