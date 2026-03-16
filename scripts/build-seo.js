@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT_DIR, 'content', 'insights');
-const DIST_DIR = path.join(ROOT_DIR, 'dist');
+const DIST_DIR = path.join(ROOT_DIR, 'docs');
 const INSIGHTS_DIST_DIR = path.join(DIST_DIR, 'insights');
 
 const SITE_URL = 'https://hylten.github.io/Fractional-GP';
