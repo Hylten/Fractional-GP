@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Hyltén;Jonas;;;
+FN:Jonas Hyltén
+ORG:Roials Capital
+TITLE:Fractional GP | Sovereign Alpha Architecture
+EMAIL;type=INTERNET;type=WORK;type=pref:jonas@roials.co
+TEL;type=WORK;type=pref:+46701619978
+URL:https://hylten.github.io/Fractional-GP/
+BDAY:1986-07-28
+ADR;type=WORK:;;;Jönköping;;;Sweden
+NOTE:Fractional GP | Sovereign Alpha Architecture. Mandates rooted in Stewardship & Agentic AI origination (Roials Alpha).
+END:VCARD
