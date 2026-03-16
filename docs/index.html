@@ -514,10 +514,6 @@
 </head>
 <body>
 
-    <div class="top-location">
-        Jönköping<br>Sweden
-    </div>
-
     <!-- HERO -->
     <header class="hero">
         <div class="container hero-content">
@@ -530,8 +526,6 @@
 
             <div class="action-bar">
                 <a href="./jonas-hylten.vcf" class="btn btn-primary" download>Save Contact</a>
-                <button id="shareBtn" class="btn btn-outline">Share Profile</button>
-                <button id="qrBtn" class="btn btn-glass">QR Code</button>
             </div>
         </div>
     </header>
@@ -559,43 +553,36 @@
             </div>
 
             <div class="portfolio-list">
-                <div class="portfolio-item">
+                <a href="https://roialscapital.com/" target="_blank" class="portfolio-item" style="text-decoration: none;">
                     <h3>Roials Capital</h3>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Pathmaker</h3>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Hyltén Invest</h3>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Eferio</h3>
-                </div>
-                <div class="portfolio-item" style="border-color: rgba(197, 160, 89, 0.3);">
+                    <div class="portfolio-link" style="color: var(--text-muted); text-transform: none; font-family: 'Inter', sans-serif; letter-spacing: 0;">Proprietary Alpha Engine</div>
+                </a>
+                <a href="https://hylten.github.io/Alpha/" target="_blank" class="portfolio-item" style="border-color: rgba(197, 160, 89, 0.3); text-decoration: none;">
                     <h3 style="color: var(--accent);">Roials Alpha</h3>
-                    <a href="mandate-briefing.html" class="portfolio-link" target="_blank">[Explore Infrastructure]</a>
-                </div>
+                    <div class="portfolio-link">[Explore Infrastructure]</div>
+                </a>
+                <a href="https://hylten.github.io/Hylten-Invest/" target="_blank" class="portfolio-item" style="text-decoration: none;">
+                    <h3>Hyltén Invest</h3>
+                    <div class="portfolio-link" style="color: var(--text-muted); text-transform: none; font-family: 'Inter', sans-serif; letter-spacing: 0;">Principal Investments</div>
+                </a>
+                <a href="https://www.eferio.com/" target="_blank" class="portfolio-item" style="text-decoration: none;">
+                    <h3>Eferio</h3>
+                    <div class="portfolio-link" style="color: var(--text-muted); text-transform: none; font-family: 'Inter', sans-serif; letter-spacing: 0;">Digital Infrastructure & TMT</div>
+                </a>
             </div>
 
             <!-- Legacy Operations -->
             <div class="legacy-section">
                 <div class="legacy-header" id="legacyToggle">
-                    <span>Legacy Operations (Pre-2023)</span>
+                    <span>Legacy Operations</span>
                     <span id="legacyIcon">+</span>
                 </div>
                 <div class="legacy-content" id="legacyContent">
                     <ul class="legacy-list">
                         <li>
-                            <div class="legacy-role">Founder & CEO</div>
-                            <div class="legacy-company">2018–2023</div>
-                        </li>
-                        <li>
-                            <div class="legacy-role">Sales Executive, Media & TMT</div>
-                            <div class="legacy-company">2006–2018</div>
-                        </li>
-                        <li>
-                            <div class="legacy-role">Reconnaissance Team Leader</div>
-                            <div class="legacy-company">2005–2006</div>
+                            <div class="legacy-role">Pathmaker</div>
+                            <a href="https://hylten.github.io/Pathmakers/" target="_blank" style="color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; text-decoration: underline;">[View Archive]</a>
+                            <div class="legacy-company">2021–2025</div>
                         </li>
                     </ul>
                 </div>
@@ -632,78 +619,32 @@
     <!-- FOOTER / CTA -->
     <footer class="footer">
         <div class="container">
-            <h3>Connect for Mandate Inquiry.</h3>
+            <h3 style="margin-bottom: 24px;">Connect for Mandate Inquiry.</h3>
             
-            <div class="action-bar">
-                <a href="https://www.linkedin.com/in/hylten" target="_blank" class="btn btn-outline" style="border-color: #FFF; color: #FFF;">Verify via LinkedIn</a>
+            <div class="action-bar" style="margin-bottom: 60px;">
+                <a href="https://wa.me/46701619978" target="_blank" class="btn btn-primary" style="background: var(--text-main); color: var(--bg-color);">Inquire</a>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 24px;">
+                <span class="serif" style="font-size: 14px; color: var(--text-muted);">Jönköping, Sweden</span>
+                <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); transition: var(--transition);">Verify via LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <!-- QR Modal -->
-    <div class="modal" id="qrModal">
-        <div class="modal-content">
-            <button class="close-modal" id="closeQr">&times;</button>
-            <h3 class="serif" style="color: var(--accent); margin-bottom: 24px; font-size: 1.5rem;">Connect</h3>
-            <div class="qr-placeholder">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://hylten.github.io/Fractional-GP/&color=000000&bgcolor=ffffff" alt="QR Code">
-            </div>
-            <p style="font-size: 13px; color: var(--text-muted);">Scan to open this profile on your device.</p>
-        </div>
-    </div>
-
     <!-- Scripts -->
     <script>
-        // Web Share API
-        document.getElementById('shareBtn').addEventListener('click', async () => {
-            const shareData = {
-                title: 'Jonas Hyltén | Fractional GP',
-                text: 'Institutional Origination & Sovereign Alpha Architecture',
-                url: window.location.href
-            };
-            if (navigator.share) {
-                try {
-                    await navigator.share(shareData);
-                } catch (err) {
-                    console.log('Share canceled', err);
-                }
-            } else {
-                navigator.clipboard.writeText(window.location.href);
-                const btn = document.getElementById('shareBtn');
-                const originalText = btn.innerText;
-                btn.innerText = 'Link Copied!';
-                setTimeout(() => btn.innerText = originalText, 2000);
-            }
-        });
-
-        // QR Modal Logic
-        const qrModal = document.getElementById('qrModal');
-        const qrBtn = document.getElementById('qrBtn');
-        const closeQr = document.getElementById('closeQr');
-
-        qrBtn.addEventListener('click', () => {
-            qrModal.classList.add('active');
-        });
-
-        closeQr.addEventListener('click', () => {
-            qrModal.classList.remove('active');
-        });
-
-        qrModal.addEventListener('click', (e) => {
-            if (e.target === qrModal) {
-                qrModal.classList.remove('active');
-            }
-        });
-
         // Legacy Accordion Logic
         const legacyToggle = document.getElementById('legacyToggle');
         const legacyContent = document.getElementById('legacyContent');
         const legacyIcon = document.getElementById('legacyIcon');
 
-        legacyToggle.addEventListener('click', () => {
-            legacyContent.classList.toggle('open');
-            legacyIcon.innerText = legacyContent.classList.contains('open') ? '-' : '+';
-        });
+        if(legacyToggle) {
+            legacyToggle.addEventListener('click', () => {
+                legacyContent.classList.toggle('open');
+                legacyIcon.innerText = legacyContent.classList.contains('open') ? '-' : '+';
+            });
+        }
     </script>
 </body>
 </html>
