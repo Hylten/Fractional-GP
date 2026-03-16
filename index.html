@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonas Hyltén | Fractional GP & Sovereign Architecture</title>
-    <meta name="description" content="Fractional GP | Sovereign Alpha Architecture. Institutional Origination & Stewardship.">
-    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <meta name="description" content="Fractional GP | Sovereign Alpha Architecture">
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #0b0f16; /* Deep High-Tech Dark from the reference image */
+            --bg-color: #02040a; /* Deep Midnight Blue */
             --surface: rgba(255, 255, 255, 0.03);
             --surface-light: rgba(255, 255, 255, 0.05);
-            --text-main: #FFFFFF;
-            --text-muted: #888888;
+            --text-main: #FFFFFF; /* Stark White */
+            --text-muted: #94a3b8; /* Slate Gray */
             --accent: #C5A059;
             --accent-dim: rgba(197, 160, 89, 0.15);
             --border: rgba(255, 255, 255, 0.1);
@@ -39,7 +39,7 @@
             position: relative;
         }
 
-        /* Ultra-fine noise to prevent 'low resolution' look */
+        /* Ultra-fine noise */
         body::after {
             content: "";
             position: fixed;
@@ -53,6 +53,7 @@
         h1, h2, h3, h4, .serif {
             font-family: 'Playfair Display', serif;
             font-weight: 400;
+            color: var(--text-main);
         }
 
         a {
@@ -65,6 +66,7 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 0 24px;
+            position: relative;
         }
 
         /* --- UI Components --- */
@@ -106,12 +108,13 @@
 
         .btn-outline {
             background-color: transparent;
-            border-color: var(--accent);
-            color: var(--accent);
+            border-color: rgba(255,255,255,0.2);
+            color: #FFF;
         }
 
         .btn-outline:hover {
-            background-color: var(--accent-dim);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.4);
         }
 
         .btn-glass {
@@ -126,9 +129,32 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
+        /* --- Header / Top Right --- */
+        .top-location {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            text-align: right;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .top-location {
+                position: relative;
+                top: 0;
+                right: 0;
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+
         /* --- Hero Section --- */
         .hero {
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -176,24 +202,7 @@
         .hero .subtitle {
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             color: var(--accent);
-            margin-bottom: 24px;
-        }
-
-        .hero .location {
-            font-size: 13px;
-            color: var(--text-muted);
-            letter-spacing: 2px;
-            text-transform: uppercase;
             margin-bottom: 40px;
-            font-weight: 500;
-        }
-
-        .hero .tagline {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 500px;
-            margin: 0 auto 60px;
-            font-weight: 300;
         }
 
         .action-bar {
@@ -205,13 +214,12 @@
 
         /* --- About Section --- */
         .section {
-            padding: 160px 0;
+            padding: 120px 0;
             border-top: 1px solid var(--border);
         }
 
         .about h2 {
             font-size: clamp(2rem, 5vw, 3.5rem);
-            color: var(--text-main);
             margin-bottom: 60px;
             max-width: 600px;
             line-height: 1.2;
@@ -231,77 +239,83 @@
 
         .about-text strong {
             color: var(--text-main);
-            font-weight: 600;
+            font-weight: 500;
         }
 
-        .mandate-rule {
-            display: block;
-            margin-top: 48px;
-            font-size: 1.5rem;
-            color: var(--text-main);
-        }
-
-        /* --- Active Mandates --- */
-        .grid-header {
-            margin-bottom: 80px;
-        }
-
-        .mandates-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2px;
-            background: var(--border);
-            border: 1px solid var(--border);
-        }
-
-        .mandate-card {
+        /* --- Glass Cards (Base) --- */
+        .glass-card {
             background: var(--surface);
-            padding: 48px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border: 1px solid transparent;
+            border: 1px solid var(--border);
+            padding: 40px;
             transition: var(--transition);
         }
 
-        .mandate-card:hover {
+        .glass-card:hover {
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.05);
         }
 
-        @media (min-width: 768px) {
-            .mandates-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .mandate-card:nth-child(5) {
-                grid-column: span 2;
-                text-align: center;
-                align-items: center;
-            }
+        /* --- Active Portfolio --- */
+        .grid-header {
+            margin-bottom: 80px;
         }
 
-        .mandate-card h3 {
-            font-size: 1.6rem;
+        .portfolio-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .portfolio-item h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
             color: var(--text-main);
-            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
 
-        .mandate-card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            font-weight: 300;
+        .portfolio-link {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .portfolio-link:hover {
+            opacity: 1;
+            text-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
         }
 
         /* --- Legacy Operations (Accordion) --- */
         .legacy-section {
-            margin-top: 80px;
+            margin-top: 60px;
             border: 1px solid var(--border);
         }
 
         .legacy-header {
             padding: 24px;
-            background: var(--surface);
+            background: rgba(255, 255, 255, 0.01);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -316,14 +330,14 @@
 
         .legacy-header:hover {
             color: var(--accent);
-            background: rgba(255,255,255,0.02);
+            background: rgba(255,255,255,0.03);
         }
 
         .legacy-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease;
-            background: var(--surface-light);
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .legacy-content.open {
@@ -339,6 +353,9 @@
             margin-bottom: 24px;
             padding-bottom: 24px;
             border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .legacy-list li:last-child {
@@ -348,124 +365,63 @@
         }
 
         .legacy-role {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-main);
-            margin-bottom: 4px;
+            font-family: 'Playfair Display', serif;
         }
 
         .legacy-company {
             color: var(--text-muted);
             font-size: 0.95rem;
+            font-family: 'JetBrains Mono', monospace;
         }
 
-        /* --- Core Competencies --- */
+        /* --- Core Competencies (3 Columns) --- */
         .competencies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(1, 1fr);
             gap: 24px;
-            margin-bottom: 80px;
+        }
+
+        @media (min-width: 768px) {
+            .competencies-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .comp-item {
-            padding: 32px 24px;
-            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 32px;
             background: var(--surface);
+            border: 1px solid var(--border);
             transition: var(--transition);
         }
 
         .comp-item:hover {
-            border-color: var(--accent-dim);
-            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-4px);
         }
 
         .comp-item h4 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--accent);
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-family: 'Inter', sans-serif;
             font-weight: 500;
+            letter-spacing: 1px;
         }
-
+        
         .comp-item p {
             font-size: 0.9rem;
             color: var(--text-muted);
-        }
-
-        .languages {
-            padding: 40px;
-            border: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .languages p {
-            font-size: 1rem;
-            color: var(--text-muted);
-            font-weight: 300;
-            line-height: 2;
-        }
-
-        /* --- Locked Infrastructure --- */
-        .locked-infrastructure {
-            margin: 80px auto;
-            max-width: 650px;
-            padding: 60px 48px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .locked-infrastructure::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #FFFFFF, transparent);
-            opacity: 0.2;
-        }
-
-        .sys-status {
-            color: #ef4444;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            margin-bottom: 24px;
-            display: block;
-            font-weight: 600;
-        }
-
-        .locked-icon {
-            color: #FFFFFF;
-            margin-bottom: 24px;
-            opacity: 0.8;
-            transition: var(--transition);
-        }
-
-        .locked-infrastructure h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: #FFFFFF;
-            margin-bottom: 16px;
-        }
-
-        .locked-text {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-            line-height: 1.8;
-            margin-bottom: 32px;
             font-family: 'Inter', sans-serif;
             font-weight: 300;
-        }
-        
-        .request-access {
-            font-size: 0.85rem;
-            color: var(--text-main);
-            letter-spacing: 2px;
-            opacity: 0.7;
-            font-weight: 500;
         }
 
         /* --- Footer CTA --- */
@@ -473,34 +429,16 @@
             padding: 120px 0;
             text-align: center;
             border-top: 1px solid var(--border);
-            background: var(--surface);
+            position: relative;
         }
 
-        .footer p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 500px;
-            margin: 0 auto 40px;
-            font-weight: 300;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 80px;
-        }
-
-        .footer-links a {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
+        .footer h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: var(--text-main);
         }
 
         /* --- Modal (QR Code) --- */
@@ -508,7 +446,7 @@
             display: none;
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.9);
+            background: rgba(2, 4, 10, 0.9);
             z-index: 9999;
             align-items: center;
             justify-content: center;
@@ -523,10 +461,10 @@
         }
 
         .modal-content {
-            background: var(--surface-light);
+            background: #060913;
             padding: 40px;
             border-radius: 4px;
-            border: 1px solid var(--accent-dim);
+            border: 1px solid rgba(255,255,255,0.1);
             text-align: center;
             max-width: 400px;
             width: 90%;
@@ -547,15 +485,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #000;
-            font-weight: bold;
             border-radius: 4px;
-            /* In a real scenario, this is an img tag pointing to a generated QR code */
         }
 
         .qr-placeholder img {
             width: 100%;
             height: 100%;
+            border-radius: 4px;
         }
 
         .close-modal {
@@ -578,6 +514,10 @@
 </head>
 <body>
 
+    <div class="top-location">
+        Jönköping<br>Sweden
+    </div>
+
     <!-- HERO -->
     <header class="hero">
         <div class="container hero-content">
@@ -587,11 +527,10 @@
             
             <h1>Jonas Hyltén</h1>
             <div class="subtitle serif">Fractional GP | Sovereign Alpha Architecture</div>
-            <div class="location">Jönköping | New York | Copenhagen</div>
 
             <div class="action-bar">
                 <a href="./jonas-hylten.vcf" class="btn btn-primary" download>Save Contact</a>
-                <button id="shareBtn" class="btn btn-outline" style="background:transparent;">Share Profile</button>
+                <button id="shareBtn" class="btn btn-outline">Share Profile</button>
                 <button id="qrBtn" class="btn btn-glass">QR Code</button>
             </div>
         </div>
@@ -601,21 +540,17 @@
     <section class="section about">
         <div class="container">
             <span class="section-label">About</span>
-            <h2>Sovereign Alpha Architecture</h2>
+            <h2 class="serif">Sovereign Alpha Architecture</h2>
             
             <div class="about-text">
-                <p>Jonas Hyltén operates at the intersection of institutional finance and agentic technology. <strong>The mandate is Stewardship</strong>: the disciplined management of capital according to Christian conservative values.</p>
+                <p>Jonas Hyltén operates at the intersection of institutional finance and agentic technology. The mandate is <strong>Stewardship</strong>: the disciplined management of capital according to Christian conservative values.</p>
                 
-                <p>In the 2026 market, value is systematically eroded by noise and excessive exposure. Jonas recognizes that true Alpha is secured in the 97% of the market that never hits a broker’s desk. He deploys the <strong>Roials Alpha Infrastructure</strong>, a proprietary system of Agentic AI designed to penetrate hidden markets and initiate discreet, principal-to-principal engagements.</p>
-                
-                <p>Jonas acts as a Fractional GP, aligning his origination engine with the specific mandates of a select group of investment partners. He utilizes autonomous agents to identify deals before they enter public knowledge and applies execution logic proven through mandates achieving <strong>>2.0x DSCR</strong>.</p>
-                
-                <strong class="mandate-rule serif">Order is the mandate.</strong>
+                <p>He provides Family Offices and Private Equity sponsors with a decisive, asymmetrical advantage in off-market origination. By deploying the <strong>Roials Alpha Infrastructure</strong>, Jonas penetrates the 97% of the market invisible to traditional networks.</p>
             </div>
         </div>
     </section>
 
-    <!-- ACTIVE MANDATES -->
+    <!-- ACTIVE PORTFOLIO -->
     <section class="section">
         <div class="container">
             <div class="grid-header">
@@ -623,26 +558,22 @@
                 <h2 class="serif" style="font-size: clamp(2rem, 4vw, 3rem);">Active Mandates</h2>
             </div>
 
-            <div class="mandates-grid">
-                <div class="mandate-card">
-                    <h3>Vienna Capital Partners</h3>
-                    <p>US/EU Private Equity & Credit</p>
+            <div class="portfolio-list">
+                <div class="portfolio-item">
+                    <h3>Roials Capital</h3>
                 </div>
-                <div class="mandate-card">
-                    <h3>LendingHub NYC</h3>
-                    <p>Securities-Based Lending Architecture</p>
+                <div class="portfolio-item">
+                    <h3>Pathmaker</h3>
                 </div>
-                <div class="mandate-card">
-                    <h3>North American Energy</h3>
-                    <p>Real Assets & Infrastructure</p>
+                <div class="portfolio-item">
+                    <h3>Hyltén Invest</h3>
                 </div>
-                <div class="mandate-card">
+                <div class="portfolio-item">
                     <h3>Eferio</h3>
-                    <p>Digital Infrastructure & TMT</p>
                 </div>
-                <div class="mandate-card" style="border: 1px solid var(--accent-dim); background: rgba(197, 160, 89, 0.02);">
-                    <h3 style="color: var(--accent);">Roials Capital</h3>
-                    <p>Proprietary Alpha Engine</p>
+                <div class="portfolio-item" style="border-color: rgba(197, 160, 89, 0.3);">
+                    <h3 style="color: var(--accent);">Roials Alpha</h3>
+                    <a href="mandate-briefing.html" class="portfolio-link" target="_blank">[Explore Infrastructure]</a>
                 </div>
             </div>
 
@@ -655,15 +586,15 @@
                 <div class="legacy-content" id="legacyContent">
                     <ul class="legacy-list">
                         <li>
-                            <div class="legacy-role serif">Founder & CEO</div>
+                            <div class="legacy-role">Founder & CEO</div>
                             <div class="legacy-company">2018–2023</div>
                         </li>
                         <li>
-                            <div class="legacy-role serif">Sales Executive, Media & TMT</div>
+                            <div class="legacy-role">Sales Executive, Media & TMT</div>
                             <div class="legacy-company">2006–2018</div>
                         </li>
                         <li>
-                            <div class="legacy-role serif">Reconnaissance Team Leader</div>
+                            <div class="legacy-role">Reconnaissance Team Leader</div>
                             <div class="legacy-company">2005–2006</div>
                         </li>
                     </ul>
@@ -673,25 +604,7 @@
         </div>
     </section>
 
-    <!-- LOCKED INFRASTRUCTURE -->
-    <section class="section" style="padding-top: 40px; padding-bottom: 40px; border-top: none;">
-        <div class="container">
-            <div class="locked-infrastructure">
-                <span class="sys-status">[ SYSTEM STATUS: ENCRYPTED ]</span>
-                <div class="locked-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
-                </div>
-                <h2>Roials Alpha Infrastructure</h2>
-                <p class="locked-text">Proprietary Agentic AI for Asymmetric Origination.<br>Access is strictly restricted to Active Mandate Partners.</p>
-                <div class="request-access">[ REQUEST ACCESS VIA MANDATE ]</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERTISE & SKILLS -->
+    <!-- CORE COMPETENCIES (Power of 3) -->
     <section class="section">
         <div class="container">
             <div class="grid-header">
@@ -700,20 +613,17 @@
             </div>
 
             <div class="competencies-grid">
-                <div class="comp-item" style="display: flex; align-items: center; justify-content: center; text-align: center;">
-                    <h4 style="margin-bottom: 0;">M&A Architecture</h4>
+                <div class="comp-item">
+                    <h4>Capital Architecture</h4>
+                    <p>M&A and Deal Structuring</p>
                 </div>
-                <div class="comp-item" style="display: flex; align-items: center; justify-content: center; text-align: center;">
-                    <h4 style="margin-bottom: 0;">Capital Origination</h4>
+                <div class="comp-item">
+                    <h4>Proprietary Alpha</h4>
+                    <p>Agentic AI Origination</p>
                 </div>
-                <div class="comp-item" style="display: flex; align-items: center; justify-content: center; text-align: center;">
-                    <h4 style="margin-bottom: 0;">Agentic AI Deployment</h4>
-                </div>
-                <div class="comp-item" style="display: flex; align-items: center; justify-content: center; text-align: center;">
-                    <h4 style="margin-bottom: 0;">Institutional Stewardship</h4>
-                </div>
-                <div class="comp-item" style="display: flex; align-items: center; justify-content: center; text-align: center;">
-                    <h4 style="margin-bottom: 0;">Asset Hardening</h4>
+                <div class="comp-item">
+                    <h4>Institutional Stewardship</h4>
+                    <p>Conservative Values & Discipline</p>
                 </div>
             </div>
         </div>
@@ -722,20 +632,10 @@
     <!-- FOOTER / CTA -->
     <footer class="footer">
         <div class="container">
-            <img src="./profile.jpg" alt="Jonas Hyltén" style="width: 48px; height: 48px; border-radius: 50%; margin-bottom: 32px; opacity: 0.5; filter: grayscale(100%); border: 1px solid var(--border);">
+            <h3>Connect for Mandate Inquiry.</h3>
             
-            <h3 style="color: var(--text-main); letter-spacing: 3px; font-size: 14px; margin-bottom: 16px;">Verification</h3>
-            <a href="https://linkedin.com/in/jonashylten" target="_blank" style="color: var(--accent); font-size: 1.1rem; text-decoration: underline; margin-bottom: 16px; display: inline-block;">View Professional Credentials on LinkedIn</a>
-            <p style="font-size: 0.95rem; font-style: italic; opacity: 0.6; margin: 0 auto;">*Mandate qualification required for principal-to-principal engagement.</p>
-            
-            <div class="action-bar" style="margin-top: 50px;">
-                <a href="mailto:jonas@roials.co" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #FFF;">Email Request</a>
-                <a href="https://wa.me/46701619978?text=Regarding%20a%20Fractional%20GP%20Mandate:" target="_blank" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #FFF;">WhatsApp</a>
-            </div>
-
-            <div class="footer-links">
-                <a href="./insights/" target="_blank">View Intelligence Substack</a>
-                <a href="./jonas-hylten.vcf" download>Save VCard</a>
+            <div class="action-bar">
+                <a href="https://www.linkedin.com/in/hylten" target="_blank" class="btn btn-outline" style="border-color: #FFF; color: #FFF;">Verify via LinkedIn</a>
             </div>
         </div>
     </footer>
@@ -746,7 +646,6 @@
             <button class="close-modal" id="closeQr">&times;</button>
             <h3 class="serif" style="color: var(--accent); margin-bottom: 24px; font-size: 1.5rem;">Connect</h3>
             <div class="qr-placeholder">
-                <!-- Using a standard chart API for a simple QR connecting to the site -->
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://hylten.github.io/Fractional-GP/&color=000000&bgcolor=ffffff" alt="QR Code">
             </div>
             <p style="font-size: 13px; color: var(--text-muted);">Scan to open this profile on your device.</p>
@@ -755,7 +654,7 @@
 
     <!-- Scripts -->
     <script>
-        // Web Share API (Mobile native sharing)
+        // Web Share API
         document.getElementById('shareBtn').addEventListener('click', async () => {
             const shareData = {
                 title: 'Jonas Hyltén | Fractional GP',
@@ -769,7 +668,6 @@
                     console.log('Share canceled', err);
                 }
             } else {
-                // Fallback: Copy to clipboard
                 navigator.clipboard.writeText(window.location.href);
                 const btn = document.getElementById('shareBtn');
                 const originalText = btn.innerText;
