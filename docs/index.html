@@ -8,18 +8,18 @@
     <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #000000;
-            --surface: #0a0a0a;
-            --surface-light: #111111;
-            --text-main: #E5E7EB;
-            --text-muted: #9CA3AF;
+            --bg-color: #0A0A0A;
+            --surface: rgba(255, 255, 255, 0.03);
+            --surface-light: rgba(255, 255, 255, 0.05);
+            --text-main: #FFFFFF;
+            --text-muted: #888888;
             --accent: #C5A059;
             --accent-dim: rgba(197, 160, 89, 0.15);
-            --border: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -36,6 +36,17 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
         h1, h2, h3, h4, .serif {
@@ -243,11 +254,19 @@
         }
 
         .mandate-card {
-            background: var(--surface-light);
+            background: var(--surface);
             padding: 48px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .mandate-card:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         @media (min-width: 768px) {
@@ -387,14 +406,15 @@
         /* --- Locked Infrastructure --- */
         .locked-infrastructure {
             margin: 80px auto;
-            max-width: 600px;
-            padding: 48px;
-            background: rgba(10, 10, 10, 0.5);
+            max-width: 650px;
+            padding: 60px 48px;
+            background: var(--surface);
             border: 1px solid var(--border);
             text-align: center;
             position: relative;
             overflow: hidden;
             border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .locked-infrastructure::before {
@@ -402,14 +422,31 @@
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            opacity: 0.3;
+            background: linear-gradient(90deg, transparent, #FFFFFF, transparent);
+            opacity: 0.2;
+        }
+
+        .sys-status {
+            color: #ef4444;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-bottom: 24px;
+            display: block;
+            font-weight: 600;
         }
 
         .locked-icon {
-            color: var(--text-muted);
+            color: #FFFFFF;
             margin-bottom: 24px;
-            opacity: 0.5;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .locked-infrastructure h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFFFFF;
+            margin-bottom: 16px;
         }
 
         .locked-text {
@@ -417,7 +454,17 @@
             color: var(--text-muted);
             letter-spacing: 0.5px;
             line-height: 1.8;
+            margin-bottom: 32px;
+            font-family: 'Inter', sans-serif;
             font-weight: 300;
+        }
+        
+        .request-access {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            letter-spacing: 2px;
+            opacity: 0.7;
+            font-weight: 500;
         }
 
         /* --- Footer CTA --- */
@@ -629,13 +676,16 @@
     <section class="section" style="padding-top: 40px; padding-bottom: 40px; border-top: none;">
         <div class="container">
             <div class="locked-infrastructure">
+                <span class="sys-status">[ SYSTEM STATUS: ENCRYPTED ]</span>
                 <div class="locked-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                     </svg>
                 </div>
-                <p class="locked-text"><strong>Roials Alpha</strong> is a closed-loop Agentic AI system.<br>Access is restricted to active mandate partners.</p>
+                <h2>Roials Alpha Infrastructure</h2>
+                <p class="locked-text">Proprietary Agentic AI for Asymmetric Origination.<br>Access is strictly restricted to Active Mandate Partners.</p>
+                <div class="request-access">[ REQUEST ACCESS VIA MANDATE ]</div>
             </div>
         </div>
     </section>
@@ -665,23 +715,21 @@
                     <h4 style="margin-bottom: 0;">Asset Hardening</h4>
                 </div>
             </div>
-
-            <div class="languages">
-                <span class="section-label" style="margin-bottom: 16px;">Languages</span>
-                <p>Swedish (Native) &bull; English (Professional) &bull; German &bull; Norwegian &bull; Spanish</p>
-            </div>
         </div>
     </section>
 
     <!-- FOOTER / CTA -->
     <footer class="footer">
         <div class="container">
-            <img src="./profile.jpg" alt="J" style="width: 48px; height: 48px; border-radius: 50%; margin-bottom: 24px; opacity: 0.5; filter: grayscale(100%);">
-            <p>Engagements by qualification. Initiate mandate below.</p>
+            <img src="./profile.jpg" alt="Jonas Hyltén" style="width: 48px; height: 48px; border-radius: 50%; margin-bottom: 32px; opacity: 0.5; filter: grayscale(100%); border: 1px solid var(--border);">
             
-            <div class="action-bar" style="margin-top: 40px;">
-                <a href="mailto:jonas@roials.co" class="btn btn-outline">Email</a>
-                <a href="https://wa.me/46701619978?text=Regarding%20a%20Fractional%20GP%20Mandate:" target="_blank" class="btn btn-outline" style="border-color: #2a2a2a; color: #E5E7EB;">WhatsApp</a>
+            <h3 style="color: var(--text-main); letter-spacing: 3px; font-size: 14px; margin-bottom: 16px;">Verification</h3>
+            <a href="https://linkedin.com/in/jonashylten" target="_blank" style="color: var(--accent); font-size: 1.1rem; text-decoration: underline; margin-bottom: 16px; display: inline-block;">View Professional Credentials on LinkedIn</a>
+            <p style="font-size: 0.95rem; font-style: italic; opacity: 0.6; margin: 0 auto;">*Mandate qualification required for principal-to-principal engagement.</p>
+            
+            <div class="action-bar" style="margin-top: 50px;">
+                <a href="mailto:jonas@roials.co" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #FFF;">Email Request</a>
+                <a href="https://wa.me/46701619978?text=Regarding%20a%20Fractional%20GP%20Mandate:" target="_blank" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #FFF;">WhatsApp</a>
             </div>
 
             <div class="footer-links">
