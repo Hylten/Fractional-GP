@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Private Mandate | Proprietary Alpha Origination</title>
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #000000;
+            --surface: #0a0a0a;
+            --surface-light: #111111;
+            --text-main: #E5E7EB;
+            --text-muted: #9CA3AF;
+            --accent: #C5A059;
+            --border: rgba(255, 255, 255, 0.05);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .serif {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .dossier-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .classification {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #ef4444; /* Subtle red for classification */
+            margin-bottom: 24px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .dossier-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--text-main);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .dossier-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Content Blocks */
+        section {
+            margin-bottom: 60px;
+        }
+
+        h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 24px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        li {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            font-weight: 300;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Numbered list for Qualification */
+        .qualification-list {
+            counter-reset: q-counter;
+        }
+
+        .qualification-list li {
+            padding-left: 40px;
+        }
+
+        .qualification-list li::before {
+            counter-increment: q-counter;
+            content: counter(q-counter) ".";
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            left: 0;
+            top: -2px;
+        }
+
+        .disclaimer {
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--text-muted);
+            border-left: 2px solid var(--border);
+            padding-left: 24px;
+            margin-top: 24px;
+        }
+
+        .action-bar {
+            display: flex;
+            gap: 16px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--accent);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(197, 160, 89, 0.1);
+        }
+
+        .btn-glass {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-color: var(--border);
+            color: var(--text-muted);
+        }
+
+        .btn-glass:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--text-main);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="dossier-header">
+            <span class="classification">Strictly Confidential</span>
+            <h1 class="dossier-title serif">Private Mandate – Proprietary Alpha Origination</h1>
+            <div class="dossier-subtitle">Confidential Briefing | Pilot Phase | Q2 2026</div>
+        </header>
+
+        <section>
+            <h3>The Objective</h3>
+            <p>Establishment of a dedicated origination loop. I act as your Fractional GP, deploying the <strong>Roials Alpha Infrastructure</strong> to penetrate the 97% of the market invisible to traditional institutional networks. Target sectors: Mid-market, Infrastructure, and Private Credit.</p>
+        </section>
+
+        <section>
+            <h3>The Asymmetric Edge</h3>
+            <ul>
+                <li><strong>Roials Alpha:</strong> Deployment of proprietary Agentic AI for autonomous discovery of off-market assets.</li>
+                <li><strong>Sovereign Execution:</strong> Direct principal-to-principal engagement. I personally architect every critical move; the technology provides the scale, I provide the closing power.</li>
+                <li><strong>Proven Logic:</strong> Execution calibrated to <strong>>2.0x DSCR</strong> standards. This is institutionalised dealmaking, supercharged by machine intelligence.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Mandate Structure (90-Day Pilot)</h3>
+            <ul>
+                <li><strong>Monthly Investment:</strong> SEK 25,000 (Operational access + GP time).</li>
+                <li><strong>Success Premium:</strong> 1.5% on closed transactions.</li>
+                <li><strong>Exclusivity:</strong> I accept only 4–6 active mandates per quarter to ensure surgical focus.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Qualification Process</h3>
+            <ul class="qualification-list">
+                <li><strong>Direct Pipeline Review (20 min):</strong> Review of live AI-generated targets.</li>
+                <li><strong>Board Alignment:</strong> Final validation with my Advisory Board (Institutional Principal background).</li>
+            </ul>
+            <p class="disclaimer">This process filters ~95% of market noise, ensuring I only partner with serious counterparties.</p>
+        </section>
+
+        <section style="border-top: 1px solid var(--border); padding-top: 60px; margin-top: 60px;">
+            <h3>The Next Step</h3>
+            <p>Connect with me on LinkedIn to verify track record or schedule the <strong>Meeting 1 (20 min virtual)</strong> below to lock in one of the remaining slots.</p>
+            
+            <div class="action-bar">
+                <a href="https://linkedin.com/in/jonashylten" target="_blank" class="btn btn-glass">Verify on LinkedIn</a>
+                <!-- Replace with actual booking link -->
+                <a href="mailto:jonas@roials.co?subject=Meeting%201%20Request%20-%20Private%20Mandate" class="btn btn-outline">Schedule Meeting 1</a>
+            </div>
+        </section>
+        
+        <div style="text-align: center; margin-top: 100px;">
+            <a href="./" style="font-size: 10px; text-transform: uppercase; letter-spacing: 3px; color: var(--text-muted);">Return to Architecture</a>
+        </div>
+    </div>
+
+</body>
+</html>
