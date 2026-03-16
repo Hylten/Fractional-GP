@@ -129,6 +129,27 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
+        /* --- Top Actions --- */
+        .top-actions {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex;
+            gap: 12px;
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .top-actions {
+                position: relative;
+                top: 0;
+                right: 0;
+                justify-content: center;
+                margin-top: 40px;
+                flex-wrap: wrap;
+            }
+        }
+
         /* --- Hero Section --- */
         .hero {
             min-height: 80vh;
@@ -558,6 +579,13 @@
 </head>
 <body>
 
+    <!-- TOP ACTIONS -->
+    <div class="top-actions">
+        <a href="./jonas-hylten.vcf" class="btn btn-primary" download>Save Contact</a>
+        <button id="shareBtn" class="btn btn-outline">Share Profile</button>
+        <button id="qrBtn" class="btn btn-glass">QR Code</button>
+    </div>
+
     <!-- HERO -->
     <header class="hero">
         <div class="container hero-content">
@@ -567,12 +595,6 @@
             
             <h1>Jonas Hyltén</h1>
             <div class="subtitle serif">Fractional GP | Sovereign Alpha Architecture</div>
-
-            <div class="action-bar">
-                <a href="./jonas-hylten.vcf" class="btn btn-primary" download>Save Contact</a>
-                <button id="shareBtn" class="btn btn-outline">Share Profile</button>
-                <button id="qrBtn" class="btn btn-glass">QR Code</button>
-            </div>
         </div>
     </header>
 
@@ -583,9 +605,12 @@
             <h2 class="serif">Sovereign Alpha Architecture</h2>
             
             <div class="about-text">
-                <p>Jonas Hyltén operates at the intersection of institutional finance and agentic technology. The mandate is <strong>Stewardship</strong>: the disciplined management of capital according to Christian conservative values.</p>
+                <p>Jonas Hyltén is a Dealmaker operating at the intersection of institutional finance and agentic technology. He provides Family Offices and Private Equity sponsors with a decisive, asymmetrical advantage in off-market origination.</p>
                 
-                <p>He provides Family Offices and Private Equity sponsors with a decisive, asymmetrical advantage in off-market origination. By deploying the <strong>Roials Alpha Infrastructure</strong>, Jonas penetrates the 97% of the market invisible to traditional networks.</p>
+                <p>The mandate is <strong>Stewardship</strong>: the disciplined management of capital according to Christian conservative values. By deploying the <strong>Roials Alpha Infrastructure</strong>, Jonas penetrates the 97% of the market invisible to traditional networks, negotiating high-yield real assets and enterprises with a minimum DSCR of 2.0.</p>
+                
+                <h3 class="serif" style="margin-top: 48px; margin-bottom: 24px; font-size: 1.8rem; color: var(--text-main);">Proprietary Architecture</h3>
+                <p>The model integrates a proprietary AI engine with dedicated Fractional GP execution, ensuring every mandate is principal-led from algorithmic targeting to final negotiation. Engagement is strictly selective; advanced stages of the mandate involve a Senior Advisory Board with institutional principal backgrounds to guarantee absolute execution quality.</p>
             </div>
         </div>
     </section>
