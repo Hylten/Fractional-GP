@@ -42,4 +42,6 @@ Failure to deploy such systems may eventually be construed not as a technologica
 
 The emerging standard is clear: in an environment where computational agents can deliver high‑fidelity, low‑latency risk intelligence, fiduciary duty expands to encompass the obligation to utilize these capabilities in the service of capital protection.
 
-Access is restricted to approved mandates. Minimum target size: $5M+.
+Access is restricted to approved mandates.
+
+Minimum target size: $5M+.

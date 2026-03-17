@@ -44,4 +44,6 @@ Over time, this produces a more stable operational climate and enhances the reli
 
 Structural rest, when institutionalized, functions not as withdrawal but as an algorithmic safeguard.a boundary that prevents the system from collapsing into noise.
 
-Access is restricted to approved mandates. Minimum target size: $5M+.
+Access is restricted to approved mandates.
+
+Minimum target size: $5M+.
