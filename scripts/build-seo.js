@@ -12,7 +12,7 @@ const DIST_DIR = path.join(ROOT_DIR, 'docs');
 const INSIGHTS_DIST_DIR = path.join(DIST_DIR, 'insights');
 
 const SITE_URL = 'https://hylten.github.io/Fractional-GP';
-const BRAND_NAME = 'Fractional GP';
+const BRAND_NAME = 'Off-Market Alpha Architect';
 const ACCENT = '#C5A059';
 
 const ensureDir = (dirPath) => {
@@ -61,28 +61,28 @@ function buildBlogHTML() {
     a { color: ${ACCENT}; text-decoration: none; transition: 0.3s; }
     a:hover { opacity: 0.7; }
     .container { max-width: 820px; margin: 0 auto; padding: 180px 24px 120px; }
-    .back { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 80px; display: inline-block; font-weight: 500; }
+    .back { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #aaaaaa; margin-bottom: 80px; display: inline-block; font-weight: 500; }
     .back:hover { color: ${ACCENT}; }
     h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #ffffff; margin-bottom: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -0.02em; }
-    .meta { font-size: 11px; color: #bbbbbb; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #1a1a1a; font-weight: 500; }
+    .meta { font-size: 11px; color: #eeeeee; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #222; font-weight: 500; }
     .content p, .content li { font-size: 1.15rem; line-height: 2.2; color: #ffffff; font-weight: 300; margin-bottom: 48px; }
     .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #ffffff; margin: 80px 0 40px; font-weight: 300; line-height: 1.2; }
     .content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #ffffff; margin: 60px 0 30px; font-weight: 400; }
     .content strong { color: #ffffff; font-weight: 600; }
     .content em { font-style: italic; color: #ffffff; }
-    .content blockquote { border-left: 2px solid ${ACCENT}; padding-left: 32px; margin: 60px 0; font-style: italic; color: #cccccc; font-size: 1.2rem; }
+    .content blockquote { border-left: 2px solid ${ACCENT}; padding-left: 32px; margin: 60px 0; font-style: italic; color: #eeeeee; font-size: 1.2rem; }
     .home-btn { display: inline-block; padding: 16px 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #ffffff; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; border-radius: 0; margin-top: 100px; transition: 0.4s; }
     .home-btn:hover { background: ${ACCENT}; color: #000; border-color: ${ACCENT}; }
     .wa-btn { position: fixed; bottom: 32px; right: 32px; z-index: 1000; background: #111; padding: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.6); opacity: 0.4; transition: 0.3s; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; }
     .wa-btn:hover { opacity: 1; transform: translateY(-2px); }
-    .list-item { margin-bottom: 140px; padding-bottom: 100px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: left; }
+    .list-item { margin-bottom: 140px; padding-bottom: 100px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
     .list-item h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: ${ACCENT}; margin-bottom: 32px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; }
-    .list-item .desc { font-size: 1.1rem; color: #ccc; line-height: 1.8; font-weight: 300; max-width: 650px; margin-bottom: 40px; }
-    .list-item .date { font-size: 10px; color: ${ACCENT}; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 32px; font-weight: 500; opacity: 0.8; }
+    .list-item .desc { font-size: 1.1rem; color: #eeeeee; line-height: 1.8; font-weight: 300; max-width: 650px; margin-bottom: 40px; }
+    .list-item .date { font-size: 10px; color: ${ACCENT}; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 32px; font-weight: 500; opacity: 1; }
     .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
     .list-item .read:hover { border-bottom-color: ${ACCENT}; color: ${ACCENT}; }
     .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: ${ACCENT}; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
-    .index-sub { font-size: 1.15rem; color: #aaa; max-width: 700px; margin: 0 auto 140px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
+    .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 140px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
   </style>
 </head>
 <body>
@@ -136,8 +136,8 @@ async function generateSEO() {
   const indexBody = `
     <div class="container" style="max-width:900px; text-align:center;">
       <a href="/Fractional-GP/" class="back">&larr; Back to Profile</a>
-      <h1 class="index-title">Insights</h1>
-      <p class="index-sub">Institutional briefings on Fractional GP architecture, Agentic AI infrastructure, and proprietary deal flow for mid-market principals.</p>
+      <h1 class="index-title">${BRAND_NAME}</h1>
+      <p class="index-sub">Institutional briefings on Off-Market Alpha architecture, Agentic AI infrastructure, and proprietary deal flow for mid-market principals.</p>
       ${listItems}
     </div>`;
 

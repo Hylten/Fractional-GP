@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonas Hyltén | Fractional GP & Sovereign Architecture</title>
-    <meta name="description" content="Fractional GP | Sovereign Alpha Architecture">
+    <title>Off-Market Alpha Architect | Sovereignty in Mid-Market Origination</title>
+    <meta name="description" content="Proprietary deal flow architecture and OPS-Alpha for mid-market private equity principals. Institutional-grade origination and execution infrastructure.">
     <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -771,13 +771,13 @@
                                 <div class="comp-status">[03]</div>
                                 <h4>Institutional Stewardship</h4>
                             </a>
-                            <div class="comp-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <div class="comp-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;" onclick="revealInquiry(this)">
                                 <div class="comp-status">[04]</div>
-                                <h4 style="color: rgba(255,255,255,0.3); font-size: 10px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; font-family: 'JetBrains Mono';">Strategic Origination</h4>
+                                <h4 class="origination-title" style="color: rgba(255,255,255,0.3); font-size: 10px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; font-family: 'JetBrains Mono';">Strategic Origination</h4>
                                 <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Fractional%20GP%20Mandate" 
                                    target="_blank" 
-                                   class="glow-text" 
-                                   style="font-size: 13px; letter-spacing: 6px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; font-weight: 800; text-decoration: none; display: inline-block;">
+                                   class="glow-text inquire-reveal" 
+                                   style="font-size: 13px; letter-spacing: 6px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; font-weight: 800; text-decoration: none; display: none;">
                                    INQUIRE
                                 </a>
                             </div>
@@ -948,6 +948,15 @@
             });
         }
 
+        // Origination Inquiry Reveal
+        function revealInquiry(el) {
+            const title = el.querySelector('.origination-title');
+            const link = el.querySelector('.inquire-reveal');
+            if (title && link) {
+                title.style.display = 'none';
+                link.style.display = 'inline-block';
+            }
+        }
     </script>
 </body>
 </html>
