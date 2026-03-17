@@ -455,6 +455,24 @@
             transform: translateY(-2px);
         }
 
+        .glow-text {
+            color: var(--accent) !important;
+            text-shadow: 0 0 15px rgba(197, 160, 89, 0.6), 0 0 25px rgba(197, 160, 89, 0.3);
+            animation: pulse-glow 2s infinite ease-in-out;
+            transition: all 0.3s ease;
+        }
+
+        .glow-text:hover {
+            text-shadow: 0 0 25px rgba(197, 160, 89, 0.8), 0 0 40px rgba(197, 160, 89, 0.5);
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse-glow {
+            0% { opacity: 0.9; text-shadow: 0 0 10px rgba(197, 160, 89, 0.4); }
+            50% { opacity: 1; text-shadow: 0 0 25px rgba(197, 160, 89, 0.8); }
+            100% { opacity: 0.9; text-shadow: 0 0 10px rgba(197, 160, 89, 0.4); }
+        }
+
         .comp-status {
             font-family: 'JetBrains Mono', monospace;
             font-size: 10px;
@@ -753,13 +771,13 @@
                                 <div class="comp-status">[03]</div>
                                 <h4>Institutional Stewardship</h4>
                             </a>
-                            <div class="comp-item" style="cursor: pointer;" onclick="revealInquiry(this)">
+                            <div class="comp-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <div class="comp-status">[04]</div>
-                                <h4 class="origination-title">Strategic Origination</h4>
+                                <h4 style="color: rgba(255,255,255,0.3); font-size: 10px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; font-family: 'JetBrains Mono';">Strategic Origination</h4>
                                 <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Fractional%20GP%20Mandate" 
                                    target="_blank" 
-                                   class="inquire-reveal" 
-                                   style="display: none; color: var(--accent); font-size: 11px; letter-spacing: 4px; border-bottom: 1px solid var(--accent); padding-bottom: 5px; font-weight: 700; text-decoration: none; margin-top: 10px;">
+                                   class="glow-text" 
+                                   style="font-size: 13px; letter-spacing: 6px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; font-weight: 800; text-decoration: none; display: inline-block;">
                                    INQUIRE
                                 </a>
                             </div>
@@ -930,15 +948,6 @@
             });
         }
 
-        // Origination Inquiry Reveal
-        function revealInquiry(el) {
-            const title = el.querySelector('.origination-title');
-            const link = el.querySelector('.inquire-reveal');
-            if (title && link) {
-                title.style.display = 'none';
-                link.style.display = 'inline-block';
-            }
-        }
     </script>
 </body>
 </html>
