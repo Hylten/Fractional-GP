@@ -753,10 +753,16 @@
                                 <div class="comp-status">[03]</div>
                                 <h4>Institutional Stewardship</h4>
                             </a>
-                            <a href="https://roialscapital.com/" target="_blank" class="comp-item" style="text-decoration: none;">
+                            <div class="comp-item" style="cursor: pointer;" onclick="revealInquiry(this)">
                                 <div class="comp-status">[04]</div>
-                                <h4>Strategic Origination</h4>
-                            </a>
+                                <h4 class="origination-title">Strategic Origination</h4>
+                                <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Fractional%20GP%20Mandate" 
+                                   target="_blank" 
+                                   class="inquire-reveal" 
+                                   style="display: none; color: var(--accent); font-size: 11px; letter-spacing: 4px; border-bottom: 1px solid var(--accent); padding-bottom: 5px; font-weight: 700; text-decoration: none; margin-top: 10px;">
+                                   INQUIRE
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -917,11 +923,21 @@
         const legacyContent = document.getElementById('legacyContent');
         const legacyIcon = document.getElementById('legacyIcon');
 
-        if(legacyToggle) {
+            if(legacyToggle) {
             legacyToggle.addEventListener('click', () => {
                 legacyContent.classList.toggle('open');
                 legacyIcon.innerText = legacyContent.classList.contains('open') ? '-' : '+';
             });
+        }
+
+        // Origination Inquiry Reveal
+        function revealInquiry(el) {
+            const title = el.querySelector('.origination-title');
+            const link = el.querySelector('.inquire-reveal');
+            if (title && link) {
+                title.style.display = 'none';
+                link.style.display = 'inline-block';
+            }
         }
     </script>
 </body>
