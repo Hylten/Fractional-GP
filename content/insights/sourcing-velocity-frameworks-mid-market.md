@@ -58,21 +58,25 @@ Velocity therefore requires a governance protocol that does not rely on repetiti
 
 It has four defining attributes: 
 
-1. **Directional Specificity** A mandate is not a search fund thesis or a general acquisition plan.
+1. **Directional Specificity*
+* A mandate is not a search fund thesis or a general acquisition plan.
 
 It is a constraint‑tight statement of intent directed at a defined asset class architecture. 
 
-2. **Counterparty Alignment** It speaks in the language of owners, not intermediaries.
+2. **Counterparty Alignment*
+* It speaks in the language of owners, not intermediaries.
 
 It collapses distance between investor and operator by communicating operational literacy and transaction feasibility. 
 
-3. **Structural Feasibility** A mandate defines deal structures the investor can execute with zero ambiguity.
+3. **Structural Feasibility*
+* A mandate defines deal structures the investor can execute with zero ambiguity.
 
 Ambiguity erodes credibility.
 
 Feasibility compounds it. 
 
-4. **Temporal Authority** A mandate is not evergreen.
+4. **Temporal Authority*
+* A mandate is not evergreen.
 
 Its authority derives from its active, time‑bounded execution window.
 
@@ -88,9 +92,13 @@ The difference manifests in sourcing velocity: credible mandates trigger inbound
 -  ## 
 
 3. Velocity Architecture: Constraints, Channels, and Convergence A sourcing velocity framework has three layers:
-• **Constraint Layer**
-• **Channel Layer**
-• **Convergence Layer** Velocity emerges when these layers are both precise and aligned. # ## 3.1 Constraint Layer: Defining 
+• **Constraint Layer*
+*
+• **Channel Layer*
+*
+• **Convergence Layer*
+* Velocity emerges when these layers are both precise and aligned. # ## 3.
+1 Constraint Layer: Defining 
 
 ## THE MANDATE
 
@@ -114,21 +122,27 @@ A high‑authority mandate contains six non‑negotiable constraint parameters:
 
 This compresses cycle time and elevates signal fidelity.
 
-Constraint clarity drives velocity. # ## 3.2 Channel Layer: Principal‑Grade Access Paths Channels in fragmented mid‑market sectors are not lead sources.
+Constraint clarity drives velocity. # ## 3.
+2 Channel Layer: Principal‑Grade Access Paths Channels in fragmented mid‑market sectors are not lead sources.
 
 They are disclosure surfaces.
 
 A channel is only functional if it creates a low‑friction disclosure environment for operators with zero incentive to enter a competitive auction.
 
 Four channel classes consistently preserve principal‑to‑principal integrity:
-• **Operator‑adjacent professional nodes** (niche accountants, sector‑specific legal practitioners, supply‑chain integrators)
-• **Operational infrastructure nodes** (industry software vendors, logistics providers, maintenance ecosystems)
-• **Regulatory and compliance nodes** (licensing bodies, safety auditors, environmental registrars)
-• **Micro‑cluster industry associations** (non‑federalized regional associations with minimal institutional infiltration) Velocity is a function of disclosure density.
+• **Operator‑adjacent professional nodes*
+* (niche accountants, sector‑specific legal practitioners, supply‑chain integrators)
+• **Operational infrastructure nodes*
+* (industry software vendors, logistics providers, maintenance ecosystems)
+• **Regulatory and compliance nodes*
+* (licensing bodies, safety auditors, environmental registrars)
+• **Micro‑cluster industry associations*
+* (non‑federalized regional associations with minimal institutional infiltration) Velocity is a function of disclosure density.
 
 Disclosure density increases when channel friction decreases.
 
-High‑noise channels reduce velocity by diluting signal among irrelevant volumes. # ## 3.3 Convergence Layer: From Disclosure to Transactional Trajectory Once an operator discloses, the convergence layer determines whether momentum accelerates or decays.
+High‑noise channels reduce velocity by diluting signal among irrelevant volumes. # ## 3.
+3 Convergence Layer: From Disclosure to Transactional Trajectory Once an operator discloses, the convergence layer determines whether momentum accelerates or decays.
 
 Convergence requires:
 • Asymmetric preparation advantage
@@ -148,21 +162,24 @@ Velocity is protected through fast feasibility analysis conducted with principal
 
 4. Sector Fragmentation Types and Velocity Considerations Fragmentation is not monolithic.
 
-There are three dominant fragmentation types, each requiring different velocity mechanics. # ## 4.1 Operational Fragmentation High‑variability margin structures, labor‑intensive models, and localized demand curves generate operational fragmentation.
+There are three dominant fragmentation types, each requiring different velocity mechanics. # ## 4.
+1 Operational Fragmentation High‑variability margin structures, labor‑intensive models, and localized demand curves generate operational fragmentation.
 
 Examples include:
 • Route‑based services
 • Niche manufacturing micro‑clusters
 • Distributed maintenance ecosystems Velocity challenge: variability impairs comparability.
 
-Solution: mandate precision removes ambiguity and increases operator trust in investor literacy. # ## 4.2 Informational Fragmentation Sectors where the majority of operators do not track institutional‑grade metrics.
+Solution: mandate precision removes ambiguity and increases operator trust in investor literacy. # ## 4.
+2 Informational Fragmentation Sectors where the majority of operators do not track institutional‑grade metrics.
 
 Examples:
 • Founder‑operated service networks
 • Analog‑native asset operators
 • Low‑visibility B2B verticals Velocity challenge: operators assume investors cannot understand the business.
 
-Solution: authoritative mandate language rooted in operational structures, not financial abstractions. # ## 4.3 Intermediary Fragmentation Sectors where brokers are either absent or structurally misaligned.
+Solution: authoritative mandate language rooted in operational structures, not financial abstractions. # ## 4.
+3 Intermediary Fragmentation Sectors where brokers are either absent or structurally misaligned.
 
 Examples:
 • Regulated trade clusters
@@ -182,23 +199,30 @@ Each is discrete.
 
 Each is non‑negotiable. 
 
-1. **Directional Statement** Defines the acquisition vector (e.g., horizontal consolidation, platform formation, selective regional roll‑up). 
+1. **Directional Statement*
+* Defines the acquisition vector (e.g., horizontal consolidation, platform formation, selective regional roll‑up). 
 
-2. **Asset Class Definition** Anchors 
+2. **Asset Class Definition*
+* Anchors 
 
 ## THE MANDATE
 
  in operational reality and sector typology. 
 
-3. **Constraint Parameters** EV, margin dynamics, recurring revenue structure, customer concentration tolerances. 
+3. **Constraint Parameters*
+* EV, margin dynamics, recurring revenue structure, customer concentration tolerances. 
 
-4. **Disqualification Conditions** Prevents signal degradation and preserves authority. 
+4. **Disqualification Conditions*
+* Prevents signal degradation and preserves authority. 
 
-5. **Execution Window** Time‑bounded declaration reinforcing actionability. 
+5. **Execution Window*
+* Time‑bounded declaration reinforcing actionability. 
 
-6. **Transactional Capacities** Cash, structure optionality, carve‑out competence, integration capability. 
+6. **Transactional Capacities*
+* Cash, structure optionality, carve‑out competence, integration capability. 
 
-7. **Communication Tone** Direct, principal‑to‑principal, devoid of marketing vernacular.
+7. **Communication Tone*
+* Direct, principal‑to‑principal, devoid of marketing vernacular.
 
 Operators respond to clarity; they retreat from persuasion attempts.
 
@@ -253,11 +277,14 @@ Authority is fast.
 
 Three inputs consistently erode velocity: 
 
-1. **Non‑directional outreach** Generates volume and destroys authority. 
+1. **Non‑directional outreach*
+* Generates volume and destroys authority. 
 
-2. **Delegated first‑touch conversations** Operators expect principals, not agents. 
+2. **Delegated first‑touch conversations*
+* Operators expect principals, not agents. 
 
-3. **Ambiguous criteria** Forces operators to guess their fit, increasing friction and decreasing disclosure likelihood.
+3. **Ambiguous criteria*
+* Forces operators to guess their fit, increasing friction and decreasing disclosure likelihood.
 
 Removing these inputs increases effective velocity even if activity volume decreases. 
 -  
@@ -279,7 +306,8 @@ Velocity is a principal metric, not a marketing metric.
 -  
 -  ## 
 
-10. Application Example: Fragmented Technical Services Sector Consider a sector with: 5,000‑10,000 operators, multi‑region distribution, low technology penetration, high compliance burden, and no central brokerage layer.
+10. Application Example: Fragmented Technical Services Sector Consider a sector with: 5,000‑10,00
+0 operators, multi‑region distribution, low technology penetration, high compliance burden, and no central brokerage layer.
 
 A conventional sourcing approach would yield:
 • High outbound volume
@@ -300,11 +328,14 @@ A conventional sourcing approach would yield:
 
 Three alignment levers accelerate velocity: 
 
-1. **Certainty Preference** Operators choose buyers who minimize ambiguity. 
+1. **Certainty Preference*
+* Operators choose buyers who minimize ambiguity. 
 
-2. **Continuity Preference** Buyers who articulate post‑transaction continuity pathways reduce operator risk perception. 
+2. **Continuity Preference*
+* Buyers who articulate post‑transaction continuity pathways reduce operator risk perception. 
 
-3. **Identity Preference** Operators prefer principals who understand their operational identity without translation.
+3. **Identity Preference*
+* Operators prefer principals who understand their operational identity without translation.
 
 The Principal’s Mandate contains all three. 
 -  
@@ -348,6 +379,7 @@ Architecture is the cause.
 Mandate is the instrument. 
 -  
 -  
--  **Off‑Market Alpha Architect** Directional Sourcing Architecture for Principals
+-  **Off‑Market Alpha Architect*
+* Directional Sourcing Architecture for Principals
 
 Access is restricted to approved mandates. Minimum target size: $5M+.

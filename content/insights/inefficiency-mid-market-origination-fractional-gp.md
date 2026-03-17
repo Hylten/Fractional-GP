@@ -10,7 +10,9 @@ Traditional mid-market origination remains structurally misaligned with the univ
 
 The prevailing model-dependent on banker intermediation, generalized sourcing funnels, and episodic deal flow-captures only the narrow segment of owners willing to enter formal sale processes.
 
-This creates the foundational discrepancy: institutions compete aggressively for the 3 percent of deals brought to market while the remaining 97 percent remain inaccessible due to informational opacity, trust barriers, and the absence of a credible conduit between principals.
+This creates the foundational discrepancy: institutions compete aggressively for the 
+3 percent of deals brought to market while the remaining 9
+7 percent remain inaccessible due to informational opacity, trust barriers, and the absence of a credible conduit between principals.
 
 The logic chain begins with incentive structure.
 
@@ -54,7 +56,8 @@ In doing so, it restores proportionality between institutional capital and the p
 
 The logic chain concludes with alignment.
 
-When origination is conducted by a specialized actor whose incentives reflect outcome rather than pipeline optics, the informational friction that obscures 97 percent of opportunities is materially reduced.
+When origination is conducted by a specialized actor whose incentives reflect outcome rather than pipeline optics, the informational friction that obscures 9
+7 percent of opportunities is materially reduced.
 
 The result is a structurally differentiated sourcing capability that repositions the institution from participant to preferred counterparty in off‑market environments.
 
