@@ -8,9 +8,7 @@ slug: "sourcing-velocity-frameworks-mid-market"
 
 # Sourcing Velocity Frameworks for Fragmented Mid‑Market Sector
 
-s
-
-## Applying the Principal’s Mandate for Directional, Authority‑Driven Deal Generation Fragmented mid‑market sectors present both a structural opportunity and a structural impediment
+s Applying the Principal’s Mandate for Directional, Authority‑Driven Deal Generation Fragmented mid‑market sectors present both a structural opportunity and a structural impediment
 
 .
 
@@ -147,10 +145,8 @@ Velocity Architecture: Constraints, Channels, and Convergence A sourcing velocit
 
 * 
 
-* Velocity emerges when these layers are both precise and aligned. ## 3.
-1 Constraint Layer: Defining 
-
-## THE MANDAT
+* Velocity emerges when these layers are both precise and aligned. 3.
+1 Constraint Layer: Defining THE MANDAT
 
 E
 
@@ -186,7 +182,7 @@ Time‑bound capital deployment window When constraints are explicit, operators 
 
 This compresses cycle time and elevates signal fidelity.
 
-Constraint clarity drives velocity. ## 3.
+Constraint clarity drives velocity. 3.
 2 Channel Layer: Principal‑Grade Access Paths Channels in fragmented mid‑market sectors are not lead sources.
 
 They are disclosure surfaces.
@@ -221,10 +217,10 @@ Four channel classes consistently preserve principal‑to‑principal integrity:
 
 Disclosure density increases when channel friction decreases.
 
-High‑noise channels reduce velocity by diluting signal among irrelevant volumes. ## 3.
+High‑noise channels reduce velocity by diluting signal among irrelevant volumes. 3.
 3 Convergence Layer: From Disclosure to Transactional Trajectory Once an operator discloses, the convergence 
 
-# Layer D: etermines whether momentum accelerates or decays
+### Layer D: etermines whether momentum accelerates or decays
 
 .
 
@@ -255,7 +251,7 @@ Velocity is protected through fast feasibility analysis conducted with principal
 
 Sector Fragmentation Types and Velocity Considerations Fragmentation is not monolithic.
 
-There are three dominant fragmentation types, each requiring different velocity mechanics. ## 4.
+There are three dominant fragmentation types, each requiring different velocity mechanics. 4.
 1 Operational Fragmentation High‑variability margin structures, labor‑intensive models, and localized demand curves generate operational fragmentation.
 
 Examples include:
@@ -266,7 +262,7 @@ Examples include:
 
 • Distributed maintenance ecosystems Velocity challenge: variability impairs comparability.
 
-Solution: mandate precision removes ambiguity and increases operator trust in investor literacy. ## 4.
+Solution: mandate precision removes ambiguity and increases operator trust in investor literacy. 4.
 2 Informational Fragmentation Sectors where the majority of operators do not track institutional‑grade metrics.
 
 Examples:
@@ -277,7 +273,7 @@ Examples:
 
 • Low‑visibility B2B verticals Velocity challenge: operators assume investors cannot understand the business.
 
-Solution: authoritative mandate language rooted in operational structures, not financial abstractions. ## 4.
+Solution: authoritative mandate language rooted in operational structures, not financial abstractions. 4.
 3 Intermediary Fragmentation Sectors where brokers are either absent or structurally misaligned.
 
 Examples:
@@ -315,9 +311,7 @@ Each is non‑negotiable.
 
 * 
 
-* Anchors 
-
-## THE MANDAT
+* Anchors THE MANDAT
 
 E
 
