@@ -1,9 +1,10 @@
----title: "The Mid-Market Friction: A Logic Chain for Fractional GP Specialization"
+---
+title: "The Mid-Market Friction: A Logic Chain for Fractional GP Specialization"
 description: "An inquiry into the structural inefficiencies of traditional off-market origination and the mechanics of the Fractional GP as a corrective layer for selective mandates."
 date: "2025-09-23"
 author: "ROIALS CAPITAL (Institutional Review)"
 slug: "inefficiency-mid-market-origination-fractional-gp"
---- 
+---
 
 Traditional mid-market origination remains structurally misaligned with the universe of off‑market transactions.
 
