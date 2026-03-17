@@ -4,7 +4,7 @@ description: "A principal-grade analytical architecture for accelerating proprie
 date: "2026-03-20"
 author: "Off-Market Alpha Architect"
 slug: "sourcing-velocity-frameworks-mid-market"
----
+--- 
 
 # Sourcing Velocity Frameworks for Fragmented Mid‑Market Sectors # 
 

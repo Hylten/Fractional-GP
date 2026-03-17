@@ -4,7 +4,7 @@ description: "An inquiry into the structural inefficiencies of traditional off-m
 date: "2025-09-23"
 author: "ROIALS CAPITAL (Institutional Review)"
 slug: "inefficiency-mid-market-origination-fractional-gp"
----
+--- 
 
 Traditional mid-market origination remains structurally misaligned with the universe of off‑market transactions.
 

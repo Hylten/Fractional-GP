@@ -4,7 +4,7 @@ description: "A technical evaluation of algorithmic risk surveillance as a fulfi
 date: "2025-11-04"
 author: "ROIALS CAPITAL (Institutional Review)"
 slug: "agentic-ai-fiduciary-duty-lp-capital-protection"
----
+--- 
 
 Agentic computational systems are altering the operational foundation of fiduciary practice across private equity partnerships and family office structures.
 

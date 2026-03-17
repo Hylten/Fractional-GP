@@ -4,7 +4,7 @@ description: "A clinical analysis of institutional rest as a risk mitigation fra
 date: "2025-08-20"
 author: "ROIALS CAPITAL (Institutional Review)"
 slug: "sabbath-architect-structural-rest-algorithmic-execution"
----
+--- 
 
 Within principal-led capital environments, the operational tempo has accelerated to a pace that routinely exceeds the cognitive and systems‑level thresholds of both human and automated decision structures.
 
