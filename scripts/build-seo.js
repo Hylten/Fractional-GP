@@ -95,7 +95,7 @@ function buildBlogHTML() {
 }
 
 async function generateSEO() {
-  console.log('Building Fractional GP Site...');
+  console.log('Building Off-Market Alpha Architect Site...');
 
   // Step 1: Copy VCard landing page to dist
   copyVCard();
@@ -141,7 +141,7 @@ async function generateSEO() {
       ${listItems}
     </div>`;
 
-  const indexHtml = htmlBuilder('Insights', 'Fractional GP Insights - Institutional briefings on AI-driven deal flow and capital architecture.', indexBody);
+  const indexHtml = htmlBuilder('Insights', 'Off-Market Alpha Architect Insights - Institutional briefings on AI-driven deal flow and capital architecture.', indexBody);
   fs.writeFileSync(path.join(INSIGHTS_DIST_DIR, 'index.html'), indexHtml);
   console.log('✅ Generated /dist/insights/index.html');
 

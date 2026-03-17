@@ -1,7 +1,7 @@
 #!/bin/bash
-# Fractional GP Auto-Publish Script
+# Alpha Architect Auto-Publish Script
 
-echo "🚀 Starting Auto-Publish for Fractional GP..."
+echo "🚀 Starting Auto-Publish for Alpha Architect..."
 
 # 1. Build
 npm run build
@@ -11,11 +11,11 @@ git add .
 
 # 3. Commit
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-git commit -m "Auto-publish: Fractional GP Update [$TIMESTAMP]"
+git commit -m "Auto-publish: Alpha Architect Update [$TIMESTAMP]"
 
 # 4. Push
 echo "📦 Pushing to GitHub..."
 git push origin main
 
 echo ""
-echo "✅ Fractional GP Publish complete!"
+echo "✅ Alpha Architect Publish complete!"
