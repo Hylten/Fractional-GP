@@ -1,12 +1,12 @@
 ---
 title: "The Mid-Market Friction: A Logic Chain for Fractional GP Specialization"
 description: "An inquiry into the structural inefficiencies of traditional off-market origination and the mechanics of the Fractional GP as a corrective layer for selective mandates."
-date: "2024-03-17"
+date: "2025-09-23"
 author: "ROIALS CAPITAL (Institutional Review)"
 slug: "inefficiency-mid-market-origination-fractional-gp"
 ---
 
-Traditional mid-market origination remains structurally misaligned with the universe of off‑market transactions. The prevailing model—dependent on banker intermediation, generalized sourcing funnels, and episodic deal flow—captures only the narrow segment of owners willing to enter formal sale processes. This creates the foundational discrepancy: institutions compete aggressively for the 3 percent of deals brought to market while the remaining 97 percent remain inaccessible due to informational opacity, trust barriers, and the absence of a credible conduit between principals.
+Traditional mid-market origination remains structurally misaligned with the universe of off‑market transactions. The prevailing model-dependent on banker intermediation, generalized sourcing funnels, and episodic deal flow-captures only the narrow segment of owners willing to enter formal sale processes. This creates the foundational discrepancy: institutions compete aggressively for the 3 percent of deals brought to market while the remaining 97 percent remain inaccessible due to informational opacity, trust barriers, and the absence of a credible conduit between principals.
 
 The logic chain begins with incentive structure. Intermediaries maximize fee certainty, not discovery. Their processes favor businesses already predisposed to transact, which, by definition, excludes the majority of owner‑operators who will engage only under controlled, relationship‑driven conditions. As a result, the market normalizes a data environment defined by scarcity, cyclicality, and winner‑take‑all pricing dynamics. The inefficiency is not an aberration; it is the output of the system’s design.
 
