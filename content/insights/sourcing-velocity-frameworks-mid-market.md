@@ -220,7 +220,7 @@ Disclosure density increases when channel friction decreases.
 High‑noise channels reduce velocity by diluting signal among irrelevant volumes. 3.
 3 Convergence Layer: From Disclosure to Transactional Trajectory Once an operator discloses, the convergence 
 
-### Layer D: etermines whether momentum accelerates or decays
+# Layer D: etermines whether momentum accelerates or decays
 
 .
 
