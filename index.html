@@ -773,11 +773,11 @@
                             </a>
                             <div class="comp-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;" onclick="revealInquiry(this)">
                                 <div class="comp-status">[04]</div>
-                                <h4 class="origination-title" style="color: rgba(255,255,255,0.3); font-size: 10px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; font-family: 'JetBrains Mono';">Strategic Origination</h4>
+                                <h4 class="origination-title">Strategic Origination</h4>
                                 <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Fractional%20GP%20Mandate" 
                                    target="_blank" 
                                    class="glow-text inquire-reveal" 
-                                   style="font-size: 13px; letter-spacing: 6px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; font-weight: 800; text-decoration: none; display: none;">
+                                   style="font-size: 13px; letter-spacing: 6px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; font-weight: 800; text-decoration: none; display: none; margin-top: 20px;">
                                    INQUIRE
                                 </a>
                             </div>
@@ -953,7 +953,15 @@
             const title = el.querySelector('.origination-title');
             const link = el.querySelector('.inquire-reveal');
             if (title && link) {
-                title.style.display = 'none';
+                // Dim and shrink title as requested
+                title.style.fontSize = '9px';
+                title.style.fontFamily = 'JetBrains Mono, monospace';
+                title.style.textTransform = 'uppercase';
+                title.style.letterSpacing = '3px';
+                title.style.opacity = '0.3';
+                title.style.marginBottom = '10px';
+                
+                // Show glowing link
                 link.style.display = 'inline-block';
             }
         }
