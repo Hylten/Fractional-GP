@@ -110,7 +110,11 @@ The difference manifests in sourcing velocity: credible mandates trigger inbound
 
 •  **Channel Layer** 
 
-•  **Convergence Layer** Velocity emerges when these layers are both precise and aligned. # ## 3.1 Constraint Layer: Defining the Mandate Envelope The most common velocity failure is over‑breadth.
+•  **Convergence Layer** Velocity emerges when these layers are both precise and aligned. # ## 3.1 Constraint Layer: Defining 
+
+## THE MANDATE
+
+ Envelope The most common velocity failure is over‑breadth.
 
 In a fragmented environment, wide nets produce low‑grade noise and undermine principal authority.
 
@@ -224,7 +228,11 @@ Each is non‑negotiable.
 
 1. **Directional Statement** Defines the acquisition vector (e.g., horizontal consolidation, platform formation, selective regional roll‑up). 
 
-2. **Asset Class Definition** Anchors the mandate in operational reality and sector typology. 
+2. **Asset Class Definition** Anchors 
+
+## THE MANDATE
+
+ in operational reality and sector typology. 
 
 3. **Constraint Parameters** EV, margin dynamics, recurring revenue structure, customer concentration tolerances. 
 
