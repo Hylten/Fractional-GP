@@ -11,7 +11,7 @@ const CONTENT_DIR = path.join(ROOT_DIR, 'content', 'insights');
 const DIST_DIR = path.join(ROOT_DIR, 'docs');
 const INSIGHTS_DIST_DIR = path.join(DIST_DIR, 'insights');
 
-const SITE_URL = 'https://hylten.github.io/Fractional-GP';
+const SITE_URL = 'https://hylten.github.io/Alpha-Architect';
 const BRAND_NAME = 'Off-Market Alpha Architect';
 const ACCENT = '#C5A059';
 
@@ -125,7 +125,7 @@ async function generateSEO() {
     listItems += `
       <div class="list-item">
         <div class="date">${date}</div>
-        <a href="/Fractional-GP/insights/${slug}/" style="text-decoration:none;">
+        <a href="/Alpha-Architect/insights/${slug}/" style="text-decoration:none;">
           <h2>${title}</h2>
           <p class="desc">${description}</p>
           <span class="read">Read Briefing</span>
@@ -135,7 +135,7 @@ async function generateSEO() {
 
   const indexBody = `
     <div class="container" style="max-width:900px; text-align:center;">
-      <a href="/Fractional-GP/" class="back">&larr; Back to Profile</a>
+      <a href="/Alpha-Architect/" class="back">&larr; Back to Profile</a>
       <h1 class="index-title">${BRAND_NAME}</h1>
       <p class="index-sub">Institutional briefings on Off-Market Alpha architecture, Agentic AI infrastructure, and proprietary deal flow for mid-market principals.</p>
       ${listItems}
@@ -168,14 +168,14 @@ async function generateSEO() {
 
     const articleBody = `
     <div class="container">
-      <a href="/Fractional-GP/insights/" class="back">&larr; Back to Index</a>
+      <a href="/Alpha-Architect/insights/" class="back">&larr; Back to Index</a>
       <h1>${title}</h1>
       <div class="meta">${date} &bull; Jonas Hylt&eacute;n</div>
       <div class="content">
         ${contentHtml}
       </div>
       <div style="text-align:center;">
-        <a href="/Fractional-GP/" class="home-btn">Return to Profile</a>
+        <a href="/Alpha-Architect/" class="home-btn">Return to Profile</a>
       </div>
     </div>`;
 
