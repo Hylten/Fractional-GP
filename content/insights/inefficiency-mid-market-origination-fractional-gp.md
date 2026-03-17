@@ -57,3 +57,5 @@ The logic chain concludes with alignment.
 When origination is conducted by a specialized actor whose incentives reflect outcome rather than pipeline optics, the informational friction that obscures 97 percent of opportunities is materially reduced.
 
 The result is a structurally differentiated sourcing capability that repositions the institution from participant to preferred counterparty in off‑market environments.
+
+Access is restricted to approved mandates. Minimum target size: $5M+.

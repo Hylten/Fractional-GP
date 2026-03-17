@@ -43,3 +43,5 @@ The mechanism is straightforward: by establishing architected intervals of disen
 Over time, this produces a more stable operational climate and enhances the reliability of capital deployment.
 
 Structural rest, when institutionalized, functions not as withdrawal but as an algorithmic safeguard.a boundary that prevents the system from collapsing into noise.
+
+Access is restricted to approved mandates. Minimum target size: $5M+.
