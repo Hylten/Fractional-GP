@@ -6,11 +6,9 @@ author: "Off-Market Alpha Architect"
 slug: "sourcing-velocity-frameworks-mid-market"
 --- 
 
-# Sourcing Velocity Frameworks for Fragmented Mid‑Market Sector
+# Sourcing Velocity Frameworks for Fragmented Mid‑Market Sectors
 
-s Applying the Principal’s Mandate for Directional, Authority‑Driven Deal Generation Fragmented mid‑market sectors present both a structural opportunity and a structural impediment
-
-.
+Applying the Principal’s Mandate for Directional, Authority‑Driven Deal Generation. Fragmented mid‑market sectors present both a structural opportunity and a structural impediment.
 
 They are opportunity‑rich because information asymmetry, ownership dispersion, and operational heterogeneity create exploitable off‑market availability.
 
@@ -32,12 +30,7 @@ The objective is operational.
 
 The domain is mid‑market acquisition sourcing in fragmented verticals.
 
-- 
-
-- 
-
-- 
-1.
+## 1. Structural Realities of Fragmented Mid‑Market Deal Environments
 
 Structural Realities of Fragmented Mid‑Market Deal Environments Fragmentation is frequently mischaracterized as a trait of “small” industries.
 
@@ -67,12 +60,7 @@ However, conventional sourcing frameworks collapse under fragmentation pressure 
 
 Velocity therefore requires a governance protocol that does not rely on repetition volume but on mandate clarity and authority signaling.
 
-- 
-
-- 
-
-- 
-2.
+## 2. The Principal’s Mandate: Definition and Functional Purpose
 
 The Principal’s Mandate: Definition and Functional Purpose The Principal’s Mandate is a directional sourcing architecture that relies on the authority of the principal counterparty rather than the mechanics of the outreach channel.
 
@@ -145,10 +133,7 @@ Velocity Architecture: Constraints, Channels, and Convergence A sourcing velocit
 
 * 
 
-* Velocity emerges when these layers are both precise and aligned. 3.
-1 Constraint Layer: Defining THE MANDAT
-
-E
+* ### 3.1 Constraint Layer: Defining THE MANDATE Envelope
 
  Envelope The most common velocity failure is over‑breadth.
 
@@ -217,10 +202,8 @@ Four channel classes consistently preserve principal‑to‑principal integrity:
 
 Disclosure density increases when channel friction decreases.
 
-High‑noise channels reduce velocity by diluting signal among irrelevant volumes. 3.
-3 Convergence Layer: From Disclosure to Transactional Trajectory Once an operator discloses, the convergence 
-
-# Layer D: etermines whether momentum accelerates or decays
+High‑noise channels reduce velocity by diluting signal among irrelevant volumes. ### 3.3 Convergence Layer: From Disclosure to Transactional Trajectory
+Once an operator discloses, the convergence **Layer Determines** whether momentum accelerates or decays.
 
 .
 
