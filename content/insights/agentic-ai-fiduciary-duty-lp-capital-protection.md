@@ -2,7 +2,7 @@
 title: "Agentic Systems and the Fiduciary Mandate: Emerging Standards in Capital Protection"
 description: "A technical evaluation of algorithmic risk surveillance as a fulfillment of fiduciary duty in private equity and multi-family office environments."
 date: "2025-11-04"
-author: "ROIALS CAPITAL (Institutional Review)"
+author: "Roials Capital (Institutional Review)"
 slug: "agentic-ai-fiduciary-duty-lp-capital-protection"
 --- 
 

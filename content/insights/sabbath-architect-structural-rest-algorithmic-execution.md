@@ -2,7 +2,7 @@
 title: "The Sabbath Protocol: Structural Equilibrium in High-Velocity Mandates"
 description: "A clinical analysis of institutional rest as a risk mitigation framework and its role in maintaining algorithmic execution integrity across asset cycles."
 date: "2025-08-20"
-author: "ROIALS CAPITAL (Institutional Review)"
+author: "Roials Capital (Institutional Review)"
 slug: "sabbath-architect-structural-rest-algorithmic-execution"
 --- 
 
