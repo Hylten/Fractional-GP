@@ -649,6 +649,68 @@
             color: #fff;
         }
 
+        /* --- LINK TRANSITION OVERLAY --- */
+        .link-transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 4, 10, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .link-transition-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .link-transition-icon {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            animation: pulse-alpha 2.1s ease-in-out infinite;
+        }
+
+        .link-transition-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--accent);
+        }
+
+        .link-transition-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        @keyframes pulse {
+            50% { opacity: .5; }
+        }
+
+        .animate-pulse {
+            animation: 2.1s cubic-bezier(.4, 0, .6, 1) infinite pulse;
+        }
+
+        @keyframes pulse-alpha {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
     </style>
 </head>
 <body>
@@ -666,8 +728,8 @@
                 <img src="./profile.jpg" alt="Jonas Hyltén" class="profile-img">
             </div>
             
-            <h1>Jonas Hyltén</h1>
-            <div class="subtitle serif" style="margin-bottom: 32px;">The Architect of Off-Market Alpha</div>
+            <h1 class="animate-pulse">Jonas Hyltén</h1>
+            <div class="subtitle serif animate-pulse" style="margin-bottom: 32px;">The Architect of Off-Market Alpha</div>
             
             <div class="action-bar">
                 <a href="./jonas-hylten.vcf" class="btn btn-primary" download>Save Contact</a>
@@ -908,7 +970,7 @@
             <div class="regulatory-footer">
                 <div class="location-stamp" style="margin-bottom: 8px;">Jönköping, Sweden</div>
                 <div style="margin-bottom: 24px;">
-                    <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4; text-decoration: none;">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/hylten" target="_blank" class="animate-pulse" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4; text-decoration: none;">LinkedIn</a>
                 </div>
                 <div style="margin-bottom: 40px;">
                     <button id="legalBtn" style="background: none; border: none; font-family: 'JetBrains Mono', monospace; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); opacity: 0.3; cursor: pointer; transition: var(--transition);">Legal Disclosures</button>
@@ -952,6 +1014,14 @@
                 <p>We use strictly essential cookies for security and core functionality, and performance cookies for optimization. You can decline cookies via your browser settings.</p>
             </div>
         </div>
+    </div>
+
+    <!-- LINK TRANSITION OVERLAY -->
+    <div class="link-transition-overlay" id="linkOverlay">
+        <div class="link-transition-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </div>
+        <span class="link-transition-text">Connecting to LinkedIn...</span>
     </div>
 
     <!-- Scripts -->
@@ -1063,7 +1133,7 @@
             if (title && link) {
                 // Dim and shrink title as requested
                 title.style.fontSize = '9px';
-                title.style.fontFamily = 'JetBrains Mono, monospace';
+                title.style.fontFamily = 'JetBrains Mono', monospace;
                 title.style.textTransform = 'uppercase';
                 title.style.letterSpacing = '3px';
                 title.style.opacity = '0.3';
@@ -1072,6 +1142,20 @@
                 // Show glowing link
                 link.style.display = 'inline-block';
             }
+        }
+
+        // LinkedIn transition animation
+        function handleLinkedInClick(element, delay) {
+            const url = element.href;
+            const overlay = document.getElementById('linkOverlay');
+            overlay.classList.add('active');
+            
+            setTimeout(() => {
+                overlay.classList.remove('active');
+                window.open(url, '_blank');
+            }, delay);
+            
+            return false;
         }
     </script>
 </body>
