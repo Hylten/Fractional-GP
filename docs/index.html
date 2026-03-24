@@ -39,6 +39,50 @@
             position: relative;
         }
 
+        /* Preloader Overlay */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: #0b0f16;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        #preloader .preloader-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #C5A059;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+        }
+
+        #preloader .preloader-sub {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 4px;
+            margin-top: 16px;
+            text-transform: uppercase;
+            animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
         /* Ultra-fine noise */
         body::after {
             content: "";
@@ -698,15 +742,6 @@
             color: rgba(255,255,255,0.6);
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50%       { opacity: 0.3; }
-        }
-
-        .animate-pulse {
-            animation: 2s cubic-bezier(.4, 0, .6, 1) infinite pulse !important;
-        }
-
         @keyframes pulse-alpha {
             0%, 100% { opacity: 0.6; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.05); }
@@ -751,6 +786,20 @@
 </head>
 <body>
 
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-text">Alpha Architect</div>
+        <div class="preloader-sub">Off-Market Alpha</div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 2000);
+        });
+    </script>
+
     <!-- TOP ACTIONS -->
     <div class="top-actions">
         <button id="shareBtn" class="btn btn-top">Share Profile</button>
@@ -764,8 +813,8 @@
                 <img src="./profile.jpg" alt="Jonas Hyltén" class="profile-img">
             </div>
             
-            <h1 class="animate-pulse">Jonas Hyltén</h1>
-            <div class="subtitle serif animate-pulse" style="margin-bottom: 32px;">The Architect of Off-Market Alpha</div>
+            <h1>Jonas Hyltén</h1>
+            <div class="subtitle serif" style="margin-bottom: 32px;">The Architect of Off-Market Alpha</div>
             
             <div class="action-bar">
                 <a href="./jonas-hylten.vcf" class="btn btn-primary" download>Save Contact</a>
@@ -1006,7 +1055,7 @@
             <div class="regulatory-footer">
                 <div class="location-stamp" style="margin-bottom: 8px;">Jönköping, Sweden</div>
                 <div style="margin-bottom: 24px;">
-                    <a href="https://www.linkedin.com/in/hylten" target="_blank" class="animate-pulse" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4; text-decoration: none;">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4; text-decoration: none;">LinkedIn</a>
                 </div>
                 <div style="margin-bottom: 40px;">
                     <button id="legalBtn" style="background: none; border: none; font-family: 'JetBrains Mono', monospace; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); opacity: 0.3; cursor: pointer; transition: var(--transition);">Legal Disclosures</button>
