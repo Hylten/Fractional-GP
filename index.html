@@ -193,6 +193,20 @@
             text-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
         }
 
+        .strategic-origination-box:hover .origination-title {
+            color: var(--accent);
+        }
+
+        .strategic-origination-box.active .origination-title {
+            font-size: 0.366rem;
+            color: var(--text-main);
+            opacity: 0.5;
+        }
+
+        .strategic-origination-box.active .inquire-btn {
+            display: block;
+        }
+
         /* --- Top Actions --- */
         .top-actions {
             position: absolute;
@@ -1031,13 +1045,13 @@
                                 <div class="comp-status">[03]</div>
                                 <h4>Institutional Stewardship</h4>
                             </a>
-                            <div class="comp-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <div class="comp-item strategic-origination-box" onclick="toggleInquiry(this)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
                                 <div class="comp-status">[04]</div>
                                 <h4 class="origination-title">Strategic Origination</h4>
                                 <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Alpha%20Architect%20Mandate" 
                                    target="_blank" 
                                    class="inquire-btn"
-                                   style="font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 500; color: var(--text-main); letter-spacing: 1px; text-decoration: none; margin-top: 16px; transition: var(--transition);">
+                                   style="font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 500; color: var(--accent); letter-spacing: 1px; text-decoration: none; margin-top: 16px; transition: var(--transition); display: none;">
                                    Inquire
                                 </a>
                             </div>
@@ -1214,6 +1228,11 @@
                 legacyContent.classList.toggle('open');
                 legacyIcon.innerText = legacyContent.classList.contains('open') ? '-' : '+';
             });
+        }
+
+        // Toggle Inquiry
+        function toggleInquiry(el) {
+            el.classList.toggle('active');
         }
 
         // LinkedIn transition animation
