@@ -2,13 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hylten.github.io/Alpha-Architect/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://hylten.github.io/Alpha-Architect/insights/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hylten.github.io/Alpha-Architect/insights/2026-03-23-proprietary-signals-network-effect/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hylten.github.io/Alpha-Architect/insights/2026-03-24-asymmetry-advantage-off-market-deals/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hylten.github.io/Alpha-Architect/insights/agentic-ai-fiduciary-duty-lp-capital-protection/</loc>
