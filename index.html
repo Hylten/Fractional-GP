@@ -698,6 +698,14 @@
             color: rgba(255,255,255,0.6);
         }
 
+        @keyframes pulse {
+            50% { opacity: .5; }
+        }
+
+        .animate-pulse {
+            animation: 2.1s cubic-bezier(.4, 0, .6, 1) infinite pulse;
+        }
+
         @keyframes pulse-alpha {
             0%, 100% { opacity: 0.6; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.05); }
@@ -962,7 +970,7 @@
             <div class="regulatory-footer">
                 <div class="location-stamp" style="margin-bottom: 8px;">Jönköping, Sweden</div>
                 <div style="margin-bottom: 24px;">
-                    <a href="https://www.linkedin.com/in/hylten" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4; text-decoration: none;" onclick="handleLinkedInClick(this, 2100); return false;">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/hylten" target="_blank" class="animate-pulse" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); opacity: 0.4; text-decoration: none;">LinkedIn</a>
                 </div>
                 <div style="margin-bottom: 40px;">
                     <button id="legalBtn" style="background: none; border: none; font-family: 'JetBrains Mono', monospace; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); opacity: 0.3; cursor: pointer; transition: var(--transition);">Legal Disclosures</button>
