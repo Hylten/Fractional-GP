@@ -703,13 +703,48 @@
         }
 
         .animate-pulse {
-            animation: 2.1s cubic-bezier(.4, 0, .6, 1) infinite pulse;
+            animation: 2s cubic-bezier(.4, 0, .6, 1) infinite pulse;
         }
 
         @keyframes pulse-alpha {
             0%, 100% { opacity: 0.6; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.05); }
         }
+
+        /* --- Venture Studio Transition Utilities --- */
+        .transition {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter, backdrop-filter;
+            transition-duration: .15s;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .transition-all {
+            transition-property: all;
+            transition-duration: .15s;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .transition-colors {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-duration: .15s;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .transition-opacity {
+            transition-property: opacity;
+            transition-duration: .15s;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-duration: .15s;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .duration-500 { transition-duration: .5s; }
+        .duration-700 { transition-duration: .7s; }
+        .duration-1000 { transition-duration: 1s; }
 
     </style>
 </head>
