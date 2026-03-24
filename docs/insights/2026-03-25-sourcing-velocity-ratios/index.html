@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sourcing Velocity Ratios: The Math Behind Deal Flow Economics | Off-Market Alpha Architect</title>
+  <meta name="description" content="Internal analysis of sourcing velocity ratios and their impact on mid-market acquisition returns.">
+  <meta name="author" content="Jonas Hyltén">
+  <link rel="canonical" href="https://hylten.github.io/Alpha-Architect/insights/">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0b0f16; color: #E5E7EB; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.8; }
+    a { color: #C5A059; text-decoration: none; transition: 0.3s; }
+    a:hover { opacity: 0.7; }
+    .container { max-width: 820px; margin: 0 auto; padding: 180px 24px 120px; }
+    .back { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #aaaaaa; margin-bottom: 80px; display: inline-block; font-weight: 500; }
+    .back:hover { color: #C5A059; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #ffffff; margin-bottom: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -0.02em; }
+    .meta { font-size: 11px; color: #eeeeee; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #222; font-weight: 500; }
+    .content p, .content li { font-size: 1.15rem; line-height: 2.4; color: #ffffff; font-weight: 300; margin-bottom: 80px; }
+    .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #ffffff; margin: 80px 0 40px; font-weight: 300; line-height: 1.2; }
+    .content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #ffffff; margin: 60px 0 30px; font-weight: 400; }
+    .content strong { color: #ffffff; font-weight: 600; }
+    .content em { font-style: italic; color: #ffffff; }
+    .content blockquote { border-left: 2px solid #C5A059; padding-left: 32px; margin: 60px 0; font-style: italic; color: #eeeeee; font-size: 1.2rem; }
+    .home-btn { display: inline-block; padding: 16px 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #ffffff; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; border-radius: 0; margin-top: 100px; transition: 0.4s; }
+    .home-btn:hover { background: #C5A059; color: #000; border-color: #C5A059; }
+    .wa-btn { position: fixed; bottom: 32px; right: 32px; z-index: 1000; background: #111; padding: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.6); opacity: 0.4; transition: 0.3s; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; }
+    .wa-btn:hover { opacity: 1; transform: translateY(-2px); }
+    .list-item { margin-bottom: 140px; padding-bottom: 100px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
+    .list-item h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #C5A059; margin-bottom: 32px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; }
+    .list-item .desc { font-size: 1.1rem; color: #eeeeee; line-height: 1.8; font-weight: 300; max-width: 650px; margin-bottom: 40px; }
+    .list-item .date { font-size: 10px; color: #C5A059; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 32px; font-weight: 500; opacity: 1; }
+    .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
+    .list-item .read:hover { border-bottom-color: #C5A059; color: #C5A059; }
+    .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: #C5A059; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
+    .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 140px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
+  </style>
+</head>
+<body>
+  
+    <div class="container">
+      <a href="/Alpha-Architect/insights/" class="back">&larr; Back to Index</a>
+      <h1>Sourcing Velocity Ratios: The Math Behind Deal Flow Economics</h1>
+      <div class="meta">March 25, 2026 &bull; Jonas Hylt&eacute;n</div>
+      <div class="content">
+        
+<p>The mid-market acquisition game reduces to a simple arithmetic problem. Buyers who understand the math of sourcing velocity outperform those who rely on intuition or broker relationships. This memo breaks down the velocity ratios that determine whether an acquisition program generates alpha or burns capital.</p>
+
+<h2>The Velocity Problem</h2>
+
+<p>Most acquirers approach deal sourcing with a fundamentally flawed assumption. They believe that deal quality matters more than deal volume. The data suggests otherwise. Buyers who systematically increase their sourcing velocity at every stage of the funnel generate superior returns not because they find better businesses, but because they develop pattern recognition that improves every subsequent evaluation.</p>
+
+<p>Consider the arithmetic. A buyer who evaluates 50 deals per year, with a 2% conversion rate to closed acquisitions, completes one deal annually. That same buyer, operating with better systems and broader reach, evaluates 500 deals per year. Even with identical conversion mechanics, they complete 10 deals. The spread between the best and worst of those 10 deals exceeds the spread in single-deal outcomes.</p>
+
+<p>The velocity ratio measures the relationship between sourcing activity and conversion outcomes. High-velocity programs generate more data points, which feeds better decision-making, which improves conversion rates, which generates more deals. The flywheel is real, but it only spins when the input side of the funnel moves fast enough to create meaningful sample sizes.</p>
+
+<h2>Front-Loading the Funnel</h2>
+
+<p>The cheapest deal flow is always the broadest possible top of funnel. Every dollar spent expanding the universe of potential targets yields more expected value than dollars spent on diligence or negotiation. This counter-intuitive statement rests on the convexity of deal outcomes. A single transformational acquisition produces more value than the aggregate cost of evaluating hundreds of non-starters.</p>
+
+<p>Sourcing budget allocation follows a power law. The first 20% of sourcing activity generates approximately 80% of the actionable opportunities in any given year. The remaining 80% of activity fills the pipeline and maintains optionality, but the critical deals originate from the initial outreach surge.</p>
+
+<p>The practical implication: front-load sourcing activity in concentrated bursts rather than distributing effort evenly across time. A buyer who sends 1,000 outreach sequences in January generates concentrated signal density in Q1. The follow-up conversations and deal flow from that burst create momentum that carries through the year. Sporadic, evenly-distributed outreach produces sporadic results.</p>
+
+<h2>Conversion Mechanics Across Segments</h2>
+
+<p>Different deal segments exhibit different conversion mechanics. Understanding these mechanics allows buyers to calibrate velocity expectations appropriately.</p>
+
+<p>+ Lower-middle-market deals (5-15M EBITDA) convert at approximately 1.5-3% from initial outreach to LOI. The conversion path runs through advisor networks more frequently than in upper segments, where direct owner outreach dominates.</p>
+<p>+ Upper-middle-market deals (15-50M EBITDA) convert at 0.5-1.5% from outreach to LOI. Longer decision cycles and more complex governance structures extend the timeline but increase deal size when they close.</p>
+<p>+ Platform acquisitions in any segment convert at lower rates but generate outsized returns when successfully integrated. The velocity calculus must account for the option value of platform potential.</p>
+
+<p>The conversion funnel compresses or expands based on buyer credibility, market positioning, and process efficiency. A buyer known for clean, fast closings in a specific sector will see conversion rates 2-3x higher than a generic buyer with equivalent capital. Credibility is a velocity multiplier.</p>
+
+<h2>The Timing Arbitrage</h2>
+
+<p>Seller timing creates asymmetric opportunities that velocity enables. Business owners considering exit decisions operate on multi-year horizons. The typical sell-side process begins 18-36 months before a transaction closes. During that window, owners test the market informally, speak with advisors, and gradually build conviction that an exit is the right move.</p>
+
+<p>Buyers with high-velocity sourcing programs intercept sellers during the early phase of this window, before formal marketing begins. This timing arbitrage produces better economics: less competition, more motivated sellers, and earlier access to information that later becomes expensive or unavailable.</p>
+
+<p>The arbitrage only works with sufficient velocity. Buyers who source sporadically cannot reliably intercept early-stage sellers because they lack the coverage to be present when sellers become receptive. High-velocity programs solve this coverage problem through systematic outreach that reaches sellers at the precise moment they become reachable.</p>
+
+<h2>Operationalizing Velocity</h2>
+
+<p>Translating velocity concepts into operational reality requires specific infrastructure investments.</p>
+
+<p>* CRM discipline: Every interaction must be logged, tagged, and categorized. The data infrastructure enables pattern recognition across the full history of sourcing activity.</p>
+<p>* Outreach automation: Manual outreach does not scale to velocity targets. Automated sequences with personalized elements handle the volume while maintaining quality signals.</p>
+<p>* Team structure: Velocity requires dedicated resources. A single dealmaker cannot maintain velocity above 100 meaningful conversations annually without sacrificing quality. Most high-velocity programs require 2-3 dedicated sourcers per dealmaker.</p>
+<p>* Pipeline management: Weekly pipeline reviews with velocity metrics force accountability. Deals stall when velocity drops, and the correlation between sustained velocity and deal flow is nearly perfect.</p>
+
+<p>The operational challenge is maintaining velocity during market downturns when seller motivation increases but buyer confidence declines. This is precisely when velocity matters most. Buyers who maintain sourcing intensity during downturns capture disproportionate opportunity share.</p>
+
+<h2>The Returns Implication</h2>
+
+<p>Velocity correlates with returns through multiple channels. Beyond the direct effect of more deal evaluations, high-velocity programs develop superior pattern recognition. Buyers who have seen 500 businesses in a sector develop intuitions that cannot be replicated through research alone. They recognize value where others see risk, and they recognize risk where others see opportunity.</p>
+
+<p>The pattern recognition advantage compounds over time. A program that maintains velocity for five years develops qualitatively different decision-making capability than a program that evaluates the same number of deals over ten years with lower intensity. Velocity accelerates learning.</p>
+
+<p>The returns spread between high-velocity and low-velocity programs in the same market typically ranges from 200-400 basisives annually. The spread originates from better deal selection, better timing, and better negotiation leverage. All three channels depend on having enough deal flow to generate meaningful data.</p>
+
+<h2>Execution Priorities</h2>
+
+<p>+ Increase top-of-funnel activity by 3x before adding any resources to deal evaluation or execution.</p>
+<p>* Build automated outreach infrastructure to handle volume without proportional headcount increase.</p>
+<p>+ Track velocity metrics weekly and hold teams accountable for sustaining momentum.</p>
+<p>* Maintain velocity during market downturns when competition for deal flow decreases.</p>
+<p>+ Reinvest efficiency gains from improved conversion into further funnel expansion.</p>
+
+<p>The buyers who understand that deal flow is a numbers game, and who structure their operations accordingly, consistently outperform those who treat sourcing as a qualitative art. The math is clear.</p>
+
+<h2>Sammanfattning</h2>
+
+<p>Sourcing velocity determines acquisition returns through multiple reinforcing mechanisms. Higher volume generates better pattern recognition, which improves conversion rates, which generates more deals. The velocity ratio measures this relationship and provides a framework for operational optimization. Front-loading the funnel with concentrated sourcing activity produces superior results compared to distributed effort across time. Execution requires infrastructure investments in CRM, automation, and team structure, but the returns justify the operational discipline.</p>
+
+      </div>
+      <div style="text-align:center;">
+        <a href="/Alpha-Architect/" class="home-btn">Return to Profile</a>
+      </div>
+    </div>
+  <a href="https://wa.me/46701619978?text=Regarding%20Fractional%20GP%20Architecture:" target="_blank" rel="noopener noreferrer" class="wa-btn">
+    <svg style="width:20px;height:20px;color:white;" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</body>
+</html>
