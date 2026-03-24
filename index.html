@@ -188,6 +188,11 @@
             opacity: 1 !important;
         }
 
+        .inquire-btn:hover {
+            color: var(--accent) !important;
+            text-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+        }
+
         /* --- Top Actions --- */
         .top-actions {
             position: absolute;
@@ -1026,14 +1031,14 @@
                                 <div class="comp-status">[03]</div>
                                 <h4>Institutional Stewardship</h4>
                             </a>
-                            <div class="comp-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;" onclick="revealInquiry(this)">
+                            <div class="comp-item" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <div class="comp-status">[04]</div>
                                 <h4 class="origination-title">Strategic Origination</h4>
                                 <a href="https://wa.me/46701619978?text=Inquiry%20regarding%20Alpha%20Architect%20Mandate" 
                                    target="_blank" 
-                                   class="glow-text inquire-reveal" 
-                                   style="font-size: 13px; letter-spacing: 6px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; font-weight: 800; text-decoration: none; display: none; margin-top: 20px;">
-                                   INQUIRE
+                                   class="inquire-btn"
+                                   style="font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 500; color: var(--text-main); letter-spacing: 1px; text-decoration: none; margin-top: 16px; transition: var(--transition);">
+                                   Inquire
                                 </a>
                             </div>
                         </div>
@@ -1209,24 +1214,6 @@
                 legacyContent.classList.toggle('open');
                 legacyIcon.innerText = legacyContent.classList.contains('open') ? '-' : '+';
             });
-        }
-
-        // Origination Inquiry Reveal
-        function revealInquiry(el) {
-            const title = el.querySelector('.origination-title');
-            const link = el.querySelector('.inquire-reveal');
-            if (title && link) {
-                // Dim and shrink title as requested
-                title.style.fontSize = '9px';
-                title.style.fontFamily = 'JetBrains Mono', monospace;
-                title.style.textTransform = 'uppercase';
-                title.style.letterSpacing = '3px';
-                title.style.opacity = '0.3';
-                title.style.marginBottom = '10px';
-                
-                // Show glowing link
-                link.style.display = 'inline-block';
-            }
         }
 
         // LinkedIn transition animation
