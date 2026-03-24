@@ -1144,7 +1144,7 @@
             
             setTimeout(() => {
                 overlay.classList.remove('active');
-                window.location.href = url;
+                window.open(url, '_blank');
             }, delay);
             
             return false;
