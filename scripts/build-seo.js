@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT_DIR, 'content', 'insights');
 const DIST_DIR = path.join(ROOT_DIR, 'docs');
-const INSIGHTS_DIST_DIR = path.join(DIST_DIR, 'insights');
+const INTELLIGENCE_DIST_DIR = path.join(DIST_DIR, 'intelligence');
 
 const SITE_URL = 'https://hylten.github.io/Alpha-Architect';
 const BRAND_NAME = 'Off-Market Alpha Architect';
@@ -53,7 +53,7 @@ function buildBlogHTML() {
   <title>${title} | ${BRAND_NAME}</title>
   <meta name="description" content="${description}">
   <meta name="author" content="Jonas Hyltén">
-  <link rel="canonical" href="${SITE_URL}/insights/">
+  <link rel="canonical" href="${SITE_URL}/intelligence/">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -101,10 +101,10 @@ async function generateSEO() {
   copyVCard();
 
   // Step 2: Generate blog pages
-  ensureDir(INSIGHTS_DIST_DIR);
+  ensureDir(INTELLIGENCE_DIST_DIR);
 
   if (!fs.existsSync(CONTENT_DIR)) {
-    console.log('No content/insights directory found. Skipping blog generation.');
+    console.log('No content/insights directory found. Skipping intelligence generation.');
     return;
   }
 
@@ -125,7 +125,7 @@ async function generateSEO() {
     listItems += `
       <div class="list-item">
         <div class="date">${date}</div>
-        <a href="/Alpha-Architect/insights/${slug}/" style="text-decoration:none;">
+        <a href="/Alpha-Architect/intelligence/${slug}/" style="text-decoration:none;">
           <h2>${title}</h2>
           <p class="desc">${description}</p>
           <span class="read">Read Briefing</span>
@@ -141,9 +141,9 @@ async function generateSEO() {
       ${listItems}
     </div>`;
 
-  const indexHtml = htmlBuilder('Insights', 'Off-Market Alpha Architect Insights - Institutional briefings on AI-driven deal flow and capital architecture.', indexBody);
-  fs.writeFileSync(path.join(INSIGHTS_DIST_DIR, 'index.html'), indexHtml);
-  console.log('✅ Generated /dist/insights/index.html');
+  const indexHtml = htmlBuilder('Intelligence', 'Off-Market Alpha Architect Intelligence - Institutional briefings on AI-driven deal flow and capital architecture.', indexBody);
+  fs.writeFileSync(path.join(INTELLIGENCE_DIST_DIR, 'index.html'), indexHtml);
+  console.log('✅ Generated /dist/intelligence/index.html');
 
   // Generate Article Pages
   for (const file of files) {
@@ -168,7 +168,7 @@ async function generateSEO() {
 
     const articleBody = `
     <div class="container">
-      <a href="/Alpha-Architect/insights/" class="back">&larr; Back to Index</a>
+      <a href="/Alpha-Architect/intelligence/" class="back">&larr; Back to Index</a>
       <h1>${title}</h1>
       <div class="meta">${date} &bull; Jonas Hylt&eacute;n</div>
       <div class="content">
@@ -179,10 +179,10 @@ async function generateSEO() {
       </div>
     </div>`;
 
-    const articleDir = path.join(INSIGHTS_DIST_DIR, slug);
+    const articleDir = path.join(INTELLIGENCE_DIST_DIR, slug);
     ensureDir(articleDir);
     fs.writeFileSync(path.join(articleDir, 'index.html'), htmlBuilder(title, description, articleBody));
-    console.log(`✅ Generated /dist/insights/${slug}/index.html`);
+    console.log(`✅ Generated /dist/intelligence/${slug}/index.html`);
   }
 
   // Sitemap
@@ -192,7 +192,7 @@ async function generateSEO() {
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>${SITE_URL}/insights/</loc>
+    <loc>${SITE_URL}/intelligence/</loc>
     <lastmod>${today}</lastmod>
     <priority>0.9</priority>
   </url>`;
@@ -204,7 +204,7 @@ async function generateSEO() {
     const date = data.date || today;
     sitemapUrls += `
   <url>
-    <loc>${SITE_URL}/insights/${slug}/</loc>
+    <loc>${SITE_URL}/intelligence/${slug}/</loc>
     <lastmod>${date}</lastmod>
     <priority>0.8</priority>
   </url>`;
