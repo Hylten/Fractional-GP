@@ -83,6 +83,42 @@ The deal team lead review framework requires senior analyst sign-off on all auto
 
 The client presentation synthesis converts autonomous findings into client-appropriate deliverables. The synthesis logic generates executive summaries, detailed findings reports, and integration frameworks matching client workflow requirements.
 
+## The Risk Assessment Framework
+
+The autonomous due diligence system generates risk assessments through structured evaluation frameworks.
+
+The financial risk assessment evaluates profitability sustainability, working capital adequacy, and debt service capacity. The assessment model identifies margin compression risk, customer concentration risk, and competitive displacement risk. The risk ratings enable comparison across deal candidates.
+
+The operational risk assessment evaluates process stability, technology obsolescence, and human capital dependency. The assessment model identifies key person dependencies, equipment replacement requirements, and facility constraints. The risk ratings inform integration planning priorities.
+
+The legal risk assessment evaluates regulatory exposure, litigation probability, and contract enforceability. The assessment model identifies pending enforcement actions, contract change of control provisions, and intellectual property vulnerabilities. The risk ratings affect deal structure and pricing decisions.
+
+The integration risk assessment evaluates cultural compatibility, systems alignment, and customer retention probability. The assessment model identifies integration complexity factors that affect post-close execution. The risk ratings inform management team retention decisions.
+
+## The Deal Sourcing Integration
+
+The autonomous due diligence system integrates with upstream deal sourcing operations.
+
+The sourcing handoff process transfers target information to due diligence workflows. Company records from prospecting systems include preliminary qualification data. The preliminary data informs diligence scope and priority decisions.
+
+The pipeline coordination synchronizes due diligence capacity with sourcing volume. The coordination prevents bottlenecks when multiple targets enter diligence simultaneously. The automated capacity management ensures consistent turnaround times.
+
+The scoring integration incorporates diligence findings into prospect prioritization. Targets that pass initial qualification but fail diligence criteria route to alternative treatment. The scoring refinement improves sourcing efficiency over time.
+
+The feedback loop transmits diligence findings to sourcing model training. The machine learning models learn from successful and unsuccessful diligence outcomes. The continuous learning improves targeting precision across deal cycles.
+
+## The Technology Infrastructure Requirements
+
+Autonomous due diligence requires infrastructure that most deal teams lack.
+
+The document processing infrastructure handles diverse file formats and data structures. The infrastructure extracts content from PDFs, spreadsheets, and presentation files. The extraction logic handles scanned documents, hand-written annotations, and non-standard layouts.
+
+The data warehouse infrastructure stores processed content and analysis results. The warehouse enables historical comparison across deal evaluations. The comparison reveals patterns in risk identification and deal selection.
+
+The model training infrastructure enables continuous improvement from operational data. The infrastructure handles training data preparation, model deployment, and performance monitoring. The continuous training maintains model accuracy as market conditions evolve.
+
+The security infrastructure protects sensitive deal information throughout processing. The infrastructure implements encryption, access controls, and audit logging. The security measures satisfy client confidentiality requirements.
+
 ## Sammanfattning
 
 The autonomous due diligence framework transforms operational analysis from human throughput constraint to scalable pipeline operation. The system processes documents, analyzes financials and operations, synthesizes findings, and generates integration frameworks without human initiation for routine analysis tasks.
@@ -90,3 +126,5 @@ The autonomous due diligence framework transforms operational analysis from huma
 The deal team focuses human expert time on judgment-intensive analysis where domain expertise adds disproportionate value. The allocation optimization increases effective deal team throughput while maintaining analysis quality standards.
 
 The GTM engineering layer provides terminal-based access to autonomous capabilities, enabling deal teams to leverage machine analysis efficiency while maintaining human workflow integration. The competitive advantage belongs to deal teams that build autonomous infrastructure rather than relying on manual process alone.
+
+The risk assessment framework generates structured evaluations across financial, operational, legal, and integration dimensions. The deal sourcing integration coordinates diligence capacity with pipeline volume. The technology infrastructure requirements demand investments that most deal teams have not made.
