@@ -8,6 +8,19 @@
   <meta name="author" content="Jonas Hyltén">
   <link rel="canonical" href="https://hylten.github.io/Alpha-Architect/intelligence/">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Sourcing Automation: Reducing Manual Effort While Increasing Output",
+  "description": "How to automate sourcing activities without losing personalization through autonomous agent workflows, voice-to-json pipelines, and continuous optimization systems.",
+  "author": {
+    "@type": "Person",
+    "name": "Jonas Hyltén"
+  },
+  "datePublished": "2025-12-15",
+  "dateModified": "2025-12-15",
+  "url": "https://hylten.github.io/Alpha-Architect/intelligence/2025-12-15-sourcing-automation/"
+}</script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #0b0f16; color: #E5E7EB; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.8; }
@@ -18,6 +31,7 @@
     .back:hover { color: #C5A059; }
     h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #ffffff; margin-bottom: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -0.02em; }
     .meta { font-size: 11px; color: #eeeeee; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #222; font-weight: 500; }
+    .meta .read-time { opacity: 0.6; margin-left: 12px; }
     .content p, .content li { font-size: 1.15rem; line-height: 2.4; color: #ffffff; font-weight: 300; margin-bottom: 80px; }
     .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #ffffff; margin: 80px 0 40px; font-weight: 300; line-height: 1.2; }
     .content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #ffffff; margin: 60px 0 30px; font-weight: 400; }
@@ -32,22 +46,36 @@
     .list-item h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #C5A059; margin-bottom: 32px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; }
     .list-item .desc { font-size: 1.1rem; color: #eeeeee; line-height: 1.8; font-weight: 300; max-width: 650px; margin-bottom: 40px; }
     .list-item .date { font-size: 10px; color: #C5A059; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 32px; font-weight: 500; opacity: 1; }
+    .list-item .read-time { font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-left: 12px; }
+    .list-item .tags { margin-bottom: 16px; }
+    .list-item .tag { display: inline-block; padding: 4px 10px; background: rgba(197, 160, 89, 0.1); border: 1px solid rgba(197, 160, 89, 0.2); color: #C5A059; font-size: 8px; text-transform: uppercase; letter-spacing: 2px; margin-right: 8px; }
     .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
     .list-item .read:hover { border-bottom-color: #C5A059; color: #C5A059; }
     .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: #C5A059; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
     .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 60px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
-    .year-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 80px; }
-    .year-box { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #aaaaaa; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; transition: 0.3s; }
-    .year-box:hover { border-color: #C5A059; color: #ffffff; }
-    .year-box.active { background: #C5A059; border-color: #C5A059; color: #000000; }
+    .year-nav, .quarter-nav, .category-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 40px; }
+    .quarter-nav { margin-top: 20px; }
+    .category-nav { margin-bottom: 60px; }
+    .year-box, .quarter-box, .cat-box { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #aaaaaa; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; transition: 0.3s; cursor: pointer; }
+    .year-box:hover, .quarter-box:hover, .cat-box:hover { border-color: #C5A059; color: #ffffff; }
+    .year-box.active, .quarter-box.active, .cat-box.active { background: #C5A059; border-color: #C5A059; color: #000000; }
+    .search-box { max-width: 400px; margin: 0 auto 60px; }
+    .search-input { width: 100%; padding: 14px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px; font-family: 'Inter', sans-serif; outline: none; transition: 0.3s; }
+    .search-input:focus { border-color: #C5A059; }
+    .search-input::placeholder { color: #666; }
   </style>
 </head>
 <body>
   
     <div class="container">
-      <a href="/Alpha-Architect/intelligence/" class="back">&larr; Back to Index</a>
+      
+      <div style="margin-bottom: 40px;">
+        <a href="/Alpha-Architect/intelligence/" style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px;">Intelligence</a>
+        <span style="font-size: 9px; color: #444; margin: 0 8px;">/</span>
+        <a href="/Alpha-Architect/intelligence/?year=2025" style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px;">2025</a>
+      </div>
       <h1>Sourcing Automation: Reducing Manual Effort While Increasing Output</h1>
-      <div class="meta">December 15, 2025 &bull; Jonas Hylt&eacute;n</div>
+      <div class="meta">December 15, 2025 <span class="read-time">8 min read</span> &bull; Jonas Hylt&eacute;n</div>
       <div class="content">
         
 <p>Automation reduces effort and increases output. The right automation generates more deals with less work. The firms that automate effectively outperform those that rely on manual effort because autonomous agents work 24 hours per day, never forget follow-ups, and continuously optimize based on response data. But automation requires careful design. Generic automation loses the personalization that sellers demand. Excessive automation creates cold, transactional experiences that destroy relationship potential. The balance between automation scale and personalization quality determines sourcing efficiency. This framework covers automation opportunities across the sourcing lifecycle, the personalization balance required for effective automation, implementation approaches that minimize risk, and continuous improvement systems that compound automation value over time.</p>
@@ -129,6 +157,17 @@
 <p>Sourcing automation reduces manual effort while increasing output through autonomous agent systems that work continuously without fatigue. Automation opportunities span data collection, outreach execution, follow-up management, and pipeline tracking. Personalization balance ensures automation serves rather than damages relationship quality. Implementation approach minimizes risk through structured deployment. Continuous improvement systems compound automation value over time. Agent workflow architecture coordinates complex sequences across multiple autonomous systems. Infrastructure requirements enable scaling automation to enterprise volumes. The integrated automation system generates deal flow at scale that manual effort cannot match, producing superior acquisition economics through efficiency advantage.</p>
 
       </div>
+      
+        <div style="display: flex; justify-content: space-between; margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <a href="/Alpha-Architect/intelligence/2025-12-10-deal-flow-metrics/" style="text-align: left;">
+            <div style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">&larr; Previous</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #C5A059;">Deal Flow Metrics: Building Comprehensive Measurement Systems</div>
+          </a>
+          <a href="/Alpha-Architect/intelligence/2026-03-25-direct-outreach-excellence/" style="text-align: right;">
+            <div style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Next &rarr;</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #C5A059;">Direct Outreach Excellence: Building the Proprietary Deal Pipeline</div>
+          </a>
+        </div>
       <div style="text-align:center;">
         <a href="/Alpha-Architect/" class="home-btn">Return to Profile</a>
       </div>

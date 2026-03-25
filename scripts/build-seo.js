@@ -45,7 +45,7 @@ function copyVCard() {
 
 function buildBlogHTML() {
   // Standalone HTML shell for blog pages (no React dependency)
-  return (title, description, bodyContent) => `<!DOCTYPE html>
+  return (title, description, bodyContent, schemaData = null) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -55,6 +55,7 @@ function buildBlogHTML() {
   <meta name="author" content="Jonas Hyltén">
   <link rel="canonical" href="${SITE_URL}/intelligence/">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  ${schemaData ? `<script type="application/ld+json">${JSON.stringify(schemaData, null, 2)}</script>` : ''}
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #0b0f16; color: #E5E7EB; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.8; }
@@ -65,6 +66,7 @@ function buildBlogHTML() {
     .back:hover { color: ${ACCENT}; }
     h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #ffffff; margin-bottom: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -0.02em; }
     .meta { font-size: 11px; color: #eeeeee; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #222; font-weight: 500; }
+    .meta .read-time { opacity: 0.6; margin-left: 12px; }
     .content p, .content li { font-size: 1.15rem; line-height: 2.4; color: #ffffff; font-weight: 300; margin-bottom: 80px; }
     .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #ffffff; margin: 80px 0 40px; font-weight: 300; line-height: 1.2; }
     .content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #ffffff; margin: 60px 0 30px; font-weight: 400; }
@@ -79,14 +81,23 @@ function buildBlogHTML() {
     .list-item h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: ${ACCENT}; margin-bottom: 32px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; }
     .list-item .desc { font-size: 1.1rem; color: #eeeeee; line-height: 1.8; font-weight: 300; max-width: 650px; margin-bottom: 40px; }
     .list-item .date { font-size: 10px; color: ${ACCENT}; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 32px; font-weight: 500; opacity: 1; }
+    .list-item .read-time { font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-left: 12px; }
+    .list-item .tags { margin-bottom: 16px; }
+    .list-item .tag { display: inline-block; padding: 4px 10px; background: rgba(197, 160, 89, 0.1); border: 1px solid rgba(197, 160, 89, 0.2); color: #C5A059; font-size: 8px; text-transform: uppercase; letter-spacing: 2px; margin-right: 8px; }
     .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
     .list-item .read:hover { border-bottom-color: ${ACCENT}; color: ${ACCENT}; }
     .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: ${ACCENT}; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
     .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 60px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
-    .year-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 80px; }
-    .year-box { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #aaaaaa; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; transition: 0.3s; }
-    .year-box:hover { border-color: ${ACCENT}; color: #ffffff; }
-    .year-box.active { background: ${ACCENT}; border-color: ${ACCENT}; color: #000000; }
+    .year-nav, .quarter-nav, .category-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 40px; }
+    .quarter-nav { margin-top: 20px; }
+    .category-nav { margin-bottom: 60px; }
+    .year-box, .quarter-box, .cat-box { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #aaaaaa; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; transition: 0.3s; cursor: pointer; }
+    .year-box:hover, .quarter-box:hover, .cat-box:hover { border-color: ${ACCENT}; color: #ffffff; }
+    .year-box.active, .quarter-box.active, .cat-box.active { background: ${ACCENT}; border-color: ${ACCENT}; color: #000000; }
+    .search-box { max-width: 400px; margin: 0 auto 60px; }
+    .search-input { width: 100%; padding: 14px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px; font-family: 'Inter', sans-serif; outline: none; transition: 0.3s; }
+    .search-input:focus { border-color: ${ACCENT}; }
+    .search-input::placeholder { color: #666; }
   </style>
 </head>
 <body>
@@ -119,17 +130,26 @@ async function generateSEO() {
   // Generate Index Page
   let listItems = '';
   const yearData = {};
+  const quarterData = {};
+  const categoryData = {};
   
   for (const file of files) {
     const raw = fs.readFileSync(path.join(CONTENT_DIR, file), 'utf8');
-    const { data } = matter(raw);
+    const { data, content } = matter(raw);
     const slug = data.slug || file.replace('.md', '');
     const title = data.title || 'Insight';
     const description = data.description || '';
+    const tags = data.tags || [];
     const date = data.date ? new Date(data.date) : null;
     const dateStr = date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
     const year = date ? date.getFullYear().toString() : '';
+    const quarter = date ? `Q${Math.floor((date.getMonth() + 3) / 3)} ${year}` : '';
     
+    // Estimate read time (approx 200 words per minute)
+    const wordCount = content.split(/\s+/).length;
+    const readTime = Math.max(1, Math.ceil(wordCount / 200));
+    
+    // Track years
     if (year && !yearData[year]) {
       yearData[year] = [];
     }
@@ -137,9 +157,29 @@ async function generateSEO() {
       yearData[year].push({ slug, title, description, date: dateStr, year });
     }
     
+    // Track quarters
+    if (quarter && !quarterData[quarter]) {
+      quarterData[quarter] = [];
+    }
+    if (quarter) {
+      quarterData[quarter].push({ slug, title, description, date: dateStr, year, quarter });
+    }
+    
+    // Track categories/tags
+    tags.forEach(tag => {
+      const cat = tag.trim();
+      if (!categoryData[cat]) {
+        categoryData[cat] = [];
+      }
+      categoryData[cat].push({ slug, title, description, date: dateStr, year, quarter });
+    });
+    
+    const tagsHtml = tags.length > 0 ? `<div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : '';
+    
     listItems += `
-      <div class="list-item" data-year="${year}">
-        <div class="date">${dateStr}</div>
+      <div class="list-item" data-year="${year}" data-quarter="${quarter}" data-tags="${tags.join(',')}">
+        <div class="date">${dateStr} <span class="read-time">${readTime} min</span></div>
+        ${tagsHtml}
         <a href="/Alpha-Architect/intelligence/${slug}/" style="text-decoration:none;">
           <h2>${title}</h2>
           <p class="desc">${description}</p>
@@ -149,36 +189,93 @@ async function generateSEO() {
   }
 
   const years = Object.keys(yearData).sort().reverse();
+  const quarters = Object.keys(quarterData).sort().reverse();
+  const categories = Object.keys(categoryData).sort();
+  
+  // Year navigation
   const yearNavItems = years.map(year => 
-    `<a href="#" onclick="filterYear('${year}', this); return false;" class="year-box" data-year="${year}">${year}</a>`
+    `<a href="#" onclick="filterItems('year', '${year}', this); return false;" class="year-box" data-year="${year}">${year}</a>`
   ).join('');
   
-  const yearNav = `
-    <div class="year-nav">
-      <a href="#" onclick="filterYear('all', this); return false;" class="year-box ${years.length > 1 ? 'active' : ''}" data-year="all">All</a>
-      ${yearNavItems}
+  // Quarter navigation
+  const quarterNavItems = quarters.map(q => 
+    `<a href="#" onclick="filterItems('quarter', '${q}', this); return false;" class="quarter-box" data-quarter="${q}">${q}</a>`
+  ).join('');
+  
+  // Category navigation
+  const categoryNavItems = categories.map(cat => 
+    `<a href="#" onclick="filterItems('category', '${cat}', this); return false;" class="cat-box" data-category="${cat}">${cat}</a>`
+  ).join('');
+
+  const hasMultipleYears = years.length > 1;
+  const hasQuarters = quarters.length > 0;
+  const hasCategories = categories.length > 0;
+  
+  const searchBox = `
+    <div class="search-box">
+      <input type="text" class="search-input" placeholder="Search briefings..." onkeyup="searchItems(this.value)">
     </div>
     <script>
-      function filterYear(year, el) {
-        document.querySelectorAll('.year-box').forEach(b => b.classList.remove('active'));
+      function searchItems(query) {
+        query = query.toLowerCase();
         document.querySelectorAll('.list-item').forEach(item => {
-          if (year === 'all' || item.dataset.year === year) {
+          const title = item.querySelector('h2')?.textContent.toLowerCase() || '';
+          const desc = item.querySelector('.desc')?.textContent.toLowerCase() || '';
+          const tags = item.dataset.tags || '';
+          if (!query || title.includes(query) || desc.includes(query) || tags.includes(query)) {
             item.style.display = 'block';
           } else {
             item.style.display = 'none';
           }
         });
-        el.classList.add('active');
+        // Clear active states when searching
+        if (query) {
+          document.querySelectorAll('.year-box, .quarter-box, .cat-box').forEach(b => b.classList.remove('active'));
+        }
       }
-    </script>
-  `;
+    </script>`;
+  
+  const filterNav = `
+    <div class="year-nav">
+      <a href="#" onclick="filterItems('year', 'all', this); return false;" class="year-box ${hasMultipleYears ? 'active' : ''}" data-year="all">All</a>
+      ${yearNavItems}
+    </div>
+    ${hasQuarters ? `<div class="quarter-nav">${quarterNavItems}</div>` : ''}
+    ${hasCategories ? `<div class="category-nav">${categoryNavItems}</div>` : ''}
+    <script>
+      let activeFilters = { year: 'all', quarter: 'all', category: 'all' };
+      function filterItems(type, value, el) {
+        activeFilters[type] = value;
+        
+        // Update active states
+        document.querySelectorAll('.' + type + '-box').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+        
+        // Clear search when using filters
+        document.querySelector('.search-input').value = '';
+        
+        // Apply all filters
+        document.querySelectorAll('.list-item').forEach(item => {
+          const yearMatch = activeFilters.year === 'all' || item.dataset.year === activeFilters.year;
+          const quarterMatch = activeFilters.quarter === 'all' || item.dataset.quarter === activeFilters.quarter;
+          const catMatch = activeFilters.category === 'all' || (item.dataset.tags || '').split(',').includes(activeFilters.category);
+          
+          if (yearMatch && quarterMatch && catMatch) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+    </script>`;
 
   const indexBody = `
     <div class="container" style="max-width:900px; text-align:center;">
       <a href="/Alpha-Architect/" class="back">&larr; Back to Profile</a>
       <h1 class="index-title">${BRAND_NAME}</h1>
       <p class="index-sub">Institutional briefings on Off-Market Alpha architecture, Agentic AI infrastructure, and proprietary deal flow for mid-market principals.</p>
-      ${years.length > 1 ? yearNav : ''}
+      ${searchBox}
+      ${hasMultipleYears || hasCategories ? filterNav : ''}
       ${listItems}
     </div>`;
 
@@ -187,13 +284,90 @@ async function generateSEO() {
   console.log('✅ Generated /dist/intelligence/index.html');
 
   // Generate Article Pages
-  for (const file of files) {
+  // Sort files by date for prev/next navigation
+  const sortedFiles = [...files].sort((a, b) => {
+    const rawA = fs.readFileSync(path.join(CONTENT_DIR, a), 'utf8');
+    const rawB = fs.readFileSync(path.join(CONTENT_DIR, b), 'utf8');
+    const dateA = new Date(matter(rawA).data.date || 0);
+    const dateB = new Date(matter(rawB).data.date || 0);
+    return dateB - dateA;
+  });
+  
+  const fileSlugMap = {};
+  for (let i = 0; i < sortedFiles.length; i++) {
+    const f = sortedFiles[i];
+    const raw = fs.readFileSync(path.join(CONTENT_DIR, f), 'utf8');
+    const { data } = matter(raw);
+    const slug = data.slug || f.replace('.md', '');
+    fileSlugMap[slug] = i;
+  }
+  
+  for (let i = 0; i < sortedFiles.length; i++) {
+    const file = sortedFiles[i];
     const raw = fs.readFileSync(path.join(CONTENT_DIR, file), 'utf8');
     const { data, content } = matter(raw);
     const slug = data.slug || file.replace('.md', '');
     const title = data.title || 'Insight';
     const description = data.description || '';
     const date = data.date ? new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+    
+    // Calculate read time
+    const wordCount = content.split(/\s+/).length;
+    const readTime = Math.max(1, Math.ceil(wordCount / 200));
+
+    // Schema.org structured data for article
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": description,
+      "author": {
+        "@type": "Person",
+        "name": "Jonas Hyltén"
+      },
+      "datePublished": data.date,
+      "dateModified": data.date,
+      "url": `${SITE_URL}/intelligence/${slug}/`
+    };
+
+    // Find prev/next
+    const currentIndex = fileSlugMap[slug];
+    const prevSlug = sortedFiles[currentIndex + 1];
+    const nextSlug = sortedFiles[currentIndex - 1];
+    
+    let prevNextHtml = '';
+    if (prevSlug || nextSlug) {
+      const prevRaw = prevSlug ? fs.readFileSync(path.join(CONTENT_DIR, prevSlug), 'utf8') : null;
+      const nextRaw = nextSlug ? fs.readFileSync(path.join(CONTENT_DIR, nextSlug), 'utf8') : null;
+      const prevData = prevRaw ? matter(prevRaw).data : null;
+      const nextData = nextRaw ? matter(nextRaw).data : null;
+      const prevTitle = prevData?.title || 'Previous';
+      const nextTitle = nextData?.title || 'Next';
+      const prevFileSlug = prevData?.slug || prevSlug?.replace('.md', '') || '';
+      const nextFileSlug = nextData?.slug || nextSlug?.replace('.md', '') || '';
+      
+      prevNextHtml = `
+        <div style="display: flex; justify-content: space-between; margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
+          ${prevSlug ? `<a href="/Alpha-Architect/intelligence/${prevFileSlug}/" style="text-align: left;">
+            <div style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">&larr; Previous</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #C5A059;">${prevTitle}</div>
+          </a>` : '<div></div>'}
+          ${nextSlug ? `<a href="/Alpha-Architect/intelligence/${nextFileSlug}/" style="text-align: right;">
+            <div style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Next &rarr;</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #C5A059;">${nextTitle}</div>
+          </a>` : '<div></div>'}
+        </div>`;
+    }
+    
+    // Breadcrumb
+    const articleDate = data.date ? new Date(data.date) : null;
+    const articleYear = articleDate ? articleDate.getFullYear() : '';
+    const breadcrumb = `
+      <div style="margin-bottom: 40px;">
+        <a href="/Alpha-Architect/intelligence/" style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px;">Intelligence</a>
+        ${articleYear ? `<span style="font-size: 9px; color: #444; margin: 0 8px;">/</span>` : ''}
+        ${articleYear ? `<a href="/Alpha-Architect/intelligence/?year=${articleYear}" style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px;">${articleYear}</a>` : ''}
+      </div>`;
 
     const contentHtml = content.split('\n').map(p => {
       p = p.trim();
@@ -209,12 +383,13 @@ async function generateSEO() {
 
     const articleBody = `
     <div class="container">
-      <a href="/Alpha-Architect/intelligence/" class="back">&larr; Back to Index</a>
+      ${breadcrumb}
       <h1>${title}</h1>
-      <div class="meta">${date} &bull; Jonas Hylt&eacute;n</div>
+      <div class="meta">${date} <span class="read-time">${readTime} min read</span> &bull; Jonas Hylt&eacute;n</div>
       <div class="content">
         ${contentHtml}
       </div>
+      ${prevNextHtml}
       <div style="text-align:center;">
         <a href="/Alpha-Architect/" class="home-btn">Return to Profile</a>
       </div>
@@ -222,7 +397,7 @@ async function generateSEO() {
 
     const articleDir = path.join(INTELLIGENCE_DIST_DIR, slug);
     ensureDir(articleDir);
-    fs.writeFileSync(path.join(articleDir, 'index.html'), htmlBuilder(title, description, articleBody));
+    fs.writeFileSync(path.join(articleDir, 'index.html'), htmlBuilder(title, description, articleBody, schemaData));
     console.log(`✅ Generated /dist/intelligence/${slug}/index.html`);
   }
 
