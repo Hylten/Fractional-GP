@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deal Flow Management: The Systems Enabling Pipeline Visibility | Off-Market Alpha Architect</title>
+  <meta name="description" content="How deal flow management systems enable pipeline visibility and optimization.">
+  <meta name="author" content="Jonas Hyltén">
+  <link rel="canonical" href="https://hylten.github.io/Alpha-Architect/intelligence/">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Deal Flow Management: The Systems Enabling Pipeline Visibility",
+  "description": "How deal flow management systems enable pipeline visibility and optimization.",
+  "author": {
+    "@type": "Person",
+    "name": "Jonas Hyltén"
+  },
+  "datePublished": "2026-06-02",
+  "dateModified": "2026-06-02",
+  "url": "https://hylten.github.io/Alpha-Architect/intelligence/2026-05-04-deal-flow-management/"
+}</script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0b0f16; color: #E5E7EB; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.8; }
+    a { color: #C5A059; text-decoration: none; transition: 0.3s; }
+    a:hover { opacity: 0.7; }
+    .container { max-width: 820px; margin: 0 auto; padding: 120px 24px 120px; }
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .top-nav-left { display: flex; flex-direction: column; gap: 8px; }
+    .top-nav-right { text-align: right; }
+    .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #888; margin-bottom: 0; }
+    .breadcrumb:hover { color: #C5A059; }
+    .breadcrumb-sep { color: #444; margin: 0 12px; }
+    .back { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #888; font-weight: 500; transition: 0.3s; }
+    .back:hover { color: #C5A059; }
+    .back-label { font-size: 9px; color: #555; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .bottom-nav-box { margin-top: 100px; padding: 60px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); text-align: center; }
+    .bottom-nav-label { font-size: 9px; color: #555; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+    .bottom-nav-link { display: inline-block; padding: 20px 48px; border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; transition: 0.4s; }
+    .bottom-nav-link:hover { background: #C5A059; color: #000; border-color: #C5A059; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #ffffff; margin-bottom: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -0.02em; }
+    .meta { font-size: 11px; color: #eeeeee; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #222; font-weight: 500; }
+    .meta .read-time { opacity: 0.6; margin-left: 12px; }
+    .content p, .content li { font-size: 1.15rem; line-height: 2.4; color: #ffffff; font-weight: 300; margin-bottom: 80px; }
+    .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; color: #ffffff; margin: 80px 0 40px; font-weight: 300; line-height: 1.2; }
+    .content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #ffffff; margin: 60px 0 30px; font-weight: 400; }
+    .content strong { color: #ffffff; font-weight: 600; }
+    .content em { font-style: italic; color: #ffffff; }
+    .content blockquote { border-left: 2px solid #C5A059; padding-left: 32px; margin: 60px 0; font-style: italic; color: #eeeeee; font-size: 1.2rem; }
+    .home-btn { display: inline-block; padding: 16px 40px; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #ffffff; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; border-radius: 0; margin-top: 100px; transition: 0.4s; }
+    .home-btn:hover { background: #C5A059; color: #000; border-color: #C5A059; }
+    .wa-btn { position: fixed; bottom: 32px; right: 32px; z-index: 1000; background: #111; padding: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.6); opacity: 0.4; transition: 0.3s; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; }
+    .wa-btn:hover { opacity: 1; transform: translateY(-2px); }
+    .list-item { margin-bottom: 140px; padding-bottom: 100px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
+    .list-item h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #C5A059; margin-bottom: 32px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; }
+    .list-item .desc { font-size: 1.1rem; color: #eeeeee; line-height: 1.8; font-weight: 300; max-width: 650px; margin-bottom: 40px; }
+    .list-item .date { font-size: 10px; color: #C5A059; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 32px; font-weight: 500; opacity: 1; }
+    .list-item .read-time { font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-left: 12px; }
+    .list-item .tags { margin-bottom: 16px; }
+    .list-item .tag { display: inline-block; padding: 4px 10px; background: rgba(197, 160, 89, 0.1); border: 1px solid rgba(197, 160, 89, 0.2); color: #C5A059; font-size: 8px; text-transform: uppercase; letter-spacing: 2px; margin-right: 8px; }
+    .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
+    .list-item .read:hover { border-bottom-color: #C5A059; color: #C5A059; }
+    .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: #C5A059; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
+    .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 60px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
+    .year-nav, .quarter-nav, .category-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 40px; }
+    .quarter-nav { margin-top: 20px; }
+    .category-nav { margin-bottom: 60px; }
+    .year-box, .quarter-box, .cat-box { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #aaaaaa; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; transition: 0.3s; cursor: pointer; }
+    .year-box:hover, .quarter-box:hover, .cat-box:hover { border-color: #C5A059; color: #ffffff; }
+    .year-box.active, .quarter-box.active, .cat-box.active { background: #C5A059; border-color: #C5A059; color: #000000; }
+    .search-box { max-width: 400px; margin: 0 auto 60px; }
+    .search-input { width: 100%; padding: 14px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px; font-family: 'Inter', sans-serif; outline: none; transition: 0.3s; }
+    .search-input:focus { border-color: #C5A059; }
+    .search-input::placeholder { color: #666; }
+  </style>
+</head>
+<body>
+  
+    <div class="container">
+      
+      <div class="top-nav">
+        <div class="top-nav-left">
+          <div class="back-label">Navigation</div>
+          <div>
+            <a href="/Alpha-Architect/" class="back">&larr; Return to Profile</a>
+          </div>
+        </div>
+        <div class="top-nav-right">
+          <div>
+            <a href="/Alpha-Architect/intelligence/" class="breadcrumb">Intelligence</a>
+            <span class="breadcrumb-sep">/</span><a href="/Alpha-Architect/intelligence/?year=2026" class="breadcrumb">2026</a>
+          </div>
+        </div>
+      </div>
+      <h1>Deal Flow Management: The Systems Enabling Pipeline Visibility</h1>
+      <div class="meta">June 2, 2026 <span class="read-time">8 min read</span> &bull; Jonas Hylt&eacute;n</div>
+      <div class="content">
+        
+<h2>The Visibility Problem</h2>
+
+<p>Traditional pipeline management lacks visibility. Deal teams estimate stages from memory. Managers forecast outcomes from hope. The lack creates uncertainty that informed decisions cannot address.</p>
+
+<p>The memory problem compounds over time and volume. A deal team managing 20 active opportunities struggles to track detailed status for each. Critical milestones blur together. Action items get forgotten. The memory degradation produces execution failures that damage deal outcomes.</p>
+
+<p>The forecasting problem multiplies the memory issue. Without systematic tracking, managers guess at conversion rates. Pipeline values reflect wishful thinking rather than data. Resource allocation follows intuition rather than evidence. The forecasting failure produces:</p>
+
+<p>- Overcommitment of resources to opportunities unlikely to close</p>
+<p>- Undercommitment to opportunities with high close probability</p>
+<p>- Missed allocation windows for seasonal deal patterns</p>
+<p>- Cash flow surprises at quarter-end</p>
+
+<p>Swedish mid-market funds illustrate the problem. A fund targeting 10 annual acquisitions operates with pipeline visibility limited to broker updates and deal team memory. The CEO receives weekly status reports that summarize opportunities in generic terms. "Three deals in due diligence, two in LOI, five in early stages." The summary provides no insight into conversion probability or timeline risk.</p>
+
+<p>Modern management systems provide visibility. Stage tracking, conversion analytics, and forecast modeling generate insights that memory and hope cannot provide. The visibility enables decisions that uncertainty prevents.</p>
+
+<p>Systematic deal flow management produces measurable improvements. Funds implementing comprehensive tracking achieve:</p>
+
+<p>- 30% improvement in forecast accuracy</p>
+<p>- 25% reduction in deal slippage</p>
+<p>- 20% improvement in resource utilization</p>
+<p>- 15% reduction in cycle times</p>
+
+<p>The improvements compound. Better forecasting enables better capital allocation. Reduced slippage preserves deal flow. Improved utilization reduces costs. The cumulative effect transforms acquisition economics.</p>
+
+<h2>The Management Architecture</h2>
+
+<p>Deal flow management requires comprehensive systems operating across three interconnected domains. Each domain addresses specific visibility requirements.</p>
+
+<h3>Stage Tracking Systems</h3>
+
+<p>Tracking systems map opportunities through stages. Qualification, due diligence, and closing receive systematic tracking. The mapping maintains visibility that enables management.</p>
+
+<p><strong>Stage definitions</strong> provide standardized progression criteria. A typical framework includes:</p>
+
+<p>1. <strong>Initial Screening</strong>: Opportunity identified, basic qualification applied</p>
+<p>2. <strong>Qualified</strong>: Fit confirmed, decision-maker engaged, information requested</p>
+<p>3. <strong>Engaged</strong>: Data room accessed, preliminary analysis underway</p>
+<p>4. <strong>Due Diligence</strong>: Detailed analysis, site visits, management meetings</p>
+<p>5. <strong>LOI</strong>: Letter of intent signed, exclusivity granted</p>
+<p>6. <strong>Closing</strong>: Legal documentation, financing, regulatory approval</p>
+
+<p>Each stage includes specific entry criteria, expected activities, and exit criteria. The standardization enables apples-to-apples comparison across opportunities.</p>
+
+<p><strong>Activity tracking</strong> records all deal-related actions. The tracking includes:</p>
+
+<p>- Meetings held and outcomes</p>
+<p>- Documents reviewed and conclusions</p>
+<p>- Communications sent and received</p>
+<p>- Decisions made and rationale</p>
+
+<p>The activity history provides context for management decisions. A deal stuck in due diligence for 60 days triggers investigation. The activity history reveals whether delays reflect data issues, seller behavior, or resource constraints.</p>
+
+<p><strong>Milestone tracking</strong> monitors critical events that drive deal progress. Milestones include:</p>
+
+<p>- Financial model completion</p>
+<p>- Due diligence findings</p>
+<p>- Board approval</p>
+<p>- Financing commitment</p>
+<p>- Legal documentation</p>
+<p>- Regulatory approval</p>
+
+<p>Milestone delays provide early warning of deal risk. Intervention before milestone slippage prevents cascading delays.</p>
+
+<h3>Analytics and Optimization Systems</h3>
+
+<p>Analytics systems evaluate pipeline health. Conversion rates, velocity metrics, and bottleneck identification reveal optimization opportunities. The analysis enables intervention that improves flow.</p>
+
+<p><strong>Conversion analysis</strong> tracks movement through stages. The analysis produces:</p>
+
+<p>- Stage-to-stage conversion rates by opportunity source</p>
+<p>- Conversion rates by industry, size, and geography</p>
+<p>- Conversion rates by deal team and process type</p>
+
+<p>The analysis identifies process improvements. A fund might discover that deals sourced through off-market prospecting convert at 35% from LOI to close while broker-sourced deals convert at 22%. The insight shifts sourcing emphasis toward off-market approaches.</p>
+
+<p><strong>Velocity analysis</strong> tracks time-in-stage for opportunities. The analysis identifies:</p>
+
+<p>- Average time in each stage</p>
+<p>- Variation in time by opportunity characteristics</p>
+<p>- Bottleneck stages where deals accumulate</p>
+
+<p>The velocity analysis reveals process inefficiencies. A fund might discover that due diligence averages 45 days but should complete in 28 days. The insight triggers process improvements or resource additions in due diligence.</p>
+
+<p><strong>Bottleneck identification</strong> pinpoints stages limiting deal flow. The identification analyzes:</p>
+
+<p>- Queue length at each stage</p>
+<p>- Wait times between stages</p>
+<p>- Resource constraints affecting stage throughput</p>
+
+<p>The bottleneck analysis enables targeted intervention. A fund might discover that 40% of deals stall in the "Engaged" stage waiting for financial data. The insight triggers data request automation or seller liaison improvements.</p>
+
+<h3>Forecast and Planning Systems</h3>
+
+<p>Forecast systems project outcomes from current data. Close probabilities, pipeline values, and timeline distributions inform planning. The projection enables resource allocation that reactive response cannot support.</p>
+
+<p><strong>Probability-weighted forecasting</strong> applies conversion rates to pipeline values. The calculation produces:</p>
+
+<p>- Expected value by opportunity: probability times value</p>
+<p>- Pipeline expected value: sum of all opportunities</p>
+<p>- Confidence intervals: range based on conversion rate variance</p>
+
+<p>The forecast provides realistic expectations. A 100-million-SEK pipeline with 25% average conversion produces 25-million-SEK expected value. The realistic number enables capital planning that optimistic projections cannot support.</p>
+
+<p><strong>Timeline distribution modeling</strong> projects deal closure timing. The modeling incorporates:</p>
+
+<p>- Historical time-in-stage distributions</p>
+<p>- Current stage and milestone status</p>
+<p>- Seasonality patterns in deal flow</p>
+
+<p>The timeline projection enables cash flow planning. A fund expecting three deals to close in Q3 and two in Q4 can plan financing accordingly. The planning prevents liquidity surprises.</p>
+
+<p><strong>Scenario analysis</strong> models alternative outcomes. The analysis tests:</p>
+
+<p>- Upside scenarios: higher conversion rates, larger deal sizes</p>
+<p>- Base scenarios: current conversion rates, pipeline values</p>
+<p>- Downside scenarios: lower conversion rates, deal failures</p>
+
+<p>The scenario planning enables risk management. A fund with visibility into downside scenarios can prepare contingency plans. The preparation prevents crisis response.</p>
+
+<h2>GTM Engineering: Pipeline Infrastructure</h2>
+
+<p>Production-grade deal flow management requires engineering infrastructure that supports real-time visibility.</p>
+
+<h3>Data Infrastructure</h3>
+
+<p><strong>CRM systems</strong> provide the foundation for deal tracking. Salesforce or HubSpot customization for M&A workflows enables:</p>
+
+<p>- Opportunity records with custom stages and fields</p>
+<p>- Activity logging with automated capture</p>
+<p>- Milestone tracking with automated alerts</p>
+<p>- Pipeline visualization with real-time updates</p>
+
+<p>The CRM implementation requires careful configuration. Standard CRM workflows rarely match M&A process requirements. Customization investment typically reaches 200-500,000 SEK.</p>
+
+<p><strong>Data warehousing</strong> consolidates deal data for analysis. The warehouse stores:</p>
+
+<p>- Historical deal outcomes for model training</p>
+<p>- Current pipeline for real-time analytics</p>
+<p>- Activity data for process analysis</p>
+
+<p>The warehouse enables advanced analytics that CRM alone cannot support. Business intelligence tools connect to the warehouse for dashboarding and reporting.</p>
+
+<h3>Automation and Integration</h3>
+
+<p><strong>Stage progression automation</strong> moves deals through stages based on activity completion. The automation triggers:</p>
+
+<p>- Stage advancement when milestone criteria met</p>
+<p>- Alert notifications to deal teams</p>
+<p>- Manager notifications for exceptions</p>
+
+<p>The automation reduces manual tracking burden. Deal teams focus on execution rather than data entry.</p>
+
+<p><strong>Integration with external systems</strong> synchronizes deal data across platforms. Integrations include:</p>
+
+<p>- Email tracking: meeting scheduling, correspondence logging</p>
+<p>- Document management: data room access, version control</p>
+<p>- Financial systems: valuation models, closing cash flows</p>
+<p>- Communication tools: call logging, messaging capture</p>
+
+<p>The integration provides comprehensive visibility. Deal context assembles from multiple sources into unified views.</p>
+
+<h3>Analytics and Reporting</h3>
+
+<p><strong>Real-time dashboards</strong> display pipeline health for different audiences:</p>
+
+<p>- Deal team: individual opportunity status and next actions</p>
+<p>- Manager: team pipeline, conversion rates, velocity metrics</p>
+<p>- Executive: portfolio pipeline, forecast, resource needs</p>
+
+<p>The dashboards provide appropriate visibility at each organizational level. Real-time updates ensure currency.</p>
+
+<p><strong>Automated reporting</strong> generates periodic updates without manual effort. Reports include:</p>
+
+<p>- Weekly pipeline summary for management review</p>
+<p>- Monthly conversion analysis for strategy sessions</p>
+<p>- Quarterly forecast review for board presentation</p>
+
+<p>The reporting automation frees analyst time for value-added analysis.</p>
+
+<h2>The Economics of Visibility</h2>
+
+<p>Systematic deal flow management produces measurable economic benefits.</p>
+
+<p><strong>Forecast accuracy improvements</strong> enable better capital allocation. Funds improving forecast accuracy from 50% to 80% achieve:</p>
+
+<p>- 25% reduction in idle capital</p>
+<p>- 20% improvement in deployment speed</p>
+<p>- 15% reduction in financing costs</p>
+
+<p>The allocation improvements compound returns. Capital deployed faster earns returns sooner. Idle capital costs money.</p>
+
+<p><strong>Process efficiency gains</strong> from bottleneck identification produce cost reductions. A fund reducing average cycle time from 120 days to 90 days achieves:</p>
+
+<p>- 25% increase in annual deal capacity</p>
+<p>- 30% reduction in per-deal costs</p>
+<p>- 20% improvement in close rates (faster sellers commit)</p>
+
+<p>The efficiency gains improve acquisition economics. Lower costs and higher close rates produce superior returns.</p>
+
+<p><strong>Resource optimization</strong> from visibility enables better team utilization. A fund achieving 20% improvement in resource utilization gains:</p>
+
+<p>- Capacity for 3-4 additional deals annually</p>
+<p>- 15% reduction in personnel costs per deal</p>
+<p>- 25% improvement in deal team satisfaction (less firefighting)</p>
+
+<p>The optimization supports scaling. More deals from same resources improves economics.</p>
+
+<p>| Metric | Intuitive Management | Systematic Management |</p>
+<p>|--------|---------------------|------------------------|</p>
+<p>| Forecast accuracy | 50% | 80% |</p>
+<p>| Deal slippage | 25% | 10% |</p>
+<p>| Cycle time (days) | 120 | 90 |</p>
+<p>| Annual deal capacity | 10 | 14 |</p>
+<p>| Cost per deal (SEK) | 1,200,000 | 850,000 |</p>
+
+<h2>Sammanfattning</h2>
+
+<p>Deal flow management systems enable pipeline visibility and optimization. Tracking systems map opportunities through stages. Analytics systems evaluate pipeline health. Forecast systems project outcomes from current data. GTM engineering infrastructure enables real-time visibility across the pipeline. The economics produce 25% improvement in forecast accuracy and 30% reduction in per-deal costs. The systems enable efficiency that uncertainty prevents.</p>
+
+<p>Order is not an option. It is a mandate.</p>
+
+      </div>
+      
+        <div style="display: flex; justify-content: space-between; margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <a href="/Alpha-Architect/intelligence/2026-06-26-ma-deal-flow-technology/" style="text-align: left;">
+            <div style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">&larr; Previous</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #C5A059;">M&A Deal Flow Technology: The Infrastructure Stack for Acquisition Excellence</div>
+          </a>
+          <a href="/Alpha-Architect/intelligence/2026-03-26-acquisition-automation-systems/" style="text-align: right;">
+            <div style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Next &rarr;</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #C5A059;">Acquisition Automation Systems: The Technology Multiplying Deal Flow</div>
+          </a>
+        </div>
+      <div class="bottom-nav-box">
+        <div class="bottom-nav-label">Back to Profile</div>
+        <a href="/Alpha-Architect/" class="bottom-nav-link">Return to Profile</a>
+      </div>
+    </div>
+  <a href="https://wa.me/46701619978?text=Regarding%20Off-Market%20Alpha%20Architecture" target="_blank" rel="noopener noreferrer" class="wa-btn">
+    <svg style="width:20px;height:20px;color:white;" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</body>
+</html>

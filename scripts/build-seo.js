@@ -21,6 +21,40 @@ const ensureDir = (dirPath) => {
   }
 };
 
+// DATE SAFEGUARD: Prevent future-dated articles from being built
+function validateArticleDates() {
+  // Use local date (YYYY-MM-DD in local timezone)
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  
+  const files = fs.readdirSync(CONTENT_DIR).filter(f => f.endsWith('.md'));
+  const futureDates = [];
+  
+  files.forEach(file => {
+    const match = file.match(/^(\d{4})-(\d{2})-(\d{2})-/);
+    if (match) {
+      const articleDate = new Date(parseInt(match[1]), parseInt(match[2]) - 1, parseInt(match[3]));
+      if (articleDate > today) {
+        futureDates.push({ file, date: `${match[1]}-${match[2]}-${match[3]}` });
+      }
+    }
+  });
+  
+  if (futureDates.length > 0) {
+    console.error('\n❌ DATE SAFEGUARD: Future-dated articles detected!');
+    console.error('   Today (local):', `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`);
+    console.error('   Future articles:');
+    futureDates.forEach(({ file, date }) => {
+      console.error(`     - ${date}: ${file}`);
+    });
+    console.error('\n   Fix: Run "node scripts/fix-all-dates.cjs" or manually rename files.');
+    console.error('   Build aborted to prevent future dates from being published.\n');
+    process.exit(1);
+  }
+  
+  console.log('✅ Date validation passed: No future dates found');
+}
+
 function copyVCard() {
   ensureDir(DIST_DIR);
   // Copy root VCard files to dist (index.html, profile.jpg, jonas-hylten.vcf)
@@ -121,6 +155,9 @@ function buildBlogHTML() {
 }
 
 async function generateSEO() {
+  // DATE SAFEGUARD: Validate no future dates before building
+  validateArticleDates();
+  
   console.log('Building Off-Market Alpha Architect Site...');
 
   // Step 1: Copy VCard landing page to dist
