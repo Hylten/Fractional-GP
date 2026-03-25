@@ -61,9 +61,20 @@ function buildBlogHTML() {
     body { background: #0b0f16; color: #E5E7EB; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.8; }
     a { color: ${ACCENT}; text-decoration: none; transition: 0.3s; }
     a:hover { opacity: 0.7; }
-    .container { max-width: 820px; margin: 0 auto; padding: 180px 24px 120px; }
-    .back { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #aaaaaa; margin-bottom: 80px; display: inline-block; font-weight: 500; }
+    .container { max-width: 820px; margin: 0 auto; padding: 120px 24px 120px; }
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .top-nav-left { display: flex; flex-direction: column; gap: 8px; }
+    .top-nav-right { text-align: right; }
+    .breadcrumb { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #888; margin-bottom: 0; }
+    .breadcrumb:hover { color: ${ACCENT}; }
+    .breadcrumb-sep { color: #444; margin: 0 12px; }
+    .back { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #888; font-weight: 500; transition: 0.3s; }
     .back:hover { color: ${ACCENT}; }
+    .back-label { font-size: 9px; color: #555; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .bottom-nav-box { margin-top: 100px; padding: 60px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); text-align: center; }
+    .bottom-nav-label { font-size: 9px; color: #555; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+    .bottom-nav-link { display: inline-block; padding: 20px 48px; border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; transition: 0.4s; }
+    .bottom-nav-link:hover { background: ${ACCENT}; color: #000; border-color: ${ACCENT}; }
     h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); color: #ffffff; margin-bottom: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -0.02em; }
     .meta { font-size: 11px; color: #eeeeee; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #222; font-weight: 500; }
     .meta .read-time { opacity: 0.6; margin-left: 12px; }
@@ -363,10 +374,19 @@ async function generateSEO() {
     const articleDate = data.date ? new Date(data.date) : null;
     const articleYear = articleDate ? articleDate.getFullYear() : '';
     const breadcrumb = `
-      <div style="margin-bottom: 40px;">
-        <a href="/Alpha-Architect/intelligence/" style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px;">Intelligence</a>
-        ${articleYear ? `<span style="font-size: 9px; color: #444; margin: 0 8px;">/</span>` : ''}
-        ${articleYear ? `<a href="/Alpha-Architect/intelligence/?year=${articleYear}" style="font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 2px;">${articleYear}</a>` : ''}
+      <div class="top-nav">
+        <div class="top-nav-left">
+          <div class="back-label">Navigation</div>
+          <div>
+            <a href="/Alpha-Architect/" class="back">&larr; Return to Profile</a>
+          </div>
+        </div>
+        <div class="top-nav-right">
+          <div>
+            <a href="/Alpha-Architect/intelligence/" class="breadcrumb">Intelligence</a>
+            ${articleYear ? `<span class="breadcrumb-sep">/</span><a href="/Alpha-Architect/intelligence/?year=${articleYear}" class="breadcrumb">${articleYear}</a>` : ''}
+          </div>
+        </div>
       </div>`;
 
     const contentHtml = content.split('\n').map(p => {
@@ -390,8 +410,9 @@ async function generateSEO() {
         ${contentHtml}
       </div>
       ${prevNextHtml}
-      <div style="text-align:center;">
-        <a href="/Alpha-Architect/" class="home-btn">Return to Profile</a>
+      <div class="bottom-nav-box">
+        <div class="bottom-nav-label">Back to Profile</div>
+        <a href="/Alpha-Architect/" class="bottom-nav-link">Return to Profile</a>
       </div>
     </div>`;
 
