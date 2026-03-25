@@ -35,7 +35,11 @@
     .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
     .list-item .read:hover { border-bottom-color: #C5A059; color: #C5A059; }
     .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: #C5A059; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
-    .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 140px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
+    .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 60px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
+    .year-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 80px; }
+    .year-box { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #aaaaaa; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; transition: 0.3s; }
+    .year-box:hover { border-color: #C5A059; color: #ffffff; }
+    .year-box.active { background: #C5A059; border-color: #C5A059; color: #000000; }
   </style>
 </head>
 <body>
@@ -45,199 +49,218 @@
       <h1 class="index-title">Off-Market Alpha Architect</h1>
       <p class="index-sub">Institutional briefings on Off-Market Alpha architecture, Agentic AI infrastructure, and proprietary deal flow for mid-market principals.</p>
       
-      <div class="list-item">
+    <div class="year-nav">
+      <a href="#" onclick="filterYear('all', this); return false;" class="year-box active" data-year="all">All</a>
+      <a href="#" onclick="filterYear('2026', this); return false;" class="year-box" data-year="2026">2026</a><a href="#" onclick="filterYear('2025', this); return false;" class="year-box" data-year="2025">2025</a>
+    </div>
+    <script>
+      function filterYear(year, el) {
+        document.querySelectorAll('.year-box').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.list-item').forEach(item => {
+          if (year === 'all' || item.dataset.year === year) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        el.classList.add('active');
+      }
+    </script>
+  
+      
+      <div class="list-item" data-year="2025">
         <div class="date">March 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-03-01-deal-flow-mastery/" style="text-decoration:none;">
-          <h2>The Deal Flow Mastery: Complete Origination Excellence</h2>
-          <p class="desc">How to achieve complete mastery in deal flow generation.</p>
+          <h2>Deal Flow Mastery: The Complete Origination Excellence Framework</h2>
+          <p class="desc">A comprehensive framework for achieving deal flow mastery through systematic origination, evaluation, and relationship management in mid-market private equity.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">March 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-03-15-acquisition-sourcing/" style="text-decoration:none;">
-          <h2>The Acquisition Sourcing: Building Complete Deal Acquisition Systems</h2>
-          <p class="desc">How to build complete systems for deal acquisition that operate indefinitely.</p>
+          <h2>Acquisition Sourcing: Building Systematic Deal Flow Architecture</h2>
+          <p class="desc">How to build complete deal acquisition systems that operate with systematic consistency and compound advantages over time.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">April 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-04-01-sourcing-engine/" style="text-decoration:none;">
-          <h2>The Sourcing Engine: Building Permanent Deal Flow Generation</h2>
-          <p class="desc">How to build engines that permanently generate deal flow.</p>
+          <h2>The Sourcing Engine: Building Sustainable Deal Flow Generation Systems</h2>
+          <p class="desc">A comprehensive guide to building automated, self-improving deal flow generation systems that operate with minimal intervention and compound over time.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">April 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-04-15-deal-generation-system/" style="text-decoration:none;">
-          <h2>The Deal Generation System: Building Comprehensive Acquisition Infrastructure</h2>
-          <p class="desc">How to build comprehensive systems that generate deal flow permanently.</p>
+          <h2>Deal Generation System: Building Complete Acquisition Infrastructure</h2>
+          <p class="desc">How to build complete systems for generating acquisition opportunities that compound over time with increasing efficiency.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">May 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-05-01-origination-mastery/" style="text-decoration:none;">
-          <h2>The Origination Mastery: Building Complete Deal Flow Capability</h2>
-          <p class="desc">How to achieve complete origination mastery that generates superior deal flow.</p>
+          <h2>Origination Mastery: Complete Excellence in Deal Origination</h2>
+          <p class="desc">Achieving complete mastery in deal origination through systematic capability development and relationship network building.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">May 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-05-15-deal-flow-engine/" style="text-decoration:none;">
-          <h2>The Deal Flow Engine: Building Self-Powered Acquisition Systems</h2>
-          <p class="desc">How to build self-powered systems that generate deal flow without constant input.</p>
+          <h2>Deal Flow Engine: Building Self-Sustaining Acquisition Pipeline Systems</h2>
+          <p class="desc">How to build self-sustaining deal flow engines that generate acquisition opportunities with minimal manual intervention and compound efficiency over time.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">June 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-06-01-acquisition-advantage/" style="text-decoration:none;">
-          <h2>The Acquisition Advantage: Building Sustainable Deal Flow Leadership</h2>
-          <p class="desc">How to build sustainable deal flow advantages that create market leadership.</p>
+          <h2>Acquisition Advantage: Building Sustainable Deal Flow Leadership</h2>
+          <p class="desc">How to build sustainable acquisition advantages that create market leadership through proprietary channels, superior processes, and accumulated capabilities.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">June 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-06-15-sourcing-excellence/" style="text-decoration:none;">
-          <h2>The Sourcing Excellence: Achieving Deal Flow Mastery</h2>
-          <p class="desc">How to achieve sourcing excellence that generates superior deal flow permanently.</p>
+          <h2>Sourcing Excellence: Achieving Deal Flow Mastery Through Systematic Capability Development</h2>
+          <p class="desc">How to achieve sourcing excellence that generates superior deal flow through systematic capability development, relationship building, and process optimization.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">July 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-07-01-deal-generation-capability/" style="text-decoration:none;">
-          <h2>The Deal Generation Capability: Building Permanent Sourcing Advantage</h2>
-          <p class="desc">How to build deal generation capabilities that create permanent sourcing advantages.</p>
+          <h2>Deal Generation Capability: Building Permanent Sourcing Advantages</h2>
+          <p class="desc">How to build deal generation capabilities that create permanent sourcing advantages through skill development, process refinement, and relationship investment.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">July 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-07-15-origination-machine/" style="text-decoration:none;">
-          <h2>The Origination Machine: Building Automated Deal Generation</h2>
-          <p class="desc">How to build machines that generate deal flow automatically.</p>
+          <h2>Origination Machine: Building Automated Deal Generation Systems</h2>
+          <p class="desc">How to build automated origination machines that generate deal flow with minimal manual intervention through systematic process design and technology integration.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">August 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-08-01-deal-flow-system/" style="text-decoration:none;">
-          <h2>The Deal Flow System: Building Comprehensive Acquisition Infrastructure</h2>
-          <p class="desc">How to build comprehensive infrastructure that generates deal flow permanently.</p>
+          <h2>Deal Flow System: Building Comprehensive Acquisition Infrastructure</h2>
+          <p class="desc">How to build comprehensive deal flow infrastructure that generates acquisition opportunities consistently through integrated systems, processes, and capabilities.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">August 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-08-15-acquisition-engine/" style="text-decoration:none;">
-          <h2>The Acquisition Engine: Building Permanent Deal Generation Systems</h2>
-          <p class="desc">How to build permanent deal generation engines that operate indefinitely.</p>
+          <h2>Acquisition Engine: Building Self-Sustaining Deal Generation Systems</h2>
+          <p class="desc">How to build self-sustaining acquisition engines that generate deal flow permanently through systematic process design, capability compounding, and continuous optimization.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">September 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-09-01-deal-flow-mastery/" style="text-decoration:none;">
-          <h2>The Deal Flow Mastery: Building Permanent Acquisition Advantage</h2>
-          <p class="desc">How to achieve mastery in deal flow generation that creates permanent advantage.</p>
+          <h2>Deal Flow Mastery: Building Permanent Acquisition Advantage</h2>
+          <p class="desc">How to achieve mastery in deal flow generation that creates permanent competitive advantages through systematic capability development and continuous learning.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">September 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-09-15-origination-excellence/" style="text-decoration:none;">
-          <h2>The Origination Excellence: Achieving Deal Flow Mastery</h2>
-          <p class="desc">How to achieve excellence in deal flow generation through systematic development.</p>
+          <h2>Origination Excellence: Achieving Deal Flow Mastery</h2>
+          <p class="desc">How to achieve excellence in deal flow generation through systematic capability development, process optimization, and reputation building.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">October 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-10-01-systematic-origination/" style="text-decoration:none;">
-          <h2>The Systematic Origination: Building Deal Flow That Never Stops</h2>
-          <p class="desc">How to build systematic origination that generates deal flow continuously.</p>
+          <h2>Systematic Origination: Building Deal Flow That Never Stops</h2>
+          <p class="desc">How to build systematic origination that generates deal flow continuously through automation, monitoring, and continuous improvement cycles.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">October 10, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-10-10-deal-flow-investment/" style="text-decoration:none;">
-          <h2>The Deal Flow Investment: Allocating Resources for Maximum Return</h2>
-          <p class="desc">How to allocate deal flow investments for maximum return on investment.</p>
+          <h2>Deal Flow Investment: Allocating Resources for Maximum Return</h2>
+          <p class="desc">How to allocate deal flow investments for maximum return on investment across personnel, technology, marketing, and relationship categories.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">October 20, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-10-20-origination-capability/" style="text-decoration:none;">
-          <h2>The Origination Capability: Building Sustainable Deal Generation</h2>
-          <p class="desc">How to build origination capabilities that generate deal flow indefinitely.</p>
+          <h2>Origination Capability: Building Sustainable Deal Generation</h2>
+          <p class="desc">How to build origination capabilities that generate deal flow indefinitely through systematic development, investment, and capability compounding.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">November 1, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-11-01-deal-flow-leadership/" style="text-decoration:none;">
-          <h2>The Deal Flow Leadership: Building Organizations That Generate Deal Flow</h2>
-          <p class="desc">How to build organizational leadership that generates consistent deal flow.</p>
+          <h2>Deal Flow Leadership: Building Organizations That Generate Deal Flow</h2>
+          <p class="desc">How to build organizational leadership that generates consistent deal flow through vision development, strategy execution, culture cultivation, and system building.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">November 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-11-15-seller-engagement/" style="text-decoration:none;">
-          <h2>The Seller Engagement: Building Relationships That Convert</h2>
-          <p class="desc">How to build seller engagement that converts relationships into closed deals.</p>
+          <h2>Seller Engagement: Building Relationships That Convert</h2>
+          <p class="desc">How to build seller engagement that converts relationships into closed deals through philosophy alignment, process design, trust building, and conversion optimization.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">November 25, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-11-25-target-identification/" style="text-decoration:none;">
-          <h2>The Target Identification: Building Systematic Discovery Systems</h2>
-          <p class="desc">How to build systems that systematically identify acquisition targets.</p>
+          <h2>Target Identification: Building Systematic Discovery Systems</h2>
+          <p class="desc">How to build systems that systematically identify acquisition targets through criteria definition, discovery method development, qualification process design, and prioritization framework construction.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">December 5, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-12-05-relationship-intelligence/" style="text-decoration:none;">
-          <h2>The Relationship Intelligence: Building Systematic Network Knowledge</h2>
-          <p class="desc">How to build intelligence systems that capture and leverage relationship knowledge.</p>
+          <h2>Relationship Intelligence: Building Systematic Network Knowledge</h2>
+          <p class="desc">How to build intelligence systems that capture and leverage relationship knowledge through automated data collection, signal detection, and autonomous agent workflows.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">December 10, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-12-10-deal-flow-metrics/" style="text-decoration:none;">
-          <h2>The Metrics Framework: Comprehensive Deal Flow Measurement</h2>
-          <p class="desc">How to build comprehensive metrics frameworks for deal flow optimization.</p>
+          <h2>Deal Flow Metrics: Building Comprehensive Measurement Systems</h2>
+          <p class="desc">How to build comprehensive metrics frameworks for deal flow optimization through data infrastructure, automated tracking, and autonomous analytics.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">December 15, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-12-15-sourcing-automation/" style="text-decoration:none;">
-          <h2>The Sourcing Automation: Reducing Manual Effort While Increasing Output</h2>
-          <p class="desc">How to automate sourcing activities without losing personalization.</p>
+          <h2>Sourcing Automation: Reducing Manual Effort While Increasing Output</h2>
+          <p class="desc">How to automate sourcing activities without losing personalization through autonomous agent workflows, voice-to-json pipelines, and continuous optimization systems.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">December 20, 2025</div>
         <a href="/Alpha-Architect/intelligence/2025-12-20-acquisition-pipeline/" style="text-decoration:none;">
-          <h2>The Acquisition Pipeline: Managing Flow From Source to Close</h2>
-          <p class="desc">How to manage acquisition pipelines that convert signals into closed deals.</p>
+          <h2>Off-Market Deal Flow: The Systematic Pipeline Architecture</h2>
+          <p class="desc">Internal analysis of systematic off-market deal flow construction through signal detection infrastructure, autonomous agent workflows, and proprietary network development.</p>
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">January 5, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-01-05-deal-flow-engine/" style="text-decoration:none;">
           <h2>The Deal Flow Engine: Building Self-Powered Acquisition Machines</h2>
@@ -245,7 +268,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">January 10, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-01-10-proprietary-origination/" style="text-decoration:none;">
           <h2>The Proprietary Origination: Building Exclusive Deal Access</h2>
@@ -253,7 +276,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">January 15, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-01-15-origination-architecture/" style="text-decoration:none;">
           <h2>The Origination Architecture: Designing Systems That Generate Deal Flow</h2>
@@ -261,7 +284,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 8, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-08-deal-flow-excellence/" style="text-decoration:none;">
           <h2>The Deal Flow Excellence: Integrating All Components</h2>
@@ -269,7 +292,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 9, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-09-competitive-advantage/" style="text-decoration:none;">
           <h2>The Competitive Advantage: Sustaining Deal Flow Leadership</h2>
@@ -277,7 +300,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 10, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-10-risk-framework/" style="text-decoration:none;">
           <h2>The Risk Framework: Managing Deal Flow Risks Systematically</h2>
@@ -285,7 +308,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 11, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-11-learning-system/" style="text-decoration:none;">
           <h2>The Learning System: Building Continuous Improvement in Deal Flow</h2>
@@ -293,7 +316,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 12, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-12-technology-stack/" style="text-decoration:none;">
           <h2>The Technology Stack: Building Integrated Deal Flow Infrastructure</h2>
@@ -301,7 +324,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 13, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-13-deal-flow-team-structure/" style="text-decoration:none;">
           <h2>The Deal Flow Team Structure: Organizing for Maximum Performance</h2>
@@ -309,7 +332,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 14, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-14-acquisition-thesis/" style="text-decoration:none;">
           <h2>The Acquisition Thesis: Building Coherent Investment Strategy</h2>
@@ -317,7 +340,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 15, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-15-quality-pipeline/" style="text-decoration:none;">
           <h2>The Quality Pipeline: Ensuring Deal Flow Excellence at Every Stage</h2>
@@ -325,7 +348,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 16, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-16-deal-flow-sustainability/" style="text-decoration:none;">
           <h2>The Deal Flow Sustainability: Building Long-Term Acquisition Capability</h2>
@@ -333,7 +356,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 17, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-17-relationship-portfolio/" style="text-decoration:none;">
           <h2>The Relationship Portfolio: Managing Multiple Deal Flow Sources</h2>
@@ -341,7 +364,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 18, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-18-target-prioritization/" style="text-decoration:none;">
           <h2>The Target Prioritization: Mathematical Approaches to Deal Selection</h2>
@@ -349,7 +372,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 19, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-19-sourcing-scale/" style="text-decoration:none;">
           <h2>The Scaling Challenge: Growing Deal Flow Without Quality Degradation</h2>
@@ -357,7 +380,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 20, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-20-channel-strategy/" style="text-decoration:none;">
           <h2>The Channel Strategy: Optimizing Deal Flow Source Diversification</h2>
@@ -365,7 +388,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 21, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-21-sourcing-innovation/" style="text-decoration:none;">
           <h2>The Sourcing Innovation: Emerging Technologies in Deal Flow</h2>
@@ -373,7 +396,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 22, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-22-market-intelligence/" style="text-decoration:none;">
           <h2>The Market Intelligence: Building Decision Support Systems</h2>
@@ -381,7 +404,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 23, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-23-deal-flow-economics/" style="text-decoration:none;">
           <h2>The Deal Flow Economics: Understanding True Acquisition Costs</h2>
@@ -389,7 +412,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 24, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-24-deal-flow-culture/" style="text-decoration:none;">
           <h2>The Deal Flow Culture: Building Organization-Wide Sourcing Capability</h2>
@@ -397,7 +420,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 25, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-25-advisor-partnership/" style="text-decoration:none;">
           <h2>The Advisor Partnership: Building Long-Term Strategic Relationships</h2>
@@ -405,7 +428,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 26, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-26-deal-flow-metrics/" style="text-decoration:none;">
           <h2>The Deal Flow Metrics: What to Measure and Why</h2>
@@ -413,7 +436,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 27, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-27-deal-flow-flywheel/" style="text-decoration:none;">
           <h2>The Deal Flow Flywheel: Building Self-Sustaining Acquisition Engines</h2>
@@ -421,7 +444,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">February 28, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-02-28-seller-psychology/" style="text-decoration:none;">
           <h2>The Seller Psychology: Understanding Owner Decision-Making</h2>
@@ -429,7 +452,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 1, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-01-network-effects/" style="text-decoration:none;">
           <h2>The Network Effects: How Deal Flow Generates More Deal Flow</h2>
@@ -437,7 +460,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 2, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-02-process-innovation/" style="text-decoration:none;">
           <h2>The Process Innovation: Continuous Improvement in Deal Flow</h2>
@@ -445,7 +468,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 3, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-03-exit-optionality/" style="text-decoration:none;">
           <h2>The Exit Optionality: How Deal Flow Quality Creates Exit Opportunities</h2>
@@ -453,7 +476,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 4, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-04-market-timing/" style="text-decoration:none;">
           <h2>The Market Timing: Capital Deployment Cycles and Deal Flow</h2>
@@ -461,7 +484,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 5, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-05-relationship-economics/" style="text-decoration:none;">
           <h2>The Relationship Economics: Calculating Deal Flow ROI</h2>
@@ -469,7 +492,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 6, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-06-due-diligence-efficiency/" style="text-decoration:none;">
           <h2>The Due Diligence Efficiency: How Proprietary Deals Enable Faster Execution</h2>
@@ -477,7 +500,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 7, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-07-valuation-precision/" style="text-decoration:none;">
           <h2>The Valuation Precision: How Deal Flow Quality Affects Pricing</h2>
@@ -485,7 +508,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 8, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-08-inbound-deal-flow/" style="text-decoration:none;">
           <h2>The Inbound Strategy: Building Deal Flow That Comes to You</h2>
@@ -493,7 +516,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 9, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-09-sourcing-team/" style="text-decoration:none;">
           <h2>The Sourcing Team: Building Capability That Compounds</h2>
@@ -501,7 +524,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 10, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-10-platform-play/" style="text-decoration:none;">
           <h2>The Platform Play: Using Acquired Businesses as Deal Flow Engines</h2>
@@ -509,7 +532,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 11, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-11-geographic-concentration/" style="text-decoration:none;">
           <h2>The Geographic Concentration: Why Local Focus Beats National Reach</h2>
@@ -517,7 +540,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 12, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-12-competitive-dynamics/" style="text-decoration:none;">
           <h2>The Competitive Dynamics: Understanding Deal Flow Competition</h2>
@@ -525,7 +548,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 13, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-13-conversion-funnel/" style="text-decoration:none;">
           <h2>The Conversion Funnel: Optimizing Each Stage of Deal Flow</h2>
@@ -533,7 +556,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 14, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-14-multi-channel-approach/" style="text-decoration:none;">
           <h2>The Multi-Channel Approach: Orchestrating Deal Flow Across Platforms</h2>
@@ -541,7 +564,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 15, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-15-data-driven-sourcing/" style="text-decoration:none;">
           <h2>The Data Infrastructure: Building Systematic Deal Flow Intelligence</h2>
@@ -549,7 +572,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 16, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-16-relationship-credibility/" style="text-decoration:none;">
           <h2>The Credibility Architecture: Building the Reputation That Closes Deals</h2>
@@ -557,7 +580,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 17, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-17-timing-arbitrage/" style="text-decoration:none;">
           <h2>The Timing Arbitrage: Capturing Deals at the Decision Moment</h2>
@@ -565,7 +588,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 18, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-18-sector-specific-origination/" style="text-decoration:none;">
           <h2>Sector-Specific Origination: Why Generalist Sourcing Fails</h2>
@@ -573,7 +596,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 19, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-19-deal-flow-crm/" style="text-decoration:none;">
           <h2>The Deal Flow CRM: Managing the Pipeline That Generates Alpha</h2>
@@ -581,7 +604,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 20, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-20-professional-advisor-network/" style="text-decoration:none;">
           <h2>The Professional Advisor Network: Building Referral Channels That Deliver Deals</h2>
@@ -589,7 +612,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 21, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-21-seller-motivation-spectrum/" style="text-decoration:none;">
           <h2>The Seller Motivation Spectrum: Identifying Deal-Ready Owners Before Competition</h2>
@@ -597,7 +620,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 22, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-22-direct-outreach-playbook/" style="text-decoration:none;">
           <h2>The Direct Outreach Playbook: Systematic Letter Strategy for Deal Flow</h2>
@@ -605,7 +628,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 23, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-23-proprietary-signals-network-effect/" style="text-decoration:none;">
           <h2>The Proprietary Signal Network: Why Deal Flow Compounds Beyond Linear Returns</h2>
@@ -613,7 +636,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 24, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-24-asymmetry-advantage-off-market-deals/" style="text-decoration:none;">
           <h2>The Asymmetry Advantage: Why Off-Market Deals Outperform in Every Market Cycle</h2>
@@ -621,7 +644,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 25, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-25-sourcing-velocity-ratios/" style="text-decoration:none;">
           <h2>Sourcing Velocity Ratios: The Math Behind Deal Flow Economics</h2>
@@ -629,7 +652,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 26, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-26-vertical-concentration-thesis/" style="text-decoration:none;">
           <h2>Vertical Concentration Thesis: Why Sector Focus Beats Diversification</h2>
@@ -637,7 +660,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 27, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-27-advisor-triangulation/" style="text-decoration:none;">
           <h2>Advisor Triangulation: Building the Intelligence Network</h2>
@@ -645,7 +668,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 28, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-28-seller-psychology-matrix/" style="text-decoration:none;">
           <h2>Seller Psychology Matrix: Mapping Motivation States</h2>
@@ -653,7 +676,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 29, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-29-due-diligence-architecture/" style="text-decoration:none;">
           <h2>Due Diligence Architecture: Building Systematic Evaluation</h2>
@@ -661,7 +684,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 30, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-30-valuation-anchoring-dynamics/" style="text-decoration:none;">
           <h2>Valuation Anchoring Dynamics in Mid-Market Transactions</h2>
@@ -669,7 +692,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 31, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-03-31-relationship-velocity-management/" style="text-decoration:none;">
           <h2>Relationship Velocity Management in Deal Execution</h2>
@@ -677,7 +700,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 1, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-01-capital-structure-optimization/" style="text-decoration:none;">
           <h2>Capital Structure Optimization in Acquisition Financing</h2>
@@ -685,7 +708,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 2, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-02-closing-risk-mitigation/" style="text-decoration:none;">
           <h2>Closing Risk Mitigation: Protecting Deal Value</h2>
@@ -693,7 +716,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 3, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-03-integration-planning-framework/" style="text-decoration:none;">
           <h2>Integration Planning Framework: Post-Acquisition Value Creation</h2>
@@ -701,7 +724,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 4, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-04-portfolio-optimization-logic/" style="text-decoration:none;">
           <h2>Portfolio Optimization Logic in Private Company Acquisitions</h2>
@@ -709,7 +732,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 5, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-05-exit-timing-arbitrage/" style="text-decoration:none;">
           <h2>Exit Timing Arbitrage: Capturing Market Cycles</h2>
@@ -717,7 +740,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 6, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-06-ownership-transition-dynamics/" style="text-decoration:none;">
           <h2>Ownership Transition Dynamics in Private Companies</h2>
@@ -725,7 +748,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 7, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-07-competition-dynamics-analysis/" style="text-decoration:none;">
           <h2>Competition Dynamics Analysis in Deal Sourcing</h2>
@@ -733,7 +756,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 8, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-08-data-driven-sourcing/" style="text-decoration:none;">
           <h2>Data-Driven Sourcing: Systematic Approaches to Deal Identification</h2>
@@ -741,7 +764,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 9, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-09-valuation-methodology-frames/" style="text-decoration:none;">
           <h2>Valuation Methodology Frames: Selecting the Right Approach</h2>
@@ -749,7 +772,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 10, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-10-regulatory-considerations/" style="text-decoration:none;">
           <h2>Regulatory Considerations in Mid-Market Acquisitions</h2>
@@ -757,7 +780,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 11, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-11-earnout-structure-logic/" style="text-decoration:none;">
           <h2>Earnout Structure Logic: Aligning Incentives Post-Acquisition</h2>
@@ -765,7 +788,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 12, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-12-seller-financing-strategies/" style="text-decoration:none;">
           <h2>Seller Financing Strategies: Optimizing Deal Structure</h2>
@@ -773,7 +796,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 13, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-13-customer-concentration-analysis/" style="text-decoration:none;">
           <h2>Customer Concentration Analysis: Risk Assessment and Mitigation</h2>
@@ -781,7 +804,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 14, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-14-key-person-dependence/" style="text-decoration:none;">
           <h2>Key Person Dependence: Assessment and Mitigation</h2>
@@ -789,7 +812,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 15, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-15-working-capital-normalization/" style="text-decoration:none;">
           <h2>Working Capital Normalization: Avoiding Post-Closing Surprises</h2>
@@ -797,7 +820,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 16, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-16-indemnification-provisions/" style="text-decoration:none;">
           <h2>Indemnification Provisions: Allocating Post-Closing Risk</h2>
@@ -805,7 +828,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 17, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-17-escrow-holdback-strategies/" style="text-decoration:none;">
           <h2>Escrow and Holdback Strategies in Deal Structure</h2>
@@ -813,7 +836,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 18, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-18-loi-negotiation-tactics/" style="text-decoration:none;">
           <h2>LOI Negotiation Tactics: Securing Favorable Terms</h2>
@@ -821,7 +844,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 19, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-19-finance-commitment-letters/" style="text-decoration:none;">
           <h2>Financing Commitment Letters: Securing Capital</h2>
@@ -829,7 +852,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 20, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-20-third-party-consents/" style="text-decoration:none;">
           <h2>Third-Party Consents: Managing Approval Requirements</h2>
@@ -837,7 +860,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 21, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-21-closing-checklist-management/" style="text-decoration:none;">
           <h2>Closing Checklist Management: Ensuring Transaction Completion</h2>
@@ -845,7 +868,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 22, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-22-post-closing-obligations/" style="text-decoration:none;">
           <h2>Post-Closing Obligations: Managing Ongoing Requirements</h2>
@@ -853,7 +876,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">April 23, 2026</div>
         <a href="/Alpha-Architect/intelligence/2026-04-23-litigation-risk-assessment/" style="text-decoration:none;">
           <h2>Litigation Risk Assessment in Due Diligence</h2>
@@ -861,7 +884,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">November 4, 2025</div>
         <a href="/Alpha-Architect/intelligence/agentic-ai-fiduciary-duty-lp-capital-protection/" style="text-decoration:none;">
           <h2>Agentic Systems and the Fiduciary Mandate: Emerging Standards in Capital Protection</h2>
@@ -869,7 +892,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">September 23, 2025</div>
         <a href="/Alpha-Architect/intelligence/inefficiency-mid-market-origination-fractional-gp/" style="text-decoration:none;">
           <h2>The Mid-Market Friction: A Logic Chain for Fractional GP Specialization</h2>
@@ -877,7 +900,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2025">
         <div class="date">August 20, 2025</div>
         <a href="/Alpha-Architect/intelligence/sabbath-architect-structural-rest-algorithmic-execution/" style="text-decoration:none;">
           <h2>The Sabbath Protocol: Structural Equilibrium in High-Velocity Mandates</h2>
@@ -885,7 +908,7 @@
           <span class="read">Read Briefing</span>
         </a>
       </div>
-      <div class="list-item">
+      <div class="list-item" data-year="2026">
         <div class="date">March 20, 2026</div>
         <a href="/Alpha-Architect/intelligence/sourcing-velocity-frameworks-mid-market/" style="text-decoration:none;">
           <h2>Sourcing Velocity Frameworks for Fragmented Mid‑Market Sectors</h2>

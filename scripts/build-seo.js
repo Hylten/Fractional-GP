@@ -82,7 +82,11 @@ function buildBlogHTML() {
     .list-item .read { font-size: 9px; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; color: #fff; border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 8px; transition: 0.3s; }
     .list-item .read:hover { border-bottom-color: ${ACCENT}; color: ${ACCENT}; }
     .index-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 10vw, 7rem); color: ${ACCENT}; margin-bottom: 48px; font-weight: 300; letter-spacing: -0.04em; text-align: center; }
-    .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 140px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
+    .index-sub { font-size: 1.15rem; color: #dddddd; max-width: 700px; margin: 0 auto 60px; line-height: 1.8; font-weight: 300; text-align: center; font-style: italic; }
+    .year-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 80px; }
+    .year-box { display: inline-block; padding: 12px 24px; background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #aaaaaa; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; transition: 0.3s; }
+    .year-box:hover { border-color: ${ACCENT}; color: #ffffff; }
+    .year-box.active { background: ${ACCENT}; border-color: ${ACCENT}; color: #000000; }
   </style>
 </head>
 <body>
@@ -114,17 +118,28 @@ async function generateSEO() {
 
   // Generate Index Page
   let listItems = '';
+  const yearData = {};
+  
   for (const file of files) {
     const raw = fs.readFileSync(path.join(CONTENT_DIR, file), 'utf8');
     const { data } = matter(raw);
     const slug = data.slug || file.replace('.md', '');
     const title = data.title || 'Insight';
     const description = data.description || '';
-    const date = data.date ? new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
-
+    const date = data.date ? new Date(data.date) : null;
+    const dateStr = date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+    const year = date ? date.getFullYear().toString() : '';
+    
+    if (year && !yearData[year]) {
+      yearData[year] = [];
+    }
+    if (year) {
+      yearData[year].push({ slug, title, description, date: dateStr, year });
+    }
+    
     listItems += `
-      <div class="list-item">
-        <div class="date">${date}</div>
+      <div class="list-item" data-year="${year}">
+        <div class="date">${dateStr}</div>
         <a href="/Alpha-Architect/intelligence/${slug}/" style="text-decoration:none;">
           <h2>${title}</h2>
           <p class="desc">${description}</p>
@@ -133,11 +148,37 @@ async function generateSEO() {
       </div>`;
   }
 
+  const years = Object.keys(yearData).sort().reverse();
+  const yearNavItems = years.map(year => 
+    `<a href="#" onclick="filterYear('${year}', this); return false;" class="year-box" data-year="${year}">${year}</a>`
+  ).join('');
+  
+  const yearNav = `
+    <div class="year-nav">
+      <a href="#" onclick="filterYear('all', this); return false;" class="year-box ${years.length > 1 ? 'active' : ''}" data-year="all">All</a>
+      ${yearNavItems}
+    </div>
+    <script>
+      function filterYear(year, el) {
+        document.querySelectorAll('.year-box').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.list-item').forEach(item => {
+          if (year === 'all' || item.dataset.year === year) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        el.classList.add('active');
+      }
+    </script>
+  `;
+
   const indexBody = `
     <div class="container" style="max-width:900px; text-align:center;">
       <a href="/Alpha-Architect/" class="back">&larr; Back to Profile</a>
       <h1 class="index-title">${BRAND_NAME}</h1>
       <p class="index-sub">Institutional briefings on Off-Market Alpha architecture, Agentic AI infrastructure, and proprietary deal flow for mid-market principals.</p>
+      ${years.length > 1 ? yearNav : ''}
       ${listItems}
     </div>`;
 
