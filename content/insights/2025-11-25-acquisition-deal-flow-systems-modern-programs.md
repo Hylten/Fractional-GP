@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Deal Flow Systems: Building Modern Programs"
-date: "2026-04-17"
+date: "2025-11-25"
 author: "Alpha Architect"
 description: "Acquisition deal flow systems enable systematic pipeline building. This intelligence briefing examines strategic frameworks, operational practices, and technology systems that build effective acquisition programs."
 ---

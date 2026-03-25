@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Intelligence Systems: The Technology Transforming Deal Decisions"
-date: "2026-06-26"
+date: "2025-12-01"
 author: "Alpha Architect"
 description: "How acquisition intelligence systems transform deal decisions from intuition to evidence."
 ---

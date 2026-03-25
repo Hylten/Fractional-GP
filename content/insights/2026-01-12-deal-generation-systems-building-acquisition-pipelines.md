@@ -1,6 +1,6 @@
 ---
 title: "Deal Generation Systems: Building Acquisition Pipelines"
-date: "2026-04-17"
+date: "2026-01-12"
 author: "Alpha Architect"
 description: "Deal generation systems convert strategic priorities into acquisition pipeline. This intelligence briefing examines system components, operational practices, and performance management approaches that build sustainable deal flow."
 ---

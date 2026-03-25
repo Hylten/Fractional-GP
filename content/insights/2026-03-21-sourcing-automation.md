@@ -1,6 +1,6 @@
 ---
 title: "Sourcing Automation: Reducing Manual Effort While Increasing Output"
-date: "2025-12-15"
+date: "2026-03-21"
 author: "Jonas Hyltén"
 description: "How to automate sourcing activities without losing personalization through autonomous agent workflows, voice-to-json pipelines, and continuous optimization systems."
 ---

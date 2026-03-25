@@ -1,6 +1,6 @@
 ---
 title: "Content Architecture for Deal Flow: The Infrastructure Behind Buyer-Led Acquisition Systems"
-date: "2026-03-31"
+date: "2025-12-23"
 author: "Alpha Architect"
 description: "How content systems create acquisition intelligence advantages that compound over deal cycles."
 ---

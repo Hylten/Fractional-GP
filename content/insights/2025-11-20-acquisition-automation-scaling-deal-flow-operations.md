@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Automation: Scaling Deal Flow Operations"
-date: "2026-04-17"
+date: "2025-11-20"
 author: "Alpha Architect"
 description: "Acquisition automation transforms deal flow from manual, labor-intensive process to scalable, efficient operation. This intelligence briefing examines automation opportunities across the acquisition lifecycle and the implementation approaches that generate sustainable efficiency gains."
 ---

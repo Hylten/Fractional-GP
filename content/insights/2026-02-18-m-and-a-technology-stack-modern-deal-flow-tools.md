@@ -1,6 +1,6 @@
 ---
 title: "M&A Technology Stack: Modern Tools for Deal Flow Management"
-date: "2026-04-17"
+date: "2026-02-18"
 author: "Alpha Architect"
 description: "The M&A technology landscape offers tools for every process stage. This intelligence briefing examines the technology categories, selection criteria, and integration approaches that build effective deal flow technology stacks."
 ---

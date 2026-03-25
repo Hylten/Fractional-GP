@@ -1,6 +1,6 @@
 ---
 title: "Data-Driven Acquisition: The Analytics Infrastructure for Deal Origination"
-date: "2026-04-03"
+date: "2025-12-24"
 author: "Alpha Architect"
 description: "How analytics systems transform acquisition origination from intuition to systematic intelligence operation."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deal Origination Analytics: The Systems Driving Data-Driven Acquisitions"
-date: "2026-06-18"
+date: "2026-01-18"
 author: "Alpha Architect"
 description: "How deal origination analytics drive data-driven acquisitions that intuition-based approaches cannot achieve."
 ---

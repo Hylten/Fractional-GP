@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Technology: The Modern Infrastructure Transforming Acquisitions"
-date: "2026-05-27"
+date: "2026-01-08"
 author: "Alpha Architect"
 description: "How modern deal flow technology transforms acquisition programs from manual to automated."
 ---

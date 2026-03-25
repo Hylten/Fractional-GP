@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Intelligence Platforms: The Unified Systems Transforming Deal Flow"
-date: "2026-06-06"
+date: "2025-11-28"
 author: "Alpha Architect"
 description: "How unified acquisition intelligence platforms transform deal flow from fragmented tools to integrated systems."
 ---

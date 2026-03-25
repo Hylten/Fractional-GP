@@ -1,6 +1,6 @@
 ---
 title: "Buyer-Led Acquisition Systems: The Framework Transforming M&A Execution"
-date: "2026-05-10"
+date: "2025-12-19"
 author: "Alpha Architect"
 description: "How buyer-led acquisition systems transform M&A from seller-driven process to proactive opportunity development."
 ---

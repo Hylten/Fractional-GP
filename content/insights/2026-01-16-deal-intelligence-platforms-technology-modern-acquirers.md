@@ -1,6 +1,6 @@
 ---
 title: "Deal Intelligence Platforms: Technology for Modern Acquirers"
-date: "2026-04-17"
+date: "2026-01-16"
 author: "Alpha Architect"
 description: "Deal intelligence platforms provide comprehensive capabilities for modern acquisition programs. This intelligence briefing examines platform categories, selection criteria, and implementation approaches that build effective deal intelligence infrastructure."
 ---

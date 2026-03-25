@@ -1,6 +1,6 @@
 ---
 title: "Proprietary Deal Flow: The Information Architecture Behind Off-Market Acquisitions"
-date: "2026-04-02"
+date: "2026-03-16"
 author: "Alpha Architect"
 description: "How proprietary information systems create acquisition advantages that broker-dependent strategies cannot replicate."
 ---

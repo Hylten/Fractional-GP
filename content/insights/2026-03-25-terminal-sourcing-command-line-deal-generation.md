@@ -1,6 +1,6 @@
 ---
 title: "Terminal Sourcing: Command-Line Deal Generation"
-date: "2026-04-17"
+date: "2026-03-25"
 author: "Alpha Architect"
 description: "Terminal-based sourcing systems bring automation and efficiency to deal generation workflows. This intelligence briefing examines how command-line tools and programmatic interfaces transform deal sourcing from manual process to systematic execution."
 ---

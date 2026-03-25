@@ -1,6 +1,6 @@
 ---
 title: "M&A Deal Sourcing: Modern Approaches to Target Identification"
-date: "2026-04-17"
+date: "2026-02-07"
 author: "Alpha Architect"
 description: "M&A deal sourcing requires modern approaches in evolving markets. This intelligence briefing examines technology-enabled sourcing, relationship-based approaches, and competitive strategies that build sustainable deal flow."
 ---

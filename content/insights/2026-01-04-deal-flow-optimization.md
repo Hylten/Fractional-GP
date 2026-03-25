@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Optimization: The Analytics Maximizing Acquisition Efficiency"
-date: "2026-06-11"
+date: "2026-01-04"
 author: "Alpha Architect"
 description: "How deal flow optimization analytics maximize acquisition efficiency."
 ---

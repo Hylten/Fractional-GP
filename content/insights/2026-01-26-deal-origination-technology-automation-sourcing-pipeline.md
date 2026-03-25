@@ -1,6 +1,6 @@
 ---
 title: "Deal Origination Technology: Automating the Sourcing Pipeline"
-date: "2026-04-17"
+date: "2026-01-26"
 author: "Alpha Architect"
 description: "Deal origination technology transforms sourcing from manual process to automated pipeline. This intelligence briefing examines the technology categories, implementation approaches, and operational practices that build effective origination automation."
 ---

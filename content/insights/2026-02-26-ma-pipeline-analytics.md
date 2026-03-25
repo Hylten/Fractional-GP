@@ -1,6 +1,6 @@
 ---
 title: "M&A Pipeline Analytics: The Intelligence Enabling Data-Driven Decisions"
-date: "2026-06-05"
+date: "2026-02-26"
 author: "Alpha Architect"
 description: "How M&A pipeline analytics transform deal decisions from intuition to evidence."
 ---

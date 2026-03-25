@@ -1,6 +1,6 @@
 ---
 title: "M&A Deal Origination: Building Sustainable Deal Flow"
-date: "2026-04-17"
+date: "2026-02-06"
 author: "Alpha Architect"
 description: "M&A deal origination builds sustainable deal flow through systematic approaches. This intelligence briefing examines strategic frameworks, operational practices, and relationship development that create lasting sourcing capability."
 ---

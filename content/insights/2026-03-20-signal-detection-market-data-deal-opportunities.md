@@ -1,6 +1,6 @@
 ---
 title: "Signal Detection: Mining Market Data for Deal Opportunities"
-date: "2026-04-17"
+date: "2026-03-20"
 author: "Alpha Architect"
 description: "Market signals reveal acquisition opportunities before competitors detect them. This intelligence briefing examines systematic approaches to signal detection, the data infrastructure required, and the analytical frameworks that convert noise into actionable intelligence."
 ---

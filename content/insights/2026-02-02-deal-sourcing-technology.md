@@ -1,6 +1,6 @@
 ---
 title: "Deal Sourcing Technology: The Infrastructure Finding Targets Systematically"
-date: "2026-06-04"
+date: "2026-02-02"
 author: "Alpha Architect"
 description: "How deal sourcing technology finds acquisition targets systematically."
 ---

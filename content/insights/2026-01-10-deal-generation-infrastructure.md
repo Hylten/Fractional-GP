@@ -1,6 +1,6 @@
 ---
 title: "Deal Generation Infrastructure: The Systems Building Sustainable Deal Flow"
-date: "2026-05-26"
+date: "2026-01-10"
 author: "Alpha Architect"
 description: "How deal generation infrastructure creates sustainable competitive advantages in acquisition."
 ---

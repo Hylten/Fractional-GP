@@ -1,6 +1,6 @@
 ---
 title: "Terminal-Based Deal Flow: The Command Architecture for Acquisition Teams"
-date: "2026-04-07"
+date: "2026-03-23"
 author: "Alpha Architect"
 description: "How terminal interfaces transform deal flow operations from browser-based workflows to efficient command execution."
 ---

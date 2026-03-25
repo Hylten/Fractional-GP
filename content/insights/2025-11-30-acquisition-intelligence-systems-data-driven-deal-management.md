@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Intelligence Systems: Data-Driven Deal Management"
-date: "2026-04-17"
+date: "2025-11-30"
 author: "Alpha Architect"
 description: "Acquisition intelligence systems enable data-driven deal management. This intelligence briefing examines infrastructure development, analytical frameworks, and operational practices that build superior analytical capability."
 ---

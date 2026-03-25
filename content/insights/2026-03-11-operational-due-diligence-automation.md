@@ -1,6 +1,6 @@
 ---
 title: "Operational Due Diligence: The Automation Framework for Deal Teams"
-date: "2026-03-31"
+date: "2026-03-11"
 author: "Alpha Architect"
 description: "How autonomous systems transform operational due diligence from manual bottleneck to scalable pipeline operation."
 ---

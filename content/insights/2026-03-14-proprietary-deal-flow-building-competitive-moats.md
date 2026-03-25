@@ -1,6 +1,6 @@
 ---
 title: "Proprietary Deal Flow: Building Competitive Moats in M&A"
-date: "2026-04-17"
+date: "2026-03-14"
 author: "Alpha Architect"
 description: "Proprietary deal flow represents the most significant competitive advantage available in M&A. This intelligence briefing examines how firms build and maintain proprietary sourcing capabilities that generate superior acquisition outcomes."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Direct Outreach Excellence: Building the Proprietary Deal Pipeline"
-date: "2026-03-25"
+date: "2026-02-03"
 author: "Jonas Hyltén"
 description: "Internal analysis of direct outreach strategies for proprietary deal flow generation through systematic targeting, autonomous execution, and continuous optimization."
 ---

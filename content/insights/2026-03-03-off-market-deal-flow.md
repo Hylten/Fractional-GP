@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Deal Flow: The Proprietary Systems Creating Competitive Advantages"
-date: "2026-06-13"
+date: "2026-03-03"
 author: "Alpha Architect"
 description: "How off-market deal flow systems create competitive advantages that broker networks cannot overcome."
 ---

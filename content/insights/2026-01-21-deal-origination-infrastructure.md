@@ -1,6 +1,6 @@
 ---
 title: "Deal Origination Infrastructure: The Foundation for Acquisition Success"
-date: "2026-06-09"
+date: "2026-01-21"
 author: "Alpha Architect"
 description: "How deal origination infrastructure creates foundation for acquisition success."
 ---

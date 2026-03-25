@@ -1,6 +1,6 @@
 ---
 title: "M&A Sourcing: Finding Targets in Competitive Markets"
-date: "2026-04-17"
+date: "2026-02-15"
 author: "Alpha Architect"
 description: "M&A sourcing faces increasing competitive pressure. This intelligence briefing examines approaches to target identification, relationship development, and competitive positioning that enable deal flow in contested markets."
 ---

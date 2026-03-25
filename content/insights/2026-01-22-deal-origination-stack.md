@@ -1,6 +1,6 @@
 ---
 title: "The Deal Origination Stack: Integrating Systems for Acquisition Excellence"
-date: "2026-04-09"
+date: "2026-01-22"
 author: "Alpha Architect"
 description: "How integrated deal origination systems transform acquisition from fragmented operations to unified intelligence platform."
 ---

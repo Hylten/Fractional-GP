@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Intelligence: The Systems Creating Proprietary Deal Flow"
-date: "2026-05-29"
+date: "2026-03-07"
 author: "Alpha Architect"
 description: "How off-market intelligence systems create proprietary deal flow that broker networks cannot access."
 ---

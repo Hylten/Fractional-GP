@@ -1,6 +1,6 @@
 ---
 title: "AI Deal Systems: Machine Intelligence in M&A Execution"
-date: "2026-04-17"
+date: "2025-12-12"
 author: "Alpha Architect"
 description: "Artificial intelligence transforms M&A processes from manual, intuition-driven workflows to systematic, data-powered systems. This intelligence briefing examines current AI applications in deal flow and emerging capabilities that will define next-generation M&A technology."
 ---

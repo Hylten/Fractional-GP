@@ -1,6 +1,6 @@
 ---
 title: "M&A Funnel Management: Optimizing Deal Flow Efficiency"
-date: "2026-04-17"
+date: "2026-02-08"
 author: "Alpha Architect"
 description: "M&A funnel management transforms deal flow from chaotic process to systematic pipeline. This intelligence briefing examines funnel architecture, conversion optimization, and performance management approaches that maximize acquisition program effectiveness."
 ---

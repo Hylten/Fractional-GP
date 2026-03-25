@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Management: From Identification to Closing"
-date: "2026-04-17"
+date: "2025-12-30"
 author: "Alpha Architect"
 description: "Deal flow management converts identification to closing systematically. This intelligence briefing examines pipeline architecture, stage management, and optimization practices that maximize close rates."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Pipeline Technology: The Systems Enabling Visibility and Control"
-date: "2026-06-14"
+date: "2025-12-04"
 author: "Alpha Architect"
 description: "How acquisition pipeline technology enables visibility and control that manual management cannot achieve."
 ---

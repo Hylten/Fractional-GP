@@ -1,6 +1,6 @@
 ---
 title: "M&A Pipeline: From Prospect to Closing"
-date: "2026-04-17"
+date: "2026-02-13"
 author: "Alpha Architect"
 description: "M&A pipeline management converts prospects into closed transactions. This intelligence briefing examines pipeline stage design, conversion optimization, and performance management approaches that maximize close rates."
 ---

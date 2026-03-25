@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Intelligence: The Analytics Platform for Acquisition Teams"
-date: "2026-04-11"
+date: "2025-12-29"
 author: "Alpha Architect"
 description: "How analytics platforms transform deal flow from intuition to systematic intelligence-driven operation."
 ---

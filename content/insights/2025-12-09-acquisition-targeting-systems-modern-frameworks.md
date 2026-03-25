@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Targeting Systems: Modern Frameworks for Target Selection"
-date: "2026-04-17"
+date: "2025-12-09"
 author: "Alpha Architect"
 description: "Acquisition targeting systems enable systematic target selection. This intelligence briefing examines strategic frameworks, analytical approaches, and operational practices that build effective targeting capability."
 ---

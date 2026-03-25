@@ -1,6 +1,6 @@
 ---
 title: "Sourcing Excellence: The Art of Deal Identification"
-date: "2026-04-17"
+date: "2026-03-22"
 author: "Alpha Architect"
 description: "Sourcing excellence determines acquisition program outcomes before transactions begin. This intelligence briefing examines systematic approaches to deal identification, the capabilities that enable superior sourcing, and the operational practices that build sustainable deal flow."
 ---

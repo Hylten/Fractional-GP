@@ -1,6 +1,6 @@
 ---
 title: "Deal Generation Technology: Building Sourcing Infrastructure"
-date: "2026-04-17"
+date: "2026-01-13"
 author: "Alpha Architect"
 description: "Deal generation technology scales sourcing beyond manual constraints. This intelligence briefing examines technology categories, implementation approaches, and operational practices that build effective sourcing infrastructure."
 ---

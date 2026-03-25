@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Deal Flow: Strategies for Modern Acquirers"
-date: "2026-04-17"
+date: "2025-11-24"
 author: "Alpha Architect"
 description: "Acquisition deal flow requires systematic strategies in competitive markets. This intelligence briefing examines sourcing approaches, pipeline management, and optimization practices that enable successful deal flow."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Metrics: Building Comprehensive Measurement Systems"
-date: "2025-12-10"
+date: "2026-01-02"
 author: "Jonas Hyltén"
 description: "How to build comprehensive metrics frameworks for deal flow optimization through data infrastructure, automated tracking, and autonomous analytics."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Analytics: Data-Driven Pipeline Management"
-date: "2026-04-17"
+date: "2025-12-25"
 author: "Alpha Architect"
 description: "Deal flow analytics enables data-driven pipeline management. This intelligence briefing examines analytics infrastructure, metric frameworks, and operational practices that build analytical capability."
 ---

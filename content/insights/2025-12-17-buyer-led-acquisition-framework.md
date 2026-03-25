@@ -1,6 +1,6 @@
 ---
 title: "Buyer-Led Acquisition Framework: The Systematic Approach to Deal Flow"
-date: "2026-05-30"
+date: "2025-12-17"
 author: "Alpha Architect"
 description: "How buyer-led acquisition frameworks transform M&A from reactive pursuit to proactive development."
 ---

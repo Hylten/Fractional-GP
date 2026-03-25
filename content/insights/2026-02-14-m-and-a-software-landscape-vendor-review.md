@@ -1,6 +1,6 @@
 ---
 title: "M&A Software Landscape: A Comprehensive Vendor Review"
-date: "2026-04-17"
+date: "2026-02-14"
 author: "Alpha Architect"
 description: "The M&A software landscape spans categories from CRM to due diligence to integration. This intelligence briefing examines vendor categories, capability differentiation, and selection frameworks that guide effective technology investment."
 ---

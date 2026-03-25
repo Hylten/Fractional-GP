@@ -1,6 +1,6 @@
 ---
 title: "M&A Deal Generation: The Technology Building Sustainable Pipeline"
-date: "2026-06-19"
+date: "2026-02-23"
 author: "Alpha Architect"
 description: "How M&A deal generation technology builds sustainable pipeline that tactical approaches cannot sustain."
 ---

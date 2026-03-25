@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Software: Tools for Modern Deal Makers"
-date: "2026-04-17"
+date: "2025-12-05"
 author: "Alpha Architect"
 description: "Acquisition software enables modern deal flow management. This intelligence briefing examines software categories, capability requirements, and selection approaches that build effective technology infrastructure."
 ---

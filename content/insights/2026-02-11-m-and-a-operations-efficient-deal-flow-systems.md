@@ -1,6 +1,6 @@
 ---
 title: "M&A Operations: Building Efficient Deal Flow Systems"
-date: "2026-04-17"
+date: "2026-02-11"
 author: "Alpha Architect"
 description: "M&A operations enable efficient deal flow through systematic processes. This intelligence briefing examines operational frameworks, technology systems, and performance management approaches that build sustainable operational excellence."
 ---

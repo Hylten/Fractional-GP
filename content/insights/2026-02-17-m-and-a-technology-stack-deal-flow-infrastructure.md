@@ -1,6 +1,6 @@
 ---
 title: "The M&A Technology Stack: Building Infrastructure for Deal Flow Excellence"
-date: "2026-04-17"
+date: "2026-02-17"
 author: "Alpha Architect"
 description: "Modern dealmakers require a sophisticated technology infrastructure. This intelligence briefing examines the critical components of M&A technology stacks and how they enable superior deal flow management."
 ---

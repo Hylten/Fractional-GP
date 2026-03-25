@@ -1,6 +1,6 @@
 ---
 title: "Deal Pipeline Optimization: The Analytics Framework for Acquisition Excellence"
-date: "2026-05-12"
+date: "2026-01-29"
 author: "Alpha Architect"
 description: "How analytics frameworks optimize deal pipeline from intuition-based management to systematic performance improvement."
 ---

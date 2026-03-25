@@ -1,6 +1,6 @@
 ---
 title: "M&A Pipeline Development: Building Acquisition Excellence"
-date: "2026-04-17"
+date: "2026-02-12"
 author: "Alpha Architect"
 description: "M&A pipeline development builds acquisition excellence through systematic approaches. This intelligence briefing examines strategic frameworks, operational practices, and capability development that create lasting competitive advantage."
 ---

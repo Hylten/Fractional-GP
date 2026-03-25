@@ -1,6 +1,6 @@
 ---
 title: "M&A Technology Trends: The Future of Deal Flow"
-date: "2026-04-17"
+date: "2026-02-19"
 author: "Alpha Architect"
 description: "M&A technology continues evolving rapidly. This intelligence briefing examines emerging trends, technology developments, and future directions that will shape deal flow management."
 ---

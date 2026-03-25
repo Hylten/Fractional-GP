@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Targeting: Strategic Frameworks for Deal Selection"
-date: "2026-04-17"
+date: "2025-12-08"
 author: "Alpha Architect"
 description: "Acquisition targeting determines portfolio quality before transactions execute. This intelligence briefing examines strategic frameworks for target selection, the criteria that drive fit assessment, and the prioritization approaches that maximize acquisition program value."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Pipeline Analytics: Measuring Deal Flow Performance"
-date: "2026-04-17"
+date: "2026-03-13"
 author: "Alpha Architect"
 description: "Effective deal flow management requires systematic measurement of pipeline performance. This intelligence briefing examines analytics frameworks for deal flow optimization and the metrics that drive superior acquisition outcomes."
 ---

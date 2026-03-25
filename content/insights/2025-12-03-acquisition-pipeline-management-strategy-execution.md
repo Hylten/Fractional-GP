@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Pipeline Management: From Strategy to Execution"
-date: "2026-04-17"
+date: "2025-12-03"
 author: "Alpha Architect"
 description: "Acquisition pipeline management converts strategy into transaction outcomes. This intelligence briefing examines pipeline architecture, management practices, and optimization approaches that maximize acquisition success."
 ---

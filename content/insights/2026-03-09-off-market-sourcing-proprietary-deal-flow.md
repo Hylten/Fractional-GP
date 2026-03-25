@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Sourcing: The Proprietary Deal Flow Imperative"
-date: "2026-04-17"
+date: "2026-03-09"
 author: "Alpha Architect"
 description: "Proprietary deal flow represents the single most significant competitive advantage in M&A. This intelligence briefing examines systematic approaches to off-market sourcing and the infrastructure required to maintain proprietary deal flow."
 ---

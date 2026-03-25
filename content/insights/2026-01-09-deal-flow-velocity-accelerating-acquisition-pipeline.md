@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Velocity: Accelerating the Acquisition Pipeline"
-date: "2026-04-17"
+date: "2026-01-09"
 author: "Alpha Architect"
 description: "Deal flow velocity determines acquisition program competitiveness. This intelligence briefing examines systematic approaches to pipeline acceleration, the bottlenecks that constrain velocity, and the interventions that improve throughput without sacrificing quality."
 ---

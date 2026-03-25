@@ -1,6 +1,6 @@
 ---
 title: "Deal Origination Excellence: Building Systematic Acquisition Programs"
-date: "2026-04-17"
+date: "2026-01-20"
 author: "Alpha Architect"
 description: "Deal origination excellence determines acquisition program outcomes. This intelligence briefing examines strategic frameworks, operational practices, and capability development approaches that build sustainable origination programs."
 ---

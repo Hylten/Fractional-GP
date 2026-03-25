@@ -1,6 +1,6 @@
 ---
 title: "Deal Origination Systems: The Technology Scaling Acquisition Programs"
-date: "2026-05-31"
+date: "2026-01-24"
 author: "Alpha Architect"
 description: "How deal origination systems scale acquisition programs beyond traditional limitations."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Technology Stack: The Integrated Systems Enabling Acquisition Excellence"
-date: "2026-06-21"
+date: "2026-01-07"
 author: "Alpha Architect"
 description: "How deal flow technology stacks enable acquisition excellence that fragmented tools cannot achieve."
 ---

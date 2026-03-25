@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Intelligence: Finding Deals Before They Surface"
-date: "2026-04-17"
+date: "2026-03-06"
 author: "Alpha Architect"
 description: "Off-market intelligence reveals acquisition targets before public processes begin. This intelligence briefing examines systematic approaches to off-market discovery, the data sources that enable early detection, and the operational practices that convert intelligence into deal flow."
 ---

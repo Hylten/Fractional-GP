@@ -1,6 +1,6 @@
 ---
 title: "Seller Financing: The Invisible Deal Structure Powering Lower Middle Market Acquisitions"
-date: "2026-03-29"
+date: "2026-03-17"
 author: "Alpha Architect"
 description: "How seller financing reduces capital requirements and structures deals that traditional lending misses entirely."
 ---

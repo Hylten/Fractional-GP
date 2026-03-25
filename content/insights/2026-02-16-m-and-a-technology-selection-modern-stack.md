@@ -1,6 +1,6 @@
 ---
 title: "M&A Technology Selection: Building the Modern Stack"
-date: "2026-04-17"
+date: "2026-02-16"
 author: "Alpha Architect"
 description: "M&A technology selection determines acquisition capability for years. This intelligence briefing examines selection frameworks, vendor evaluation approaches, and implementation practices that build effective technology stacks."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Sourcing Infrastructure: The Foundation for Modern Deal Flow"
-date: "2026-06-20"
+date: "2025-12-06"
 author: "Alpha Architect"
 description: "How acquisition sourcing infrastructure creates foundation for modern deal flow."
 ---

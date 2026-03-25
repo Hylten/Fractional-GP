@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Pipeline Intelligence: The Analytics Framework for Deal Flow"
-date: "2026-04-16"
+date: "2025-12-02"
 author: "Alpha Architect"
 description: "How analytics frameworks transform deal pipeline from intuitive tracking to systematic intelligence operation."
 ---

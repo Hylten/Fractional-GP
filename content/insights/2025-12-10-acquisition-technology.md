@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Technology: The Infrastructure Stack for Modern Deal Flow"
-date: "2026-05-24"
+date: "2025-12-10"
 author: "Alpha Architect"
 description: "How acquisition technology stacks transform deal flow from fragmented tools to unified systems."
 ---

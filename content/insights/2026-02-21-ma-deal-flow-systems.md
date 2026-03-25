@@ -1,6 +1,6 @@
 ---
 title: "M&A Deal Flow Systems: The Technology Creating Sustainable Competitive Advantages"
-date: "2026-06-25"
+date: "2026-02-21"
 author: "Alpha Architect"
 description: "How M&A deal flow systems create sustainable competitive advantages."
 ---

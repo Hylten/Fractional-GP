@@ -1,6 +1,6 @@
 ---
 title: "Deal Sourcing Infrastructure: The Systems Architecture for Off-Market Acquisitions"
-date: "2026-04-15"
+date: "2026-01-31"
 author: "Alpha Architect"
 description: "How infrastructure systems transform deal sourcing from relationship-dependent to architecture-driven operation."
 ---

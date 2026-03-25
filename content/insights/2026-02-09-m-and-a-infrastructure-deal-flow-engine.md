@@ -1,6 +1,6 @@
 ---
 title: "M&A Infrastructure: Building the Deal Flow Engine"
-date: "2026-04-17"
+date: "2026-02-09"
 author: "Alpha Architect"
 description: "M&A infrastructure determines deal flow capability and acquisition program effectiveness. This intelligence briefing examines the components, integration patterns, and development approaches that build sustainable deal flow infrastructure."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Prospecting: The Agent Infrastructure for Deal Generation"
-date: "2026-04-10"
+date: "2025-12-16"
 author: "Alpha Architect"
 description: "How autonomous agent systems transform prospecting from manual activity to continuous intelligence operation."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Deal Flow Systems: The Technology Stack for Modern Programs"
-date: "2026-06-10"
+date: "2025-11-26"
 author: "Alpha Architect"
 description: "How acquisition deal flow systems enable modern programs that legacy approaches cannot support."
 ---

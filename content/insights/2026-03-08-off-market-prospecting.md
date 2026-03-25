@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Prospecting: The Systems Finding Deals Before Competition"
-date: "2026-05-21"
+date: "2026-03-08"
 author: "Alpha Architect"
 description: "How off-market prospecting systems identify acquisition opportunities before competitors recognize potential."
 ---

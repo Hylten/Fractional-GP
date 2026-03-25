@@ -1,6 +1,6 @@
 ---
 title: "AI-Powered Deal Origination: The Machine Learning Infrastructure for Acquisition"
-date: "2026-04-08"
+date: "2025-12-13"
 author: "Alpha Architect"
 description: "How machine learning systems transform deal origination from rules-based to predictive intelligence operation."
 ---

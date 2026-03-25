@@ -1,6 +1,6 @@
 ---
 title: "Proprietary Deal Flow Systems: The Infrastructure for Competitive Moats"
-date: "2026-05-17"
+date: "2026-03-15"
 author: "Alpha Architect"
 description: "How proprietary deal flow systems create sustainable competitive advantages that broker-dependent approaches cannot overcome."
 ---

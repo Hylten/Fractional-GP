@@ -1,6 +1,6 @@
 ---
 title: "M&A Intelligence Systems: The Analytics Transforming Deal Decisions"
-date: "2026-05-25"
+date: "2026-02-24"
 author: "Alpha Architect"
 description: "How M&A intelligence systems transform deal decisions from intuition to evidence."
 ---

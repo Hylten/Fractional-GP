@@ -1,6 +1,6 @@
 ---
 title: "M&A Analytics Framework: The Systems Architecture for Data-Driven Acquisitions"
-date: "2026-05-18"
+date: "2026-02-20"
 author: "Alpha Architect"
 description: "How analytics frameworks transform M&A from intuition-based decisions to systematic intelligence."
 ---

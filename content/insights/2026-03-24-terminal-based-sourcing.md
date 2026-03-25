@@ -1,6 +1,6 @@
 ---
 title: "Terminal-Based Sourcing: The Command Interface for Deal Generation"
-date: "2026-05-19"
+date: "2026-03-24"
 author: "Alpha Architect"
 description: "How terminal interfaces transform deal sourcing from browser-based workflows to efficient command execution."
 ---

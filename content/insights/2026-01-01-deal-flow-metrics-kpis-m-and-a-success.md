@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Metrics: KPIs for M&A Success"
-date: "2026-04-17"
+date: "2026-01-01"
 author: "Alpha Architect"
 description: "Deal flow metrics enable performance management and continuous improvement. This intelligence briefing examines the key performance indicators that drive acquisition success, measurement approaches, and analytical frameworks for metric interpretation."
 ---

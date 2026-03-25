@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Intelligence: Data-Driven Deal Making"
-date: "2026-04-17"
+date: "2025-11-27"
 author: "Alpha Architect"
 description: "Acquisition intelligence transforms deal making from intuition to data-driven process. This intelligence briefing examines intelligence infrastructure, analytical frameworks, and operational practices that enable superior decision-making."
 ---

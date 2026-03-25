@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Technology: Modern Infrastructure for Acquirers"
-date: "2026-04-17"
+date: "2026-01-05"
 author: "Alpha Architect"
 description: "Deal flow technology enables modern acquisition management. This intelligence briefing examines technology categories, integration approaches, and development practices that build effective deal flow infrastructure."
 ---

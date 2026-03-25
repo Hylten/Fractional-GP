@@ -1,6 +1,6 @@
 ---
 title: "Buyer-Led Acquisition: Shifting the M&A Paradigm"
-date: "2026-04-17"
+date: "2025-12-18"
 author: "Alpha Architect"
 description: "Buyer-led acquisition models challenge traditional seller-centric M&A processes. This intelligence briefing examines how proactive buyers transform deal flow dynamics and achieve superior acquisition outcomes through systematic target engagement."
 ---

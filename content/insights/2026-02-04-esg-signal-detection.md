@@ -1,6 +1,6 @@
 ---
 title: "Signal Detection: ESG Decision-Makers and the Acquisition Intelligence Stack"
-date: "2026-03-30"
+date: "2026-02-04"
 author: "Alpha Architect"
 description: "How to identify, qualify, and reach ESG decision-makers for B2B acquisition and partnership opportunities."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Generation Systems: The Technology Creating Sustainable Pipeline"
-date: "2026-06-07"
+date: "2025-12-28"
 author: "Alpha Architect"
 description: "How deal flow generation systems create sustainable acquisition pipeline."
 ---

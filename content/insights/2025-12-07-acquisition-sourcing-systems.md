@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Sourcing Systems: The Technology Finding Targets Efficiently"
-date: "2026-05-28"
+date: "2025-12-07"
 author: "Alpha Architect"
 description: "How acquisition sourcing systems transform target identification from manual research to automated intelligence."
 ---

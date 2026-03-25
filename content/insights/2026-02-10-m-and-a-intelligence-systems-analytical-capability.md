@@ -1,6 +1,6 @@
 ---
 title: "M&A Intelligence Systems: Building Analytical Capability"
-date: "2026-04-17"
+date: "2026-02-10"
 author: "Alpha Architect"
 description: "M&A intelligence systems enable data-driven deal management. This intelligence briefing examines infrastructure development, analytical frameworks, and operational practices that build superior analytical capability."
 ---

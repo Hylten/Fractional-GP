@@ -1,6 +1,6 @@
 ---
 title: "Deal Sourcing Analytics: The Intelligence Driving Systematic Acquisition"
-date: "2026-06-24"
+date: "2026-01-30"
 author: "Alpha Architect"
 description: "How deal sourcing analytics drive systematic acquisition that random approaches cannot achieve."
 ---

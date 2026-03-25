@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Sourcing: The Terminal-Based Deal Pipeline Architecture"
-date: "2026-04-01"
+date: "2026-03-10"
 author: "Alpha Architect"
 description: "How command-line infrastructure transforms deal sourcing from outreach campaign to autonomous pipeline operation."
 ---

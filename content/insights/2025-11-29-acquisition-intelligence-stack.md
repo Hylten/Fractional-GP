@@ -1,6 +1,6 @@
 ---
 title: "The Acquisition Intelligence Stack: From Signal to Proprietary Deal"
-date: "2026-04-04"
+date: "2025-11-29"
 author: "Alpha Architect"
 description: "How integrated intelligence systems convert market signals into proprietary acquisition opportunities."
 ---

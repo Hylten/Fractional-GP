@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Management: The Systems Enabling Pipeline Visibility"
-date: "2026-06-02"
+date: "2025-12-31"
 author: "Alpha Architect"
 description: "How deal flow management systems enable pipeline visibility and optimization."
 ---

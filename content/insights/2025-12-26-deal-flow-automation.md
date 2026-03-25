@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Automation: The Technology Scaling Acquisition Operations"
-date: "2026-05-23"
+date: "2025-12-26"
 author: "Alpha Architect"
 description: "How deal flow automation scales acquisition operations beyond human bandwidth limitations."
 ---

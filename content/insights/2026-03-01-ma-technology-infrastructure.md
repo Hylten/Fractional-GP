@@ -1,6 +1,6 @@
 ---
 title: "M&A Technology Infrastructure: The Systems Architecture for Modern Acquisitions"
-date: "2026-05-13"
+date: "2026-03-01"
 author: "Alpha Architect"
 description: "How M&A technology infrastructure transforms acquisition programs from manual operations to automated systems."
 ---

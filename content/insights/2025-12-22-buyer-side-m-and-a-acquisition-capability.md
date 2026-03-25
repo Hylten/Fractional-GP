@@ -1,6 +1,6 @@
 ---
 title: "Buyer-Side M&A: Building Acquisition Capability"
-date: "2026-04-17"
+date: "2025-12-22"
 author: "Alpha Architect"
 description: "Buyer-side M&A capability determines how effectively organizations execute acquisition strategies. This intelligence briefing examines the components of acquisition capability, development approaches, and operational practices that build sustainable deal execution strength."
 ---

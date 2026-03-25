@@ -1,6 +1,6 @@
 ---
 title: "Deal Origination Automation: The Workflow Systems for Acquisition Excellence"
-date: "2026-04-14"
+date: "2026-01-19"
 author: "Alpha Architect"
 description: "How workflow automation transforms deal origination from manual coordination to autonomous operation."
 ---

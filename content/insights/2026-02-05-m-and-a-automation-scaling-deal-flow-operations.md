@@ -1,6 +1,6 @@
 ---
 title: "M&A Automation: Scaling Deal Flow Operations"
-date: "2026-04-17"
+date: "2026-02-05"
 author: "Alpha Architect"
 description: "M&A automation scales deal flow operations beyond manual constraints. This intelligence briefing examines automation opportunities, implementation approaches, and operational practices that build efficient automated systems."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Deal Identification: The Infrastructure for Proprietary Opportunities"
-date: "2026-05-09"
+date: "2026-03-05"
 author: "Alpha Architect"
 description: "How off-market identification infrastructure creates proprietary deal opportunities that broker-represented transactions cannot match."
 ---

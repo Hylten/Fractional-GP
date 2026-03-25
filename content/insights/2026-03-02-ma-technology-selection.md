@@ -1,6 +1,6 @@
 ---
 title: "M&A Technology Selection: The Framework Choosing Modern Tools"
-date: "2026-06-08"
+date: "2026-03-02"
 author: "Alpha Architect"
 description: "How M&A technology selection framework identifies tools that enable acquisition excellence."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deal Intelligence: Information Systems for M&A Success"
-date: "2026-04-17"
+date: "2026-01-15"
 author: "Alpha Architect"
 description: "Deal intelligence systems aggregate, analyze, and distribute information that drives acquisition decisions. This intelligence briefing examines information architecture, analytical frameworks, and distribution systems that convert data into competitive advantage."
 ---

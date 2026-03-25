@@ -1,6 +1,6 @@
 ---
 title: "M&A Pipeline Management: The Systems Enabling Proactive Deal Control"
-date: "2026-06-22"
+date: "2026-02-27"
 author: "Alpha Architect"
 description: "How M&A pipeline management systems enable proactive deal control."
 ---

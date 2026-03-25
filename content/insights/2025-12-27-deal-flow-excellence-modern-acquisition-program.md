@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Excellence: Building the Modern Acquisition Program"
-date: "2026-04-17"
+date: "2025-12-27"
 author: "Alpha Architect"
 description: "Deal flow excellence determines acquisition program success. This intelligence briefing examines strategic frameworks, operational practices, and capability development approaches that build sustainable deal flow programs."
 ---

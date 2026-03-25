@@ -1,6 +1,6 @@
 ---
 title: "Buyer-Led M&A Intelligence: The Systematic Approach to Off-Market Acquisition"
-date: "2026-04-13"
+date: "2025-12-20"
 author: "Alpha Architect"
 description: "How buyer-led M&A intelligence transforms acquisition from reactive pursuit to systematic opportunity development."
 ---

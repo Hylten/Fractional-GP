@@ -1,6 +1,6 @@
 ---
 title: "Deal Origination: Building Systematic Acquisition Pipelines"
-date: "2026-04-17"
+date: "2026-01-23"
 author: "Alpha Architect"
 description: "Deal origination determines acquisition outcomes before transactions begin. This intelligence briefing examines systematic approaches to building acquisition pipelines, the infrastructure required, and the operational practices that generate consistent deal flow."
 ---

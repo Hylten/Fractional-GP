@@ -1,6 +1,6 @@
 ---
 title: "Deal Flow Technology Stack: Building Modern M&A Infrastructure"
-date: "2026-04-17"
+date: "2026-01-06"
 author: "Alpha Architect"
 description: "Deal flow technology stack enables modern acquisition management. This intelligence briefing examines technology categories, integration patterns, and development practices that build effective infrastructure."
 ---

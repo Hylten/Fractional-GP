@@ -1,6 +1,6 @@
 ---
 title: "Deal Generation: Systematic Approaches to Acquisition Pipeline Building"
-date: "2026-04-17"
+date: "2026-01-11"
 author: "Alpha Architect"
 description: "Deal generation establishes the foundation for acquisition success. This intelligence briefing examines systematic approaches to pipeline building, the infrastructure requirements, and the operational practices that generate consistent acquisition opportunities."
 ---

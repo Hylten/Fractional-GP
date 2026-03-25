@@ -1,6 +1,6 @@
 ---
 title: "Signal Detection for Acquisitions: The Intelligence Systems Finding Deal Opportunities"
-date: "2026-05-14"
+date: "2026-03-19"
 author: "Alpha Architect"
 description: "How signal detection systems transform acquisition from reactive pursuit to proactive opportunity identification."
 ---

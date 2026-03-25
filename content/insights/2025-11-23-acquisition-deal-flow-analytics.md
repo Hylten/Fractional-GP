@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Deal Flow Analytics: The Intelligence Enabling Optimization"
-date: "2026-06-17"
+date: "2025-11-23"
 author: "Alpha Architect"
 description: "How acquisition deal flow analytics enable optimization that intuition cannot achieve."
 ---

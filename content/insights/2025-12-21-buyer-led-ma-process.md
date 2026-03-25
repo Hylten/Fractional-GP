@@ -1,6 +1,6 @@
 ---
 title: "Buyer-Led M&A Process: The Systematic Approach Transforming Acquisitions"
-date: "2026-05-22"
+date: "2025-12-21"
 author: "Alpha Architect"
 description: "How buyer-led M&A processes transform acquisition from seller-driven to proactive opportunity development."
 ---

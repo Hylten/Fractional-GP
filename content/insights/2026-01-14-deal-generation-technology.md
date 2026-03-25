@@ -1,6 +1,6 @@
 ---
 title: "Deal Generation Technology: The Infrastructure for Sustainable Acquisition"
-date: "2026-06-15"
+date: "2026-01-14"
 author: "Alpha Architect"
 description: "How deal generation technology creates sustainable acquisition infrastructure."
 ---

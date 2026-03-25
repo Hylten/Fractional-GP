@@ -1,6 +1,6 @@
 ---
 title: "Deal Sourcing Strategies: Building the Acquisition Pipeline"
-date: "2026-04-17"
+date: "2026-02-01"
 author: "Alpha Architect"
 description: "Deal sourcing strategies determine acquisition pipeline quality. This intelligence briefing examines systematic approaches to deal sourcing, channel optimization, and performance management that build sustainable deal flow."
 ---

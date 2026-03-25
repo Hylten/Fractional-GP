@@ -1,6 +1,6 @@
 ---
 title: "Acquisition Automation Systems: The Technology Multiplying Deal Flow"
-date: "2026-06-03"
+date: "2025-11-21"
 author: "Alpha Architect"
 description: "How acquisition automation systems multiply deal flow beyond human limitations."
 ---

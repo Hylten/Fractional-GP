@@ -1,6 +1,6 @@
 ---
 title: "Off-Market Deal Generation: The Infrastructure for Proprietary Acquisition"
-date: "2026-04-12"
+date: "2026-03-04"
 author: "Alpha Architect"
 description: "How off-market infrastructure transforms deal generation from broker-dependent to proprietary operation."
 ---

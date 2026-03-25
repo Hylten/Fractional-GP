@@ -1,6 +1,6 @@
 ---
 title: "M&A Sourcing Automation: The Technology Scaling Target Identification"
-date: "2026-06-12"
+date: "2026-02-28"
 author: "Alpha Architect"
 description: "How M&A sourcing automation scales target identification beyond human limitations."
 ---

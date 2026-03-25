@@ -1,6 +1,6 @@
 ---
 title: "M&A Deal Flow Technology: The Infrastructure Stack for Acquisition Excellence"
-date: "2026-06-01"
+date: "2026-02-22"
 author: "Alpha Architect"
 description: "How M&A deal flow technology stacks enable acquisition excellence at scale."
 ---

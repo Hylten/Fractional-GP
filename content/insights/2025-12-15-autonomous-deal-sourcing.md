@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Deal Sourcing: The Agent Systems Scaling Acquisition Programs"
-date: "2026-05-15"
+date: "2025-12-15"
 author: "Alpha Architect"
 description: "How autonomous agent systems transform deal sourcing from manual activity to continuous intelligence operation."
 ---

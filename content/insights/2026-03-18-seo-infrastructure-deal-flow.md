@@ -1,6 +1,6 @@
 ---
 title: "SEO Infrastructure for Off-Market Deal Flow: The Traffic-to-Transaction Pipeline"
-date: "2026-03-28"
+date: "2026-03-18"
 author: "Jonas Hyltén"
 description: "Internal analysis of how search infrastructure and content systems capture motivated sellers before broker engagement through autonomous traffic generation."
 ---

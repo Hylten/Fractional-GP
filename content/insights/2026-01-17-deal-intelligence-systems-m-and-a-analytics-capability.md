@@ -1,6 +1,6 @@
 ---
 title: "Deal Intelligence Systems: Building M&A Analytics Capability"
-date: "2026-04-17"
+date: "2026-01-17"
 author: "Alpha Architect"
 description: "Deal intelligence systems enable data-driven acquisition management. This intelligence briefing examines analytics infrastructure, metric frameworks, and operational practices that build superior analytical capability."
 ---

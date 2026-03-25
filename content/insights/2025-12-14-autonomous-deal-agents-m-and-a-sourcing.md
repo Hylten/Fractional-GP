@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Deal Agents: The Future of M&A Sourcing"
-date: "2026-04-17"
+date: "2025-12-14"
 author: "Alpha Architect"
 description: "Autonomous agents represent the next frontier in deal flow automation. This intelligence briefing examines how autonomous AI systems will transform M&A sourcing, the technical architecture required, and the strategic implications for dealmakers."
 ---
